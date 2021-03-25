@@ -1,0 +1,113 @@
+bics:Survey a rdfs:Class ;
+     rdfs:label "Survey" ;
+     rdfs:comment "The class of a Survey." ;
+     rdfs:isDefinedBy <https://tundrarich.github.io/resources/bics-ontology#> ;
+     rdfs:subClassOf rdfs:Resource . 
+
+bics:Industry a rdfs:Class ;
+     rdfs:label "Industry" ;
+     rdfs:comment "The class of an of Industry." ;
+     rdfs:isDefinedBy <https://tundrarich.github.io/resources/bics-ontology#> ;
+     rdfs:subClassOf rdfs:Resource . 
+
+bics:WorkforceBand a rdfs:Class ;
+     rdfs:label "WorkforceBand" ;
+     rdfs:comment "The class of a certain workforce band size." ;
+     rdfs:isDefinedBy <https://tundrarich.github.io/resources/bics-ontology#> ;
+     rdfs:subClassOf rdfs:Resource . 
+
+bics:TradingStatus a rdfs:Class ;
+     rdfs:label "TradingStatus" ;
+     rdfs:comment "The class of a Trading Status." ;
+     rdfs:isDefinedBy <https://tundrarich.github.io/resources/bics-ontology#> ;
+     rdfs:subClassOf rdfs:Resource . 
+
+bics:Location a rdfs:Class ;
+     rdfs:label "Location" ;
+     rdfs:comment "The class of a Location." ;
+     rdfs:isDefinedBy <https://tundrarich.github.io/resources/bics-ontology#> ;
+     rdfs:subClassOf rdfs:Resource . 
+
+bics:Initiative a rdfs:Class ;
+     rdfs:label "Initiative" ;
+     rdfs:comment "The class of an Initiative." ;
+     rdfs:isDefinedBy <https://tundrarich.github.io/resources/bics-ontology#> ;
+     rdfs:subClassOf rdfs:Resource . 
+
+bics:Sent a rdf:Property ;
+     rdfs:label "Sent" ;
+     rdfs:comment "The property that refers to surveys sent to an instance of an industry." ;
+     rdfs:domain bics:Survey ;
+     rdfs:isDefinedBy <https://tundrarich.github.io/resources/bics-ontology#> ;
+     rdfs:range rdfs:Resource . 
+
+bics:Received a rdf:Property ;
+     rdfs:label "Received" ;
+     rdfs:comment "The property that refers to surveys received by am instance of an industry." ;
+     rdfs:domain bics:Survey ;
+     rdfs:isDefinedBy <https://tundrarich.github.io/resources/bics-ontology#> ;
+     rdfs:range rdfs:Resource . 
+
+bics:ContainedWorkforce a rdf:Property ;
+     rdfs:label "ContainedWorkforce" ;
+     rdfs:comment "The property that refers to the workforceBand a resource can contain." ;
+     rdfs:domain rdfs:Resource ;
+     rdfs:isDefinedBy <https://tundrarich.github.io/resources/bics-ontology#> ;
+     rdfs:range rdfs:Resource . 
+
+bics:ContainedLocation a rdf:Property ;
+     rdfs:label "ContainedLocation" ;
+     rdfs:comment "The property that refers to the Location a resource can contain." ;
+     rdfs:domain rdfs:Resource ;
+     rdfs:isDefinedBy <https://tundrarich.github.io/resources/bics-ontology#> ;
+     rdfs:range rdfs:Resource .
+
+bics:ContainedTradingStatus a rdf:Property ;
+     rdfs:label "ContainedTradingStatus" ;
+     rdfs:comment "The property that refers to the TradingStatus a resource can contain." ;
+     rdfs:domain rdfs:Resource ;
+     rdfs:isDefinedBy <https://tundrarich.github.io/resources/bics-ontology#> ;
+     rdfs:range rdfs:Resource .
+	 
+bics:ContainedIniative a rdf:Property ;
+     rdfs:label "ContainedIniative" ;
+     rdfs:comment "The property that refers to the Initiative a resource can contain." ;
+     rdfs:domain rdfs:Resource ;
+     rdfs:isDefinedBy <https://tundrarich.github.io/resources/bics-ontology#> ;
+     rdfs:range rdfs:Resource .
+
+bics:hasWorkforceValue a rdf:Property ;
+     rdfs:label "hasWorkforceValue" ;
+     rdfs:comment "The property that determines the number of workplaces that have a falls within a certain size-band." ;
+     rdfs:domain bics:WorkforceBand ;
+     rdfs:isDefinedBy <https://tundrarich.github.io/resources/bics-ontology#> ;
+     rdfs:range rdfs:Resource . 
+	 
+bics:tradingValue a rdf:Property ;
+     rdfs:label "tradingValue" ;
+     rdfs:comment "The property that determines the amount that is currently trading under a certain status." ;
+     rdfs:domain bics:TradingStatus ;
+     rdfs:isDefinedBy <https://tundrarich.github.io/resources/bics-ontology#> ;
+     rdfs:range rdfs:Resource . 
+	 
+bics:iniativeStatus a rdf:Property ;
+     rdfs:label "iniativeStatus" ;
+     rdfs:comment "The property that determines the status of an Initiative." ;
+     rdfs:domain bics:Initiative ;
+     rdfs:isDefinedBy <https://tundrarich.github.io/resources/bics-ontology#> ;
+     rdfs:range rdfs:Resource . 
+
+bics:iniativeValue a rdf:Property ;
+     rdfs:label "hasValue" ;
+     rdfs:comment "The property that determines the value of the status a Initiative has." ;
+     rdfs:domain bics:Initiative ;
+     rdfs:isDefinedBy <https://tundrarich.github.io/resources/bics-ontology#> ;
+     rdfs:range rdfs:Resource . 
+	 
+	 
+	 
+
+
+
+
+
