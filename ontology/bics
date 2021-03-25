@@ -49,20 +49,6 @@ bics:Initiative a rdfs:Class ;
      rdfs:isDefinedBy <https://github.com/tundrarich/tundrarich.github.io/blob/main/ontology/bics/> ;
      rdfs:subClassOf rdfs:Resource . 
 
-bics:Sent a rdf:Property ;
-     rdfs:label "Sent" ;
-     rdfs:comment "The property that refers to surveys sent to an instance of an industry." ;
-     rdfs:domain bics:Survey ;
-     rdfs:isDefinedBy <https://github.com/tundrarich/tundrarich.github.io/blob/main/ontology/bics/> ;
-     rdfs:range rdfs:Resource . 
-
-bics:Received a rdf:Property ;
-     rdfs:label "Received" ;
-     rdfs:comment "The property that refers to surveys received by am instance of an industry." ;
-     rdfs:domain bics:Survey ;
-     rdfs:isDefinedBy <https://github.com/tundrarich/tundrarich.github.io/blob/main/ontology/bics/> ;
-     rdfs:range rdfs:Resource . 
-
 bics:ContainedWorkforce a rdf:Property ;
      rdfs:label "ContainedWorkforce" ;
      rdfs:comment "The property that refers to the workforceBand a resource can contain." ;
@@ -91,12 +77,34 @@ bics:ContainedIniative a rdf:Property ;
      rdfs:isDefinedBy <https://github.com/tundrarich/tundrarich.github.io/blob/main/ontology/bics/> ;
      rdfs:range rdfs:Resource .
 
-bics:hasWorkforceValue a rdf:Property ;
-     rdfs:label "hasWorkforceValue" ;
-     rdfs:comment "The property that determines the number of workplaces that have a falls within a certain size-band." ;
+bics:hasWorkforceNumberSent a rdf:Property ;
+     rdfs:label "hasWorkforceNumberSent" ;
+     rdfs:comment "The property that determines the number of workplaces that have a falls within a certain size-band surveys sent numerically." ;
      rdfs:domain bics:WorkforceBand ;
      rdfs:isDefinedBy <https://github.com/tundrarich/tundrarich.github.io/blob/main/ontology/bics/> ;
      rdfs:range rdfs:Resource . 
+
+bics:hasWorkforceNumberReceived a rdf:Property ;
+     rdfs:label "hasWorkforceNumberReceived" ;
+     rdfs:comment "The property that determines the number of workplaces that have a falls within a certain size-band surveys received numerically." ;
+     rdfs:domain bics:WorkforceBand ;
+     rdfs:isDefinedBy <https://github.com/tundrarich/tundrarich.github.io/blob/main/ontology/bics/> ;
+     rdfs:range rdfs:Resource . 
+	 
+bics:hasWorkforcePercentageSent a rdf:Property ;
+     rdfs:label "hasWorkforcePercentageSent" ;
+     rdfs:comment "The property that determines the number of workplaces that have a falls within a certain size-band sent percentage-wise." ;
+     rdfs:domain bics:WorkforceBand ;
+     rdfs:isDefinedBy <https://github.com/tundrarich/tundrarich.github.io/blob/main/ontology/bics/> ;
+     rdfs:range rdfs:Resource . 
+	 
+bics:hasWorkforcePercentageReceived a rdf:Property ;
+     rdfs:label "WorkforcePercentageReceived" ;
+     rdfs:comment "The property that determines the number of workplaces that have a falls within a certain size-band received percentage-wise." ;
+     rdfs:domain bics:WorkforceBand ;
+     rdfs:isDefinedBy <https://github.com/tundrarich/tundrarich.github.io/blob/main/ontology/bics/> ;
+     rdfs:range rdfs:Resource . 
+
 	 
 bics:tradingValue a rdf:Property ;
      rdfs:label "tradingValue" ;
