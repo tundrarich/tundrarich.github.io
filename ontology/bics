@@ -47,7 +47,14 @@ bics:Initiative a rdfs:Class ;
      rdfs:label "Initiative" ;
      rdfs:comment "The class of an Initiative." ;
      rdfs:isDefinedBy <https://github.com/tundrarich/tundrarich.github.io/blob/main/ontology/bics/> ;
-     rdfs:subClassOf rdfs:Resource . 
+     rdfs:subClassOf rdfs:Resource .
+
+bics:ContainedIndustry a rdf:Property ;
+     rdfs:label "ContainedIndustry" ;
+     rdfs:comment "The property that refers to the Industry a resource can contain." ;
+     rdfs:domain rdfs:Resource ;
+     rdfs:isDefinedBy <https://github.com/tundrarich/tundrarich.github.io/blob/main/ontology/bics/> ;
+     rdfs:range rdfs:Resource . 	 
 
 bics:ContainedWorkforce a rdf:Property ;
      rdfs:label "ContainedWorkforce" ;
@@ -70,7 +77,7 @@ bics:ContainedTradingStatus a rdf:Property ;
      rdfs:isDefinedBy <https://github.com/tundrarich/tundrarich.github.io/blob/main/ontology/bics/> ;
      rdfs:range rdfs:Resource .
 	 
-bics:ContainedIniative a rdf:Property ;
+bics:ContainedInitiative a rdf:Property ;
      rdfs:label "ContainedIniative" ;
      rdfs:comment "The property that refers to the Initiative a resource can contain." ;
      rdfs:domain rdfs:Resource ;
@@ -113,14 +120,14 @@ bics:tradingValue a rdf:Property ;
      rdfs:isDefinedBy <https://github.com/tundrarich/tundrarich.github.io/blob/main/ontology/bics/> ;
      rdfs:range rdfs:Resource . 
 	 
-bics:iniativeStatus a rdf:Property ;
+bics:initiativeStatus a rdf:Property ;
      rdfs:label "iniativeStatus" ;
      rdfs:comment "The property that determines the status of an Initiative." ;
      rdfs:domain bics:Initiative ;
      rdfs:isDefinedBy <https://github.com/tundrarich/tundrarich.github.io/blob/main/ontology/bics/> ;
      rdfs:range rdfs:Resource . 
 
-bics:iniativeValue a rdf:Property ;
+bics:initiativeValue a rdf:Property ;
      rdfs:label "hasValue" ;
      rdfs:comment "The property that determines the value of the status a Initiative has." ;
      rdfs:domain bics:Initiative ;
