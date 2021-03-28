@@ -8,10 +8,11 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
-<https://github.com/tundrarich/tundrarich.github.io/blob/main/ontology/bics/> a owl:Ontology ;
+<https://tundrarich.github.io/ontology/bics/> a owl:Ontology ;
 	dc:title "BICS Vocabularly" ;
 	dc:date "2020-03-25" ;
 	dc:description "BICS Vocabularly." .
+	owl:imports "https://github.com/tundrarich/tundrarich.github.io/blob/main/ontology/bics/" .
 
 bics:Survey a rdfs:Class ;
      rdfs:label "Survey" ;
