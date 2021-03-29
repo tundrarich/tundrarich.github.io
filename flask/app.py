@@ -5,6 +5,9 @@ from flask_frozen import Freezer
 
 app = Flask(__name__)
 
+
+FREEZER_BASE_URL = "http://localhost/tundrarich.github.io"
+
 DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
