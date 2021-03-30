@@ -27,7 +27,7 @@ freezer = Freezer(app)
 def index():
     return render_template('index.html')
 
-@app.route("/query1")
+@app.route("/query1/")
 def query1():
     for row in queries.getIndustryNames():       
         return str(row)
