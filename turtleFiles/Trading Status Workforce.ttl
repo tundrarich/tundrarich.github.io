@@ -47,19 +47,19 @@
 <https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading> a bics:TradingStatus ;
     rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string .
 
-<https://tundrarich.github.io/resources/workforces/total> a bics:Industry ;
+<https://tundrarich.github.io/resources/workforces/total> a bics:WorkforceBand ;
     rdfs:label "All Size Bands"^^xsd:string ;
     bics:ContainedTradingStatus <https://tundrarich.github.io/resources/tradingStatuses/continuingTrade>,
         <https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading>,
         <https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading> .
 
-<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250> a bics:Industry ;
+<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250> a bics:WorkforceBand ;
     rdfs:label " 250 +"^^xsd:string ;
     bics:ContainedTradingStatus <https://tundrarich.github.io/resources/tradingStatuses/continuingTrade>,
         <https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading>,
         <https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading> .
 
-<https://tundrarich.github.io/resources/workforces/workforceSmaller250> a bics:Industry ;
+<https://tundrarich.github.io/resources/workforces/workforceSmaller250> a bics:WorkforceBand ;
     rdfs:label " < 250 "^^xsd:string ;
     bics:ContainedTradingStatus <https://tundrarich.github.io/resources/tradingStatuses/continuingTrade>,
         <https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading>,

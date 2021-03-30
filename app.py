@@ -1,7 +1,14 @@
 import sys, os, git
+import generateSPARQL as queries
 from flask import Flask, render_template
 from flask_flatpages import FlatPages
 from flask_frozen import Freezer
+import rdflib , pprint
+from rdflib import URIRef, Graph, Namespace 
+from rdflib.plugins import sparql
+import rdflib.plugins.sparql as sparql
+import rdflib.graph as g
+from rdflib.namespace import FOAF , XSD, RDFS, NamespaceManager
 
 
 
@@ -15,12 +22,17 @@ app.config.from_object(__name__)
 
 freezer = Freezer(app) 
 
+
 @app.route("/")
 def index():
     return render_template('index.html')
 
-
-
+@app.route("/query1")
+def query1():
+    for row in queries.getIndustryNames():       
+        return str(row)
+    
+print(queries.getIndustryNames())
 
 if __name__ == "__main__":
         app.run()
