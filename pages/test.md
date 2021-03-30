@@ -1,4 +1,4 @@
-title: Test
+title: My First Entry
+date: 2018-01-01
 
-
-Testing GitHub deployment
+This is my **first** blog post ever! Welcome!
