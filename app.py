@@ -25,9 +25,8 @@ freezer = Freezer(app)
 
 @app.route("/")
 def index():
-    sentIndustryNames, sentIndustryValues = queries.getIndustrySurveysSent()
-    sentIndustryNames = json.dumps(sentIndustryNames)
-    return render_template('index.html', sentIndustryNames=sentIndustryNames)
+  
+    return render_template('index.html')
 
 
     
