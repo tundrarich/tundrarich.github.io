@@ -1,17 +1,17 @@
-group|Sent|Received
-Accommodation And Food Service Activities|1634|516
-Administrative And Support Service Activities|2359|814
-All Industries|17623|6114
-Arts, Entertainment And Recreation|718|278
-Construction|1034|284
-Education|760|318
-Human Health And Social Work Activities|294|144
-Information And Communication|1216|418
-Manufacturing|3155|1097
-Mining And Quarrying|28|0
-Other Service Activities|137|0
-Professional, Scientific And Technical Activities|2023|733
-Real Estate Activities|200|0
-Transportation And Storage|863|282
-Water Supply, Sewerage, Waste Management And Remediation Activities|201|70
-Wholesale And Retail Trade; Repair Of Motor Vehicles And Motorcycles|2999|1030
+group,Sent,Received
+Accommodation And Food Service Activities,1634,516
+Administrative And Support Service Activities,2359,814
+All Industries,17623,6114
+"Arts, Entertainment And Recreation",718,278
+Construction,1034,284
+Education,760,318
+Human Health And Social Work Activities,294,144
+Information And Communication,1216,418
+Manufacturing,3155,1097
+Mining And Quarrying,28,0
+Other Service Activities,137,0
+"Professional, Scientific And Technical Activities",2023,733
+Real Estate Activities,200,0
+Transportation And Storage,863,282
+"Water Supply, Sewerage, Waste Management And Remediation Activities",201,70
+Wholesale And Retail Trade; Repair Of Motor Vehicles And Motorcycles,2999,1030

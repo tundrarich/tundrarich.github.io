@@ -138,7 +138,7 @@ for i in range(len(namesSent)):
 
 
 with open('CSVfiles/industriesTotal.csv', 'w', newline='') as file:
-    writer = csv.writer(file, delimiter='|')
+    writer = csv.writer(file, delimiter=',')
     writer.writerow(["group", "Sent", "Received"])
     for i in range(len(fullList)):
         writer.writerow(fullList[i])
