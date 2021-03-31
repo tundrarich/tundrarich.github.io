@@ -2,277 +2,368 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/AccommodationAndFoodServiceActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/AccommodationAndFoodServiceActivities> rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "42.20%" .
 
-<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/AdministrativeAndSupportServiceActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/AdministrativeAndSupportServiceActivities> rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "20.50%" .
 
-<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/AllIndustries> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/AllIndustries> rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "22.30%" .
 
-<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/ArtsEntertainmentAndRecreation> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/ArtsEntertainmentAndRecreation> rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "33.10%" .
 
-<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/Construction> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/Construction> rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "28.70%" .
 
-<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/Education> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/Education> rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "7.00%" .
 
-<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/HumanHealthAndSocialWorkActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/HumanHealthAndSocialWorkActivities> rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "6.30%" .
 
-<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/InformationAndCommunication> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/InformationAndCommunication> rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "13.70%" .
 
-<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/Manufacturing> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/Manufacturing> rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "19.30%" .
 
-<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/ProfessionalScientificAndTechnicalActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/ProfessionalScientificAndTechnicalActivities> rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "18.60%" .
 
-<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/TransportationAndStorage> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/TransportationAndStorage> rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "24.80%" .
 
-<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/WaterSupplySewerageWasteManagementAndRemediationActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/WaterSupplySewerageWasteManagementAndRemediationActivities> rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "21.40%" .
 
-<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "25.00%" .
 
-<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/AccommodationAndFoodServiceActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/AccommodationAndFoodServiceActivities> rdfs:label "Accredited finance agreements"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "20.60%" .
 
-<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/AdministrativeAndSupportServiceActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/AdministrativeAndSupportServiceActivities> rdfs:label "Accredited finance agreements"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "12.30%" .
 
-<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/AllIndustries> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/AllIndustries> rdfs:label "Accredited finance agreements"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "9.90%" .
 
-<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/ArtsEntertainmentAndRecreation> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/ArtsEntertainmentAndRecreation> rdfs:label "Accredited finance agreements"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "18.30%" .
 
-<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/Construction> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/Construction> rdfs:label "Accredited finance agreements"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "9.60%" .
 
-<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/Education> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/Education> rdfs:label "Accredited finance agreements"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "2.80%" .
 
-<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/HumanHealthAndSocialWorkActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/HumanHealthAndSocialWorkActivities> rdfs:label "Accredited finance agreements"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "2.80%" .
 
-<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/InformationAndCommunication> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/InformationAndCommunication> rdfs:label "Accredited finance agreements"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "3.80%" .
 
-<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/Manufacturing> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/Manufacturing> rdfs:label "Accredited finance agreements"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "8.60%" .
 
-<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/ProfessionalScientificAndTechnicalActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/ProfessionalScientificAndTechnicalActivities> rdfs:label "Accredited finance agreements"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "8.10%" .
 
-<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/TransportationAndStorage> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/TransportationAndStorage> rdfs:label "Accredited finance agreements"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "9.20%" .
 
-<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/WaterSupplySewerageWasteManagementAndRemediationActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/WaterSupplySewerageWasteManagementAndRemediationActivities> rdfs:label "Accredited finance agreements"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "10.00%" .
 
-<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> rdfs:label "Accredited finance agreements"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "9.00%" .
 
-<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/AccommodationAndFoodServiceActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/AccommodationAndFoodServiceActivities> rdfs:label "Business rates holiday"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "78.20%" .
 
-<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/AdministrativeAndSupportServiceActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/AdministrativeAndSupportServiceActivities> rdfs:label "Business rates holiday"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "20.10%" .
 
-<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/AllIndustries> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/AllIndustries> rdfs:label "Business rates holiday"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "27.40%" .
 
-<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/ArtsEntertainmentAndRecreation> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/ArtsEntertainmentAndRecreation> rdfs:label "Business rates holiday"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "57.20%" .
 
-<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/Construction> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/Construction> rdfs:label "Business rates holiday"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "13.50%" .
 
-<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/Education> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/Education> rdfs:label "Business rates holiday"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "8.50%" .
 
-<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/HumanHealthAndSocialWorkActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/HumanHealthAndSocialWorkActivities> rdfs:label "Business rates holiday"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "13.40%" .
 
-<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/InformationAndCommunication> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/InformationAndCommunication> rdfs:label "Business rates holiday"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "8.20%" .
 
-<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/Manufacturing> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/Manufacturing> rdfs:label "Business rates holiday"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "14.00%" .
 
-<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/ProfessionalScientificAndTechnicalActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/ProfessionalScientificAndTechnicalActivities> rdfs:label "Business rates holiday"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "12.60%" .
 
-<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/TransportationAndStorage> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/TransportationAndStorage> rdfs:label "Business rates holiday"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "24.10%" .
 
-<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/WaterSupplySewerageWasteManagementAndRemediationActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/WaterSupplySewerageWasteManagementAndRemediationActivities> rdfs:label "Business rates holiday"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "15.70%" .
 
-<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> rdfs:label "Business rates holiday"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "44.60%" .
 
-<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/AccommodationAndFoodServiceActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/AccommodationAndFoodServiceActivities> rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "87.10%" .
 
-<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/AdministrativeAndSupportServiceActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/AdministrativeAndSupportServiceActivities> rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "75.70%" .
 
-<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/AllIndustries> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/AllIndustries> rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "67.20%" .
 
-<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/ArtsEntertainmentAndRecreation> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/ArtsEntertainmentAndRecreation> rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "76.30%" .
 
-<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/Construction> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/Construction> rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "80.90%" .
 
-<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/Education> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/Education> rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "40.50%" .
 
-<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/HumanHealthAndSocialWorkActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/HumanHealthAndSocialWorkActivities> rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "34.50%" .
 
-<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/InformationAndCommunication> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/InformationAndCommunication> rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "40.10%" .
 
-<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/Manufacturing> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/Manufacturing> rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "63.50%" .
 
-<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/ProfessionalScientificAndTechnicalActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/ProfessionalScientificAndTechnicalActivities> rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "62.20%" .
 
-<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/TransportationAndStorage> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/TransportationAndStorage> rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "76.60%" .
 
-<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/WaterSupplySewerageWasteManagementAndRemediationActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/WaterSupplySewerageWasteManagementAndRemediationActivities> rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "68.60%" .
 
-<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "72.60%" .
 
-<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/AccommodationAndFoodServiceActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/AccommodationAndFoodServiceActivities> rdfs:label "Deferring VAT payments"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "80.60%" .
 
-<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/AdministrativeAndSupportServiceActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/AdministrativeAndSupportServiceActivities> rdfs:label "Deferring VAT payments"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "63.70%" .
 
-<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/AllIndustries> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/AllIndustries> rdfs:label "Deferring VAT payments"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "56.40%" .
 
-<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/ArtsEntertainmentAndRecreation> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/ArtsEntertainmentAndRecreation> rdfs:label "Deferring VAT payments"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "61.20%" .
 
-<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/Construction> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/Construction> rdfs:label "Deferring VAT payments"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "59.90%" .
 
-<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/Education> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/Education> rdfs:label "Deferring VAT payments"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "26.30%" .
 
-<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/HumanHealthAndSocialWorkActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/HumanHealthAndSocialWorkActivities> rdfs:label "Deferring VAT payments"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "16.20%" .
 
-<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/InformationAndCommunication> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/InformationAndCommunication> rdfs:label "Deferring VAT payments"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "47.40%" .
 
-<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/Manufacturing> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/Manufacturing> rdfs:label "Deferring VAT payments"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "44.30%" .
 
-<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/ProfessionalScientificAndTechnicalActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/ProfessionalScientificAndTechnicalActivities> rdfs:label "Deferring VAT payments"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "66.20%" .
 
-<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/TransportationAndStorage> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/TransportationAndStorage> rdfs:label "Deferring VAT payments"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "55.30%" .
 
-<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/WaterSupplySewerageWasteManagementAndRemediationActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/WaterSupplySewerageWasteManagementAndRemediationActivities> rdfs:label "Deferring VAT payments"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "57.10%" .
 
-<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> rdfs:label "Deferring VAT payments"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "60.10%" .
 
-<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/AccommodationAndFoodServiceActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/AccommodationAndFoodServiceActivities> rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "24.90%" .
 
-<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/AdministrativeAndSupportServiceActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/AdministrativeAndSupportServiceActivities> rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "21.80%" .
 
-<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/AllIndustries> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/AllIndustries> rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "11.20%" .
 
-<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/ArtsEntertainmentAndRecreation> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/ArtsEntertainmentAndRecreation> rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "18.00%" .
 
-<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/Construction> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/Construction> rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "6.00%" .
 
-<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/Education> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/Education> rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "2.20%" .
 
-<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/HumanHealthAndSocialWorkActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/HumanHealthAndSocialWorkActivities> rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "10.60%" .
 
-<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/InformationAndCommunication> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/InformationAndCommunication> rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "3.60%" .
 
-<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/Manufacturing> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/Manufacturing> rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "4.80%" .
 
-<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/ProfessionalScientificAndTechnicalActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/ProfessionalScientificAndTechnicalActivities> rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "4.90%" .
 
-<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/TransportationAndStorage> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/TransportationAndStorage> rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "6.40%" .
 
-<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/WaterSupplySewerageWasteManagementAndRemediationActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/WaterSupplySewerageWasteManagementAndRemediationActivities> rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "5.70%" .
 
-<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "13.30%" .
 
-<https://tundrarich.github.io/resources/initiatives/notApplied/AccommodationAndFoodServiceActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/notApplied/AccommodationAndFoodServiceActivities> rdfs:label "We have not applied for any of these initiatives"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "2.70%" .
 
-<https://tundrarich.github.io/resources/initiatives/notApplied/AdministrativeAndSupportServiceActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/notApplied/AdministrativeAndSupportServiceActivities> rdfs:label "We have not applied for any of these initiatives"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "13.90%" .
 
-<https://tundrarich.github.io/resources/initiatives/notApplied/AllIndustries> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/notApplied/AllIndustries> rdfs:label "We have not applied for any of these initiatives"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "20.70%" .
 
-<https://tundrarich.github.io/resources/initiatives/notApplied/ArtsEntertainmentAndRecreation> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/notApplied/ArtsEntertainmentAndRecreation> rdfs:label "We have not applied for any of these initiatives"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "12.60%" .
 
-<https://tundrarich.github.io/resources/initiatives/notApplied/Construction> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/notApplied/Construction> rdfs:label "We have not applied for any of these initiatives"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "11.70%" .
 
-<https://tundrarich.github.io/resources/initiatives/notApplied/Education> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/notApplied/Education> rdfs:label "We have not applied for any of these initiatives"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "48.40%" .
 
-<https://tundrarich.github.io/resources/initiatives/notApplied/HumanHealthAndSocialWorkActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/notApplied/HumanHealthAndSocialWorkActivities> rdfs:label "We have not applied for any of these initiatives"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "55.60%" .
 
-<https://tundrarich.github.io/resources/initiatives/notApplied/InformationAndCommunication> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/notApplied/InformationAndCommunication> rdfs:label "We have not applied for any of these initiatives"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "37.30%" .
 
-<https://tundrarich.github.io/resources/initiatives/notApplied/Manufacturing> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/notApplied/Manufacturing> rdfs:label "We have not applied for any of these initiatives"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "26.00%" .
 
-<https://tundrarich.github.io/resources/initiatives/notApplied/ProfessionalScientificAndTechnicalActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/notApplied/ProfessionalScientificAndTechnicalActivities> rdfs:label "We have not applied for any of these initiatives"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "20.70%" .
 
-<https://tundrarich.github.io/resources/initiatives/notApplied/TransportationAndStorage> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/notApplied/TransportationAndStorage> rdfs:label "We have not applied for any of these initiatives"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "16.70%" .
 
-<https://tundrarich.github.io/resources/initiatives/notApplied/WaterSupplySewerageWasteManagementAndRemediationActivities> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/notApplied/WaterSupplySewerageWasteManagementAndRemediationActivities> rdfs:label "We have not applied for any of these initiatives"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "21.40%" .
 
-<https://tundrarich.github.io/resources/initiatives/notApplied/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/notApplied/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> rdfs:label "We have not applied for any of these initiatives"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "15.50%" .
 
 <https://tundrarich.github.io/resources/survey/appliedInitiativesIndustry> a bics:Survey ;
@@ -429,7 +520,6 @@
         <https://tundrarich.github.io/resources/initiatives/notApplied> .
 
 <https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme> a bics:Initiative ;
-    rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
     bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AccommodationAndFoodServiceActivities>,
         <https://tundrarich.github.io/resources/industries/AdministrativeAndSupportServiceActivities>,
         <https://tundrarich.github.io/resources/industries/AllIndustries>,
@@ -445,7 +535,6 @@
         <https://tundrarich.github.io/resources/industries/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> .
 
 <https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements> a bics:Initiative ;
-    rdfs:label "Accredited finance agreements"^^xsd:string ;
     bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AccommodationAndFoodServiceActivities>,
         <https://tundrarich.github.io/resources/industries/AdministrativeAndSupportServiceActivities>,
         <https://tundrarich.github.io/resources/industries/AllIndustries>,
@@ -461,7 +550,6 @@
         <https://tundrarich.github.io/resources/industries/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> .
 
 <https://tundrarich.github.io/resources/initiatives/businessRatesHoliday> a bics:Initiative ;
-    rdfs:label "Business rates holiday"^^xsd:string ;
     bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AccommodationAndFoodServiceActivities>,
         <https://tundrarich.github.io/resources/industries/AdministrativeAndSupportServiceActivities>,
         <https://tundrarich.github.io/resources/industries/AllIndustries>,
@@ -477,7 +565,6 @@
         <https://tundrarich.github.io/resources/industries/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> .
 
 <https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme> a bics:Initiative ;
-    rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
     bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AccommodationAndFoodServiceActivities>,
         <https://tundrarich.github.io/resources/industries/AdministrativeAndSupportServiceActivities>,
         <https://tundrarich.github.io/resources/industries/AllIndustries>,
@@ -493,7 +580,6 @@
         <https://tundrarich.github.io/resources/industries/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> .
 
 <https://tundrarich.github.io/resources/initiatives/deferringVATPayments> a bics:Initiative ;
-    rdfs:label "Deferring VAT payments"^^xsd:string ;
     bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AccommodationAndFoodServiceActivities>,
         <https://tundrarich.github.io/resources/industries/AdministrativeAndSupportServiceActivities>,
         <https://tundrarich.github.io/resources/industries/AllIndustries>,
@@ -509,7 +595,6 @@
         <https://tundrarich.github.io/resources/industries/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> .
 
 <https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans> a bics:Initiative ;
-    rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
     bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AccommodationAndFoodServiceActivities>,
         <https://tundrarich.github.io/resources/industries/AdministrativeAndSupportServiceActivities>,
         <https://tundrarich.github.io/resources/industries/AllIndustries>,
@@ -525,7 +610,6 @@
         <https://tundrarich.github.io/resources/industries/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> .
 
 <https://tundrarich.github.io/resources/initiatives/notApplied> a bics:Initiative ;
-    rdfs:label "We have not applied for any of these initiatives"^^xsd:string ;
     bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AccommodationAndFoodServiceActivities>,
         <https://tundrarich.github.io/resources/industries/AdministrativeAndSupportServiceActivities>,
         <https://tundrarich.github.io/resources/industries/AllIndustries>,

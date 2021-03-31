@@ -21,121 +21,160 @@
         <https://tundrarich.github.io/resources/workforces/workforceSmaller250> ;
     bics:surveyDescription "Responses to the BICS survey broken down by industry"^^xsd:string .
 
-<https://tundrarich.github.io/resources/workforces/total/AccommodationAndFoodServiceActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AccommodationAndFoodServiceActivities> ;
+<https://tundrarich.github.io/resources/workforces/total/AccommodationAndFoodServiceActivities> rdfs:label "Total"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AccommodationAndFoodServiceActivities> ;
     bics:hasWorkforceNumberReceived 516 .
 
-<https://tundrarich.github.io/resources/workforces/total/AdministrativeAndSupportServiceActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AdministrativeAndSupportServiceActivities> ;
+<https://tundrarich.github.io/resources/workforces/total/AdministrativeAndSupportServiceActivities> rdfs:label "Total"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AdministrativeAndSupportServiceActivities> ;
     bics:hasWorkforceNumberReceived 814 .
 
-<https://tundrarich.github.io/resources/workforces/total/AllIndustries> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AllIndustries> ;
+<https://tundrarich.github.io/resources/workforces/total/AllIndustries> rdfs:label "Total"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AllIndustries> ;
     bics:hasWorkforceNumberReceived 6114 .
 
-<https://tundrarich.github.io/resources/workforces/total/ArtsEntertainmentAndRecreation> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ArtsEntertainmentAndRecreation> ;
+<https://tundrarich.github.io/resources/workforces/total/ArtsEntertainmentAndRecreation> rdfs:label "Total"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ArtsEntertainmentAndRecreation> ;
     bics:hasWorkforceNumberReceived 278 .
 
-<https://tundrarich.github.io/resources/workforces/total/Construction> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Construction> ;
+<https://tundrarich.github.io/resources/workforces/total/Construction> rdfs:label "Total"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Construction> ;
     bics:hasWorkforceNumberReceived 284 .
 
-<https://tundrarich.github.io/resources/workforces/total/Education> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Education> ;
+<https://tundrarich.github.io/resources/workforces/total/Education> rdfs:label "Total"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Education> ;
     bics:hasWorkforceNumberReceived 318 .
 
-<https://tundrarich.github.io/resources/workforces/total/HumanHealthAndSocialWorkActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/HumanHealthAndSocialWorkActivities> ;
+<https://tundrarich.github.io/resources/workforces/total/HumanHealthAndSocialWorkActivities> rdfs:label "Total"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/HumanHealthAndSocialWorkActivities> ;
     bics:hasWorkforceNumberReceived 144 .
 
-<https://tundrarich.github.io/resources/workforces/total/InformationAndCommunication> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/InformationAndCommunication> ;
+<https://tundrarich.github.io/resources/workforces/total/InformationAndCommunication> rdfs:label "Total"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/InformationAndCommunication> ;
     bics:hasWorkforceNumberReceived 418 .
 
-<https://tundrarich.github.io/resources/workforces/total/Manufacturing> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Manufacturing> ;
+<https://tundrarich.github.io/resources/workforces/total/Manufacturing> rdfs:label "Total"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Manufacturing> ;
     bics:hasWorkforceNumberReceived 1097 .
 
-<https://tundrarich.github.io/resources/workforces/total/ProfessionalScientificAndTechnicalActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ProfessionalScientificAndTechnicalActivities> ;
+<https://tundrarich.github.io/resources/workforces/total/ProfessionalScientificAndTechnicalActivities> rdfs:label "Total"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ProfessionalScientificAndTechnicalActivities> ;
     bics:hasWorkforceNumberReceived 733 .
 
-<https://tundrarich.github.io/resources/workforces/total/TransportationAndStorage> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/TransportationAndStorage> ;
+<https://tundrarich.github.io/resources/workforces/total/TransportationAndStorage> rdfs:label "Total"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/TransportationAndStorage> ;
     bics:hasWorkforceNumberReceived 282 .
 
-<https://tundrarich.github.io/resources/workforces/total/WaterSupplySewerageWasteManagementAndRemediationActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WaterSupplySewerageWasteManagementAndRemediationActivities> ;
+<https://tundrarich.github.io/resources/workforces/total/WaterSupplySewerageWasteManagementAndRemediationActivities> rdfs:label "Total"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WaterSupplySewerageWasteManagementAndRemediationActivities> ;
     bics:hasWorkforceNumberReceived 70 .
 
-<https://tundrarich.github.io/resources/workforces/total/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> ;
+<https://tundrarich.github.io/resources/workforces/total/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> rdfs:label "Total"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> ;
     bics:hasWorkforceNumberReceived 1030 .
 
-<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/AccommodationAndFoodServiceActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AccommodationAndFoodServiceActivities> ;
+<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/AccommodationAndFoodServiceActivities> rdfs:label "Workforce Size 250 +"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AccommodationAndFoodServiceActivities> ;
     bics:hasWorkforceNumberReceived 195 .
 
-<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/AdministrativeAndSupportServiceActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AdministrativeAndSupportServiceActivities> ;
+<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/AdministrativeAndSupportServiceActivities> rdfs:label "Workforce Size 250 +"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AdministrativeAndSupportServiceActivities> ;
     bics:hasWorkforceNumberReceived 361 .
 
-<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/AllIndustries> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AllIndustries> ;
+<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/AllIndustries> rdfs:label "Workforce Size 250 +"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AllIndustries> ;
     bics:hasWorkforceNumberReceived 2305 .
 
-<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/ArtsEntertainmentAndRecreation> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ArtsEntertainmentAndRecreation> ;
+<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/ArtsEntertainmentAndRecreation> rdfs:label "Workforce Size 250 +"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ArtsEntertainmentAndRecreation> ;
     bics:hasWorkforceNumberReceived 98 .
 
-<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/Construction> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Construction> ;
+<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/Construction> rdfs:label "Workforce Size 250 +"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Construction> ;
     bics:hasWorkforceNumberReceived 76 .
 
-<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/Education> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Education> ;
+<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/Education> rdfs:label "Workforce Size 250 +"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Education> ;
     bics:hasWorkforceNumberReceived 191 .
 
-<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/HumanHealthAndSocialWorkActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/HumanHealthAndSocialWorkActivities> ;
+<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/HumanHealthAndSocialWorkActivities> rdfs:label "Workforce Size 250 +"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/HumanHealthAndSocialWorkActivities> ;
     bics:hasWorkforceNumberReceived 59 .
 
-<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/InformationAndCommunication> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/InformationAndCommunication> ;
+<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/InformationAndCommunication> rdfs:label "Workforce Size 250 +"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/InformationAndCommunication> ;
     bics:hasWorkforceNumberReceived 121 .
 
-<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/Manufacturing> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Manufacturing> ;
+<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/Manufacturing> rdfs:label "Workforce Size 250 +"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Manufacturing> ;
     bics:hasWorkforceNumberReceived 449 .
 
-<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/ProfessionalScientificAndTechnicalActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ProfessionalScientificAndTechnicalActivities> ;
+<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/ProfessionalScientificAndTechnicalActivities> rdfs:label "Workforce Size 250 +"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ProfessionalScientificAndTechnicalActivities> ;
     bics:hasWorkforceNumberReceived 265 .
 
-<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/TransportationAndStorage> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/TransportationAndStorage> ;
+<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/TransportationAndStorage> rdfs:label "Workforce Size 250 +"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/TransportationAndStorage> ;
     bics:hasWorkforceNumberReceived 89 .
 
-<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/WaterSupplySewerageWasteManagementAndRemediationActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WaterSupplySewerageWasteManagementAndRemediationActivities> ;
+<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/WaterSupplySewerageWasteManagementAndRemediationActivities> rdfs:label "Workforce Size 250 +"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WaterSupplySewerageWasteManagementAndRemediationActivities> ;
     bics:hasWorkforceNumberReceived 20 .
 
-<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> ;
+<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> rdfs:label "Workforce Size 250 +"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> ;
     bics:hasWorkforceNumberReceived 344 .
 
-<https://tundrarich.github.io/resources/workforces/workforceSmaller250/AccommodationAndFoodServiceActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AccommodationAndFoodServiceActivities> ;
+<https://tundrarich.github.io/resources/workforces/workforceSmaller250/AccommodationAndFoodServiceActivities> rdfs:label "Workforce Size < 250"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AccommodationAndFoodServiceActivities> ;
     bics:hasWorkforceNumberReceived 321 .
 
-<https://tundrarich.github.io/resources/workforces/workforceSmaller250/AdministrativeAndSupportServiceActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AdministrativeAndSupportServiceActivities> ;
+<https://tundrarich.github.io/resources/workforces/workforceSmaller250/AdministrativeAndSupportServiceActivities> rdfs:label "Workforce Size < 250"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AdministrativeAndSupportServiceActivities> ;
     bics:hasWorkforceNumberReceived 453 .
 
-<https://tundrarich.github.io/resources/workforces/workforceSmaller250/AllIndustries> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AllIndustries> ;
+<https://tundrarich.github.io/resources/workforces/workforceSmaller250/AllIndustries> rdfs:label "Workforce Size < 250"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AllIndustries> ;
     bics:hasWorkforceNumberReceived 3809 .
 
-<https://tundrarich.github.io/resources/workforces/workforceSmaller250/ArtsEntertainmentAndRecreation> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ArtsEntertainmentAndRecreation> ;
+<https://tundrarich.github.io/resources/workforces/workforceSmaller250/ArtsEntertainmentAndRecreation> rdfs:label "Workforce Size < 250"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ArtsEntertainmentAndRecreation> ;
     bics:hasWorkforceNumberReceived 180 .
 
-<https://tundrarich.github.io/resources/workforces/workforceSmaller250/Construction> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Construction> ;
+<https://tundrarich.github.io/resources/workforces/workforceSmaller250/Construction> rdfs:label "Workforce Size < 250"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Construction> ;
     bics:hasWorkforceNumberReceived 208 .
 
-<https://tundrarich.github.io/resources/workforces/workforceSmaller250/Education> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Education> ;
+<https://tundrarich.github.io/resources/workforces/workforceSmaller250/Education> rdfs:label "Workforce Size < 250"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Education> ;
     bics:hasWorkforceNumberReceived 127 .
 
-<https://tundrarich.github.io/resources/workforces/workforceSmaller250/HumanHealthAndSocialWorkActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/HumanHealthAndSocialWorkActivities> ;
+<https://tundrarich.github.io/resources/workforces/workforceSmaller250/HumanHealthAndSocialWorkActivities> rdfs:label "Workforce Size < 250"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/HumanHealthAndSocialWorkActivities> ;
     bics:hasWorkforceNumberReceived 85 .
 
-<https://tundrarich.github.io/resources/workforces/workforceSmaller250/InformationAndCommunication> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/InformationAndCommunication> ;
+<https://tundrarich.github.io/resources/workforces/workforceSmaller250/InformationAndCommunication> rdfs:label "Workforce Size < 250"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/InformationAndCommunication> ;
     bics:hasWorkforceNumberReceived 297 .
 
-<https://tundrarich.github.io/resources/workforces/workforceSmaller250/Manufacturing> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Manufacturing> ;
+<https://tundrarich.github.io/resources/workforces/workforceSmaller250/Manufacturing> rdfs:label "Workforce Size < 250"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Manufacturing> ;
     bics:hasWorkforceNumberReceived 648 .
 
-<https://tundrarich.github.io/resources/workforces/workforceSmaller250/ProfessionalScientificAndTechnicalActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ProfessionalScientificAndTechnicalActivities> ;
+<https://tundrarich.github.io/resources/workforces/workforceSmaller250/ProfessionalScientificAndTechnicalActivities> rdfs:label "Workforce Size < 250"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ProfessionalScientificAndTechnicalActivities> ;
     bics:hasWorkforceNumberReceived 468 .
 
-<https://tundrarich.github.io/resources/workforces/workforceSmaller250/TransportationAndStorage> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/TransportationAndStorage> ;
+<https://tundrarich.github.io/resources/workforces/workforceSmaller250/TransportationAndStorage> rdfs:label "Workforce Size < 250"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/TransportationAndStorage> ;
     bics:hasWorkforceNumberReceived 193 .
 
-<https://tundrarich.github.io/resources/workforces/workforceSmaller250/WaterSupplySewerageWasteManagementAndRemediationActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WaterSupplySewerageWasteManagementAndRemediationActivities> ;
+<https://tundrarich.github.io/resources/workforces/workforceSmaller250/WaterSupplySewerageWasteManagementAndRemediationActivities> rdfs:label "Workforce Size < 250"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WaterSupplySewerageWasteManagementAndRemediationActivities> ;
     bics:hasWorkforceNumberReceived 50 .
 
-<https://tundrarich.github.io/resources/workforces/workforceSmaller250/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> ;
+<https://tundrarich.github.io/resources/workforces/workforceSmaller250/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> rdfs:label "Workforce Size < 250"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> ;
     bics:hasWorkforceNumberReceived 686 .
 
 <https://tundrarich.github.io/resources/industries/AccommodationAndFoodServiceActivities> a bics:Industry ;
@@ -216,12 +255,9 @@
         <https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250>,
         <https://tundrarich.github.io/resources/workforces/workforceSmaller250> .
 
-<https://tundrarich.github.io/resources/workforces/total> a bics:WorkforceBand ;
-    rdfs:label "Total"^^xsd:string .
+<https://tundrarich.github.io/resources/workforces/total> a bics:WorkforceBand .
 
-<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250> a bics:WorkforceBand ;
-    rdfs:label "Workforce Size 250 +"^^xsd:string .
+<https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250> a bics:WorkforceBand .
 
-<https://tundrarich.github.io/resources/workforces/workforceSmaller250> a bics:WorkforceBand ;
-    rdfs:label "Workforce Size < 250"^^xsd:string .
+<https://tundrarich.github.io/resources/workforces/workforceSmaller250> a bics:WorkforceBand .
 

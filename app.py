@@ -1,4 +1,4 @@
-import sys, os, git
+import sys, os, git, json
 import generateSPARQL as queries
 from flask import Flask, render_template
 from flask_flatpages import FlatPages
@@ -25,12 +25,11 @@ freezer = Freezer(app)
 
 @app.route("/")
 def index():
-    return render_template('index.html')
+    sentIndustryNames, sentIndustryValues = queries.getIndustrySurveysSent()
+    sentIndustryNames = json.dumps(sentIndustryNames)
+    return render_template('index.html', sentIndustryNames=sentIndustryNames)
 
-@app.route("/query1/")
-def query1():
-    for row in queries.getIndustryNames():       
-        return str(row)
+
     
 print(queries.getIndustryNames())
 

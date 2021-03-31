@@ -11,41 +11,47 @@
         <https://tundrarich.github.io/resources/workforces/workforceSmaller250> ;
     bics:surveyDescription "Question: What is the current trading status of your enterprise?, Percentage of all responding businesses, broken down by size band, UK, 6 April to 19 April 2020"^^xsd:string .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/total> bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/total> ;
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/total> rdfs:label "Continuing to trade"^^xsd:string ;
+    bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/total> ;
     bics:tradingValue "76.70%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/workforceBiggerEqual250> bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250> ;
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/workforceBiggerEqual250> rdfs:label "Continuing to trade"^^xsd:string ;
+    bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250> ;
     bics:tradingValue "79.80%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/workforceSmaller250> bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/workforceSmaller250> ;
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/workforceSmaller250> rdfs:label "Continuing to trade"^^xsd:string ;
+    bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/workforceSmaller250> ;
     bics:tradingValue "74.80%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/total> bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/total> ;
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/total> rdfs:label "Has permanently ceased trading"^^xsd:string ;
+    bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/total> ;
     bics:tradingValue "0.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/workforceBiggerEqual250> bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250> ;
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/workforceBiggerEqual250> rdfs:label "Has permanently ceased trading"^^xsd:string ;
+    bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250> ;
     bics:tradingValue "0.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/workforceSmaller250> bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/workforceSmaller250> ;
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/workforceSmaller250> rdfs:label "Has permanently ceased trading"^^xsd:string ;
+    bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/workforceSmaller250> ;
     bics:tradingValue "0.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/total> bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/total> ;
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/total> rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string ;
+    bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/total> ;
     bics:tradingValue "22.80%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/workforceBiggerEqual250> bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250> ;
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/workforceBiggerEqual250> rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string ;
+    bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250> ;
     bics:tradingValue "19.70%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/workforceSmaller250> bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/workforceSmaller250> ;
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/workforceSmaller250> rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string ;
+    bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/workforceSmaller250> ;
     bics:tradingValue "24.70%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading> a bics:TradingStatus ;
-    rdfs:label "Continuing to trade"^^xsd:string .
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading> a bics:TradingStatus .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading> a bics:TradingStatus ;
-    rdfs:label "Has permanently ceased trading"^^xsd:string .
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading> a bics:TradingStatus .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading> a bics:TradingStatus ;
-    rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string .
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading> a bics:TradingStatus .
 
 <https://tundrarich.github.io/resources/workforces/total> a bics:WorkforceBand ;
     rdfs:label "All Size Bands"^^xsd:string ;

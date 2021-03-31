@@ -50,7 +50,40 @@ def getIndustryNames():
     
     data = []
     for row in g.query(query):
-      data.append(row)
+      value = str(row.asdict()['name'].toPython())
+      data.append(value)
       
     return data
 
+def getIndustrySurveysSent():
+    query = sparql.prepareQuery(
+    """SELECT ?name ?sentValue ?receivedValue
+    WHERE {
+    ?workforce rdfs:label "Total"^^xsd:string .
+    ?workforce bics:hasWorkforceNumberSent ?sentValue .
+      
+    ?workforce bics:ContainedIndustry ?industry .
+    ?industry rdfs:label ?name .
+    
+    FILTER(?name != "All Industries"^^xsd:string)
+    
+    }
+    
+    ORDER BY DESC(?industry)
+    
+    """,
+    initNs = {"bics": BICS, "rdfs": RDFS, "xsd": XSD})
+    
+    sentValues = []
+    names = []
+    
+    for row in g.query(query):
+      sentValue = (row.asdict()['sentValue'].toPython())
+      name = str(row.asdict()['name'].toPython())
+
+      names.append(name)
+      sentValues.append(sentValue)
+        
+    return names, sentValues
+
+print(getIndustrySurveysSent())

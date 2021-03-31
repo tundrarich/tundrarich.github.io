@@ -2,58 +2,76 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/total> bics:initiativeStatus "Received" ;
+<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/total> rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
+    bics:initiativeStatus "Received" ;
     bics:initiativeValue "8.80%" .
 
-<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/workforceBiggerEqual250> bics:initiativeStatus "Received" ;
+<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/workforceBiggerEqual250> rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
+    bics:initiativeStatus "Received" ;
     bics:initiativeValue "7.80%" .
 
-<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/workforceSmaller250> bics:initiativeStatus "Received" ;
+<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/workforceSmaller250> rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
+    bics:initiativeStatus "Received" ;
     bics:initiativeValue "9.40%" .
 
-<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/total> bics:initiativeStatus "Received" ;
+<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/total> rdfs:label "Accredited finance agreements"^^xsd:string ;
+    bics:initiativeStatus "Received" ;
     bics:initiativeValue "8.00%" .
 
-<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/workforceBiggerEqual250> bics:initiativeStatus "Received" ;
+<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/workforceBiggerEqual250> rdfs:label "Accredited finance agreements"^^xsd:string ;
+    bics:initiativeStatus "Received" ;
     bics:initiativeValue "7.20%" .
 
-<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/workforceSmaller250> bics:initiativeStatus "Received" ;
+<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/workforceSmaller250> rdfs:label "Accredited finance agreements"^^xsd:string ;
+    bics:initiativeStatus "Received" ;
     bics:initiativeValue "8.50%" .
 
-<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/total> bics:initiativeStatus "Received" ;
+<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/total> rdfs:label "Business rates holiday"^^xsd:string ;
+    bics:initiativeStatus "Received" ;
     bics:initiativeValue "9.10%" .
 
-<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/workforceBiggerEqual250> bics:initiativeStatus "Received" ;
+<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/workforceBiggerEqual250> rdfs:label "Business rates holiday"^^xsd:string ;
+    bics:initiativeStatus "Received" ;
     bics:initiativeValue "9.40%" .
 
-<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/workforceSmaller250> bics:initiativeStatus "Received" ;
+<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/workforceSmaller250> rdfs:label "Business rates holiday"^^xsd:string ;
+    bics:initiativeStatus "Received" ;
     bics:initiativeValue "8.90%" .
 
-<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/total> bics:initiativeStatus "Received" ;
+<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/total> rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
+    bics:initiativeStatus "Received" ;
     bics:initiativeValue "36.80%" .
 
-<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/workforceBiggerEqual250> bics:initiativeStatus "Received" ;
+<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/workforceBiggerEqual250> rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
+    bics:initiativeStatus "Received" ;
     bics:initiativeValue "37.00%" .
 
-<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/workforceSmaller250> bics:initiativeStatus "Received" ;
+<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/workforceSmaller250> rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
+    bics:initiativeStatus "Received" ;
     bics:initiativeValue "36.70%" .
 
-<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/total> bics:initiativeStatus "Received" ;
+<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/total> rdfs:label "Deferring VAT payments"^^xsd:string ;
+    bics:initiativeStatus "Received" ;
     bics:initiativeValue "19.00%" .
 
-<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/workforceBiggerEqual250> bics:initiativeStatus "Received" ;
+<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/workforceBiggerEqual250> rdfs:label "Deferring VAT payments"^^xsd:string ;
+    bics:initiativeStatus "Received" ;
     bics:initiativeValue "16.90%" .
 
-<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/workforceSmaller250> bics:initiativeStatus "Received" ;
+<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/workforceSmaller250> rdfs:label "Deferring VAT payments"^^xsd:string ;
+    bics:initiativeStatus "Received" ;
     bics:initiativeValue "20.20%" .
 
-<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/total> bics:initiativeStatus "Received" ;
+<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/total> rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
+    bics:initiativeStatus "Received" ;
     bics:initiativeValue "3.90%" .
 
-<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/workforceBiggerEqual250> bics:initiativeStatus "Received" ;
+<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/workforceBiggerEqual250> rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
+    bics:initiativeStatus "Received" ;
     bics:initiativeValue "2.70%" .
 
-<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/workforceSmaller250> bics:initiativeStatus "Received" ;
+<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/workforceSmaller250> rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
+    bics:initiativeStatus "Received" ;
     bics:initiativeValue "4.60%" .
 
 <https://tundrarich.github.io/resources/initiatives/noneOfOptions/total> bics:initiativeStatus "Received" ;
@@ -64,6 +82,12 @@
 
 <https://tundrarich.github.io/resources/initiatives/noneOfOptions/workforceSmaller250> bics:initiativeStatus "Received" ;
     bics:initiativeValue "48.00%" .
+
+<https://tundrarich.github.io/resources/initiatives/notApplied/total> rdfs:label "We have not applied for any of these initiatives"^^xsd:string .
+
+<https://tundrarich.github.io/resources/initiatives/notApplied/workforceBiggerEqual250> rdfs:label "We have not applied for any of these initiatives"^^xsd:string .
+
+<https://tundrarich.github.io/resources/initiatives/notApplied/workforceSmaller250> rdfs:label "We have not applied for any of these initiatives"^^xsd:string .
 
 <https://tundrarich.github.io/resources/survey/futureInitiativesWorkforce> a bics:Survey ;
     bics:ContainedInitiative <https://tundrarich.github.io/resources/tradingStatuses/HRMCTimeToPayScheme>,
@@ -79,43 +103,36 @@
     bics:surveyDescription "Question: Is your enterprise intending to apply for any of the following initiatives?, Percentage of businesses either continuing to trade or who have temporarily paused or ceased trading, broken down by size band, UK, 6 April to 19 April 2020"^^xsd:string .
 
 <https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme> a bics:Initiative ;
-    rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
     bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/total>,
         <https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250>,
         <https://tundrarich.github.io/resources/workforces/workforceSmaller250> .
 
 <https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements> a bics:Initiative ;
-    rdfs:label "Accredited finance agreements"^^xsd:string ;
     bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/total>,
         <https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250>,
         <https://tundrarich.github.io/resources/workforces/workforceSmaller250> .
 
 <https://tundrarich.github.io/resources/initiatives/businessRatesHoliday> a bics:Initiative ;
-    rdfs:label "Business rates holiday"^^xsd:string ;
     bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/total>,
         <https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250>,
         <https://tundrarich.github.io/resources/workforces/workforceSmaller250> .
 
 <https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme> a bics:Initiative ;
-    rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
     bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/total>,
         <https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250>,
         <https://tundrarich.github.io/resources/workforces/workforceSmaller250> .
 
 <https://tundrarich.github.io/resources/initiatives/deferringVATPayments> a bics:Initiative ;
-    rdfs:label "Deferring VAT payments"^^xsd:string ;
     bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/total>,
         <https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250>,
         <https://tundrarich.github.io/resources/workforces/workforceSmaller250> .
 
 <https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans> a bics:Initiative ;
-    rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
     bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/total>,
         <https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250>,
         <https://tundrarich.github.io/resources/workforces/workforceSmaller250> .
 
 <https://tundrarich.github.io/resources/initiatives/noneOfOptions> a bics:Initiative ;
-    rdfs:label "None of the above"^^xsd:string ;
     bics:ContainedWorkforce <https://tundrarich.github.io/resources/workforces/total>,
         <https://tundrarich.github.io/resources/workforces/workforceBiggerEqual250>,
         <https://tundrarich.github.io/resources/workforces/workforceSmaller250> .

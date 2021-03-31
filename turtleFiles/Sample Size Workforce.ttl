@@ -10,29 +10,29 @@
         <https://tundrarich.github.io/resources/workforces/workforce250Plus> ;
     bics:surveyDescription "Sample for the BICS survey broken down by workforce size"^^xsd:string .
 
-<https://tundrarich.github.io/resources/workforces/total/AllIndustries> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AllIndustries> ;
+<https://tundrarich.github.io/resources/workforces/total/AllIndustries> rdfs:label "Total"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AllIndustries> ;
     bics:hasWorkforceNumberSent 17623 .
 
-<https://tundrarich.github.io/resources/workforces/workforce0To99/AllIndustries> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AllIndustries> ;
+<https://tundrarich.github.io/resources/workforces/workforce0To99/AllIndustries> rdfs:label "Workforce Size 0 - 99"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AllIndustries> ;
     bics:hasWorkforceNumberSent 1326 .
 
-<https://tundrarich.github.io/resources/workforces/workforce100To249/AllIndustries> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AllIndustries> ;
+<https://tundrarich.github.io/resources/workforces/workforce100To249/AllIndustries> rdfs:label "Workforce Size 100 - 249"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AllIndustries> ;
     bics:hasWorkforceNumberSent 9116 .
 
-<https://tundrarich.github.io/resources/workforces/workforce250Plus/AllIndustries> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AllIndustries> ;
+<https://tundrarich.github.io/resources/workforces/workforce250Plus/AllIndustries> rdfs:label "Workforce Size 250 +"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AllIndustries> ;
     bics:hasWorkforceNumberSent 7181 .
 
-<https://tundrarich.github.io/resources/workforces/total> a bics:WorkforceBand ;
-    rdfs:label "Total"^^xsd:string .
+<https://tundrarich.github.io/resources/workforces/total> a bics:WorkforceBand .
 
-<https://tundrarich.github.io/resources/workforces/workforce0To99> a bics:WorkforceBand ;
-    rdfs:label "Workforce Size 0 - 99"^^xsd:string .
+<https://tundrarich.github.io/resources/workforces/workforce0To99> a bics:WorkforceBand .
 
-<https://tundrarich.github.io/resources/workforces/workforce100To249> a bics:WorkforceBand ;
-    rdfs:label "Workforce Size 100 - 249"^^xsd:string .
+<https://tundrarich.github.io/resources/workforces/workforce100To249> a bics:WorkforceBand .
 
-<https://tundrarich.github.io/resources/workforces/workforce250Plus> a bics:WorkforceBand ;
-    rdfs:label "Workforce Size 250 +"^^xsd:string .
+<https://tundrarich.github.io/resources/workforces/workforce250Plus> a bics:WorkforceBand .
 
 <https://tundrarich.github.io/resources/industries/AllIndustries> a bics:Industry ;
     rdfs:label "All Industries"^^xsd:string ;

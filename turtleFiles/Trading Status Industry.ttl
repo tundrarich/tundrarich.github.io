@@ -21,121 +21,160 @@
         <https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading> ;
     bics:surveyDescription "Question: What is the current trading status of your enterprise?, Percentage of all responding businesses, broken down by industry, UK, 6 April to 19 April 2020 "^^xsd:string .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/AccommodationAndFoodServiceActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AccommodationAndFoodServiceActivities> ;
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/AccommodationAndFoodServiceActivities> rdfs:label "Continuing to trade"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AccommodationAndFoodServiceActivities> ;
     bics:tradingValue "18.20%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/AdministrativeAndSupportServiceActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AdministrativeAndSupportServiceActivities> ;
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/AdministrativeAndSupportServiceActivities> rdfs:label "Continuing to trade"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AdministrativeAndSupportServiceActivities> ;
     bics:tradingValue "91.50%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/AllIndustries> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AllIndustries> ;
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/AllIndustries> rdfs:label "Continuing to trade"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AllIndustries> ;
     bics:tradingValue "76.70%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/ArtsEntertainmentAndRecreation> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ArtsEntertainmentAndRecreation> ;
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/ArtsEntertainmentAndRecreation> rdfs:label "Continuing to trade"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ArtsEntertainmentAndRecreation> ;
     bics:tradingValue "20.50%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/Construction> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Construction> ;
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/Construction> rdfs:label "Continuing to trade"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Construction> ;
     bics:tradingValue "73.20%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/Education> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Education> ;
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/Education> rdfs:label "Continuing to trade"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Education> ;
     bics:tradingValue "86.80%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/HumanHealthAndSocialWorkActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/HumanHealthAndSocialWorkActivities> ;
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/HumanHealthAndSocialWorkActivities> rdfs:label "Continuing to trade"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/HumanHealthAndSocialWorkActivities> ;
     bics:tradingValue "93.80%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/InformationAndCommunication> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/InformationAndCommunication> ;
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/InformationAndCommunication> rdfs:label "Continuing to trade"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/InformationAndCommunication> ;
     bics:tradingValue "95.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/Manufacturing> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Manufacturing> ;
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/Manufacturing> rdfs:label "Continuing to trade"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Manufacturing> ;
     bics:tradingValue "79.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/ProfessionalScientificAndTechnicalActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ProfessionalScientificAndTechnicalActivities> ;
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/ProfessionalScientificAndTechnicalActivities> rdfs:label "Continuing to trade"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ProfessionalScientificAndTechnicalActivities> ;
     bics:tradingValue "96.70%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/TransportationAndStorage> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/TransportationAndStorage> ;
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/TransportationAndStorage> rdfs:label "Continuing to trade"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/TransportationAndStorage> ;
     bics:tradingValue "91.50%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/WaterSupplySewerageWasteManagementAndRemediationActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WaterSupplySewerageWasteManagementAndRemediationActivities> ;
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/WaterSupplySewerageWasteManagementAndRemediationActivities> rdfs:label "Continuing to trade"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WaterSupplySewerageWasteManagementAndRemediationActivities> ;
     bics:tradingValue "90.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> ;
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> rdfs:label "Continuing to trade"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> ;
     bics:tradingValue "75.20%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/AccommodationAndFoodServiceActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AccommodationAndFoodServiceActivities> ;
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/AccommodationAndFoodServiceActivities> rdfs:label "Has permanently ceased trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AccommodationAndFoodServiceActivities> ;
     bics:tradingValue "1.20%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/AdministrativeAndSupportServiceActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AdministrativeAndSupportServiceActivities> ;
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/AdministrativeAndSupportServiceActivities> rdfs:label "Has permanently ceased trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AdministrativeAndSupportServiceActivities> ;
     bics:tradingValue "0.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/AllIndustries> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AllIndustries> ;
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/AllIndustries> rdfs:label "Has permanently ceased trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AllIndustries> ;
     bics:tradingValue "0.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/ArtsEntertainmentAndRecreation> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ArtsEntertainmentAndRecreation> ;
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/ArtsEntertainmentAndRecreation> rdfs:label "Has permanently ceased trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ArtsEntertainmentAndRecreation> ;
     bics:tradingValue "0.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/Construction> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Construction> ;
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/Construction> rdfs:label "Has permanently ceased trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Construction> ;
     bics:tradingValue "0.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/Education> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Education> ;
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/Education> rdfs:label "Has permanently ceased trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Education> ;
     bics:tradingValue "0.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/HumanHealthAndSocialWorkActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/HumanHealthAndSocialWorkActivities> ;
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/HumanHealthAndSocialWorkActivities> rdfs:label "Has permanently ceased trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/HumanHealthAndSocialWorkActivities> ;
     bics:tradingValue "1.40%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/InformationAndCommunication> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/InformationAndCommunication> ;
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/InformationAndCommunication> rdfs:label "Has permanently ceased trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/InformationAndCommunication> ;
     bics:tradingValue "0.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/Manufacturing> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Manufacturing> ;
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/Manufacturing> rdfs:label "Has permanently ceased trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Manufacturing> ;
     bics:tradingValue "0.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/ProfessionalScientificAndTechnicalActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ProfessionalScientificAndTechnicalActivities> ;
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/ProfessionalScientificAndTechnicalActivities> rdfs:label "Has permanently ceased trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ProfessionalScientificAndTechnicalActivities> ;
     bics:tradingValue "0.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/TransportationAndStorage> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/TransportationAndStorage> ;
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/TransportationAndStorage> rdfs:label "Has permanently ceased trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/TransportationAndStorage> ;
     bics:tradingValue "0.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/WaterSupplySewerageWasteManagementAndRemediationActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WaterSupplySewerageWasteManagementAndRemediationActivities> ;
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/WaterSupplySewerageWasteManagementAndRemediationActivities> rdfs:label "Has permanently ceased trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WaterSupplySewerageWasteManagementAndRemediationActivities> ;
     bics:tradingValue "0.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> ;
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> rdfs:label "Has permanently ceased trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> ;
     bics:tradingValue "0.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/AccommodationAndFoodServiceActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AccommodationAndFoodServiceActivities> ;
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/AccommodationAndFoodServiceActivities> rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AccommodationAndFoodServiceActivities> ;
     bics:tradingValue "80.60%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/AdministrativeAndSupportServiceActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AdministrativeAndSupportServiceActivities> ;
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/AdministrativeAndSupportServiceActivities> rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AdministrativeAndSupportServiceActivities> ;
     bics:tradingValue "8.10%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/AllIndustries> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AllIndustries> ;
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/AllIndustries> rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/AllIndustries> ;
     bics:tradingValue "22.80%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/ArtsEntertainmentAndRecreation> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ArtsEntertainmentAndRecreation> ;
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/ArtsEntertainmentAndRecreation> rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ArtsEntertainmentAndRecreation> ;
     bics:tradingValue "79.50%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/Construction> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Construction> ;
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/Construction> rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Construction> ;
     bics:tradingValue "26.10%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/Education> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Education> ;
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/Education> rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Education> ;
     bics:tradingValue "12.60%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/HumanHealthAndSocialWorkActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/HumanHealthAndSocialWorkActivities> ;
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/HumanHealthAndSocialWorkActivities> rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/HumanHealthAndSocialWorkActivities> ;
     bics:tradingValue "4.90%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/InformationAndCommunication> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/InformationAndCommunication> ;
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/InformationAndCommunication> rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/InformationAndCommunication> ;
     bics:tradingValue "4.50%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/Manufacturing> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Manufacturing> ;
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/Manufacturing> rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/Manufacturing> ;
     bics:tradingValue "20.60%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/ProfessionalScientificAndTechnicalActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ProfessionalScientificAndTechnicalActivities> ;
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/ProfessionalScientificAndTechnicalActivities> rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/ProfessionalScientificAndTechnicalActivities> ;
     bics:tradingValue "3.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/TransportationAndStorage> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/TransportationAndStorage> ;
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/TransportationAndStorage> rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/TransportationAndStorage> ;
     bics:tradingValue "8.50%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/WaterSupplySewerageWasteManagementAndRemediationActivities> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WaterSupplySewerageWasteManagementAndRemediationActivities> ;
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/WaterSupplySewerageWasteManagementAndRemediationActivities> rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WaterSupplySewerageWasteManagementAndRemediationActivities> ;
     bics:tradingValue "10.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> ;
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string ;
+    bics:ContainedIndustry <https://tundrarich.github.io/resources/industries/WholesaleAndRetailTradeRepairOfMotorVehiclesAndMotorcycles> ;
     bics:tradingValue "24.30%" .
 
 <https://tundrarich.github.io/resources/industries/AccommodationAndFoodServiceActivities> a bics:Industry ;
@@ -216,12 +255,9 @@
         <https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading>,
         <https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading> .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading> a bics:TradingStatus ;
-    rdfs:label "Continuing to trade"^^xsd:string .
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading> a bics:TradingStatus .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading> a bics:TradingStatus ;
-    rdfs:label "Has permanently ceased trading"^^xsd:string .
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading> a bics:TradingStatus .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading> a bics:TradingStatus ;
-    rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string .
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading> a bics:TradingStatus .
 

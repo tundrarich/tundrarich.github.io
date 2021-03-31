@@ -13,53 +13,67 @@
         <https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading> ;
     bics:surveyDescription "Question: What is the current trading status of your enterprise?, Percentage of all responding businesses, broken down by country, UK, 6 April to 19 April 2020"^^xsd:string .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/England> bics:ContainedLocation <https://tundrarich.github.io/resources/locations/England> ;
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/England> rdfs:label "Continuing to trade"^^xsd:string ;
+    bics:ContainedLocation <https://tundrarich.github.io/resources/locations/England> ;
     bics:tradingValue "77.80%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/NorthernIreland> bics:ContainedLocation <https://tundrarich.github.io/resources/locations/NorthernIreland> ;
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/NorthernIreland> rdfs:label "Continuing to trade"^^xsd:string ;
+    bics:ContainedLocation <https://tundrarich.github.io/resources/locations/NorthernIreland> ;
     bics:tradingValue "72.80%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/Scotland> bics:ContainedLocation <https://tundrarich.github.io/resources/locations/Scotland> ;
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/Scotland> rdfs:label "Continuing to trade"^^xsd:string ;
+    bics:ContainedLocation <https://tundrarich.github.io/resources/locations/Scotland> ;
     bics:tradingValue "77.60%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/UK> bics:ContainedLocation <https://tundrarich.github.io/resources/locations/UK> ;
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/UK> rdfs:label "Continuing to trade"^^xsd:string ;
+    bics:ContainedLocation <https://tundrarich.github.io/resources/locations/UK> ;
     bics:tradingValue "76.70%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/Wales> bics:ContainedLocation <https://tundrarich.github.io/resources/locations/Wales> ;
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading/Wales> rdfs:label "Continuing to trade"^^xsd:string ;
+    bics:ContainedLocation <https://tundrarich.github.io/resources/locations/Wales> ;
     bics:tradingValue "76.20%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/England> bics:ContainedLocation <https://tundrarich.github.io/resources/locations/England> ;
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/England> rdfs:label "Has permanently ceased trading"^^xsd:string ;
+    bics:ContainedLocation <https://tundrarich.github.io/resources/locations/England> ;
     bics:tradingValue "0.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/NorthernIreland> bics:ContainedLocation <https://tundrarich.github.io/resources/locations/NorthernIreland> ;
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/NorthernIreland> rdfs:label "Has permanently ceased trading"^^xsd:string ;
+    bics:ContainedLocation <https://tundrarich.github.io/resources/locations/NorthernIreland> ;
     bics:tradingValue "0.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/Scotland> bics:ContainedLocation <https://tundrarich.github.io/resources/locations/Scotland> ;
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/Scotland> rdfs:label "Has permanently ceased trading"^^xsd:string ;
+    bics:ContainedLocation <https://tundrarich.github.io/resources/locations/Scotland> ;
     bics:tradingValue "0.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/UK> bics:ContainedLocation <https://tundrarich.github.io/resources/locations/UK> ;
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/UK> rdfs:label "Has permanently ceased trading"^^xsd:string ;
+    bics:ContainedLocation <https://tundrarich.github.io/resources/locations/UK> ;
     bics:tradingValue "0.00%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/Wales> bics:ContainedLocation <https://tundrarich.github.io/resources/locations/Wales> ;
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading/Wales> rdfs:label "Has permanently ceased trading"^^xsd:string ;
+    bics:ContainedLocation <https://tundrarich.github.io/resources/locations/Wales> ;
     bics:tradingValue "1.10%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/England> bics:ContainedLocation <https://tundrarich.github.io/resources/locations/England> ;
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/England> rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string ;
+    bics:ContainedLocation <https://tundrarich.github.io/resources/locations/England> ;
     bics:tradingValue "21.80%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/NorthernIreland> bics:ContainedLocation <https://tundrarich.github.io/resources/locations/NorthernIreland> ;
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/NorthernIreland> rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string ;
+    bics:ContainedLocation <https://tundrarich.github.io/resources/locations/NorthernIreland> ;
     bics:tradingValue "27.20%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/Scotland> bics:ContainedLocation <https://tundrarich.github.io/resources/locations/Scotland> ;
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/Scotland> rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string ;
+    bics:ContainedLocation <https://tundrarich.github.io/resources/locations/Scotland> ;
     bics:tradingValue "21.70%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/UK> bics:ContainedLocation <https://tundrarich.github.io/resources/locations/UK> ;
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/UK> rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string ;
+    bics:ContainedLocation <https://tundrarich.github.io/resources/locations/UK> ;
     bics:tradingValue "22.80%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/Wales> bics:ContainedLocation <https://tundrarich.github.io/resources/locations/Wales> ;
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading/Wales> rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string ;
+    bics:ContainedLocation <https://tundrarich.github.io/resources/locations/Wales> ;
     bics:tradingValue "22.70%" .
 
-<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading> a bics:TradingStatus ;
-    rdfs:label "Continuing to trade"^^xsd:string .
+<https://tundrarich.github.io/resources/tradingStatuses/continuingTrading> a bics:TradingStatus .
 
 <https://tundrarich.github.io/resources/locations/England> a bics:Location ;
     rdfs:label "England"^^xsd:string ;
@@ -91,9 +105,7 @@
         <https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading>,
         <https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading> .
 
-<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading> a bics:TradingStatus ;
-    rdfs:label "Has permanently ceased trading"^^xsd:string .
+<https://tundrarich.github.io/resources/tradingStatuses/permanentlyCeasedTrading> a bics:TradingStatus .
 
-<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading> a bics:TradingStatus ;
-    rdfs:label "Has temporarily closed or temporarily paused trading"^^xsd:string .
+<https://tundrarich.github.io/resources/tradingStatuses/temporarilyClosedOrPausedTrading> a bics:TradingStatus .
 

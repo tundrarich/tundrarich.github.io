@@ -2,109 +2,144 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/England> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/England> rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "22.40%" .
 
-<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/NorthernIreland> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/NorthernIreland> rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "13.00%" .
 
-<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/Scotland> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/Scotland> rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "23.50%" .
 
-<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/UK> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/UK> rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "22.30%" .
 
-<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/Wales> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme/Wales> rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "25.50%" .
 
-<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/England> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/England> rdfs:label "Accredited finance agreements"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "9.70%" .
 
-<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/NorthernIreland> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/NorthernIreland> rdfs:label "Accredited finance agreements"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "6.50%" .
 
-<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/Scotland> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/Scotland> rdfs:label "Accredited finance agreements"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "9.80%" .
 
-<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/UK> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/UK> rdfs:label "Accredited finance agreements"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "9.90%" .
 
-<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/Wales> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements/Wales> rdfs:label "Accredited finance agreements"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "12.70%" .
 
-<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/England> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/England> rdfs:label "Business rates holiday"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "27.40%" .
 
-<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/NorthernIreland> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/NorthernIreland> rdfs:label "Business rates holiday"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "30.40%" .
 
-<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/Scotland> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/Scotland> rdfs:label "Business rates holiday"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "29.00%" .
 
-<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/UK> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/UK> rdfs:label "Business rates holiday"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "27.40%" .
 
-<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/Wales> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/businessRatesHoliday/Wales> rdfs:label "Business rates holiday"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "38.70%" .
 
-<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/England> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/England> rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "67.30%" .
 
-<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/NorthernIreland> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/NorthernIreland> rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "65.20%" .
 
-<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/Scotland> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/Scotland> rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "71.70%" .
 
-<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/UK> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/UK> rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "67.20%" .
 
-<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/Wales> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme/Wales> rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "73.80%" .
 
-<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/England> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/England> rdfs:label "Deferring VAT payments"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "57.30%" .
 
-<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/NorthernIreland> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/NorthernIreland> rdfs:label "Deferring VAT payments"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "40.20%" .
 
-<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/Scotland> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/Scotland> rdfs:label "Deferring VAT payments"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "63.00%" .
 
-<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/UK> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/UK> rdfs:label "Deferring VAT payments"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "56.40%" .
 
-<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/Wales> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/deferringVATPayments/Wales> rdfs:label "Deferring VAT payments"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "65.10%" .
 
-<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/England> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/England> rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "10.90%" .
 
-<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/NorthernIreland> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/NorthernIreland> rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "10.90%" .
 
-<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/Scotland> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/Scotland> rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "7.50%" .
 
-<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/UK> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/UK> rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "11.20%" .
 
-<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/Wales> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans/Wales> rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "13.70%" .
 
-<https://tundrarich.github.io/resources/initiatives/notApplied/England> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/notApplied/England> rdfs:label "We have not applied for any of these initiatives"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "20.50%" .
 
-<https://tundrarich.github.io/resources/initiatives/notApplied/NorthernIreland> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/notApplied/NorthernIreland> rdfs:label "We have not applied for any of these initiatives"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "23.90%" .
 
-<https://tundrarich.github.io/resources/initiatives/notApplied/Scotland> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/notApplied/Scotland> rdfs:label "We have not applied for any of these initiatives"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "16.50%" .
 
-<https://tundrarich.github.io/resources/initiatives/notApplied/UK> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/notApplied/UK> rdfs:label "We have not applied for any of these initiatives"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "20.70%" .
 
-<https://tundrarich.github.io/resources/initiatives/notApplied/Wales> bics:initiativeStatus "Applied" ;
+<https://tundrarich.github.io/resources/initiatives/notApplied/Wales> rdfs:label "We have not applied for any of these initiatives"^^xsd:string ;
+    bics:initiativeStatus "Applied" ;
     bics:initiativeValue "13.40%" .
 
 <https://tundrarich.github.io/resources/survey/appliedInitiativesCountry> a bics:Survey ;
@@ -123,7 +158,6 @@
     bics:surveyDescription "Question: Has your enterprise applied for any of the following initiatives?, Percentage of businesses either continuing to trade or who have temporarily paused or ceased trading, broken down by country, UK, 6 April to 19 April 2020"^^xsd:string .
 
 <https://tundrarich.github.io/resources/initiatives/HRMCTimeToPayScheme> a bics:Initiative ;
-    rdfs:label "HMRC Time To Pay scheme"^^xsd:string ;
     bics:ContainedLocation <https://tundrarich.github.io/resources/locations/England>,
         <https://tundrarich.github.io/resources/locations/NorthernIreland>,
         <https://tundrarich.github.io/resources/locations/Scotland>,
@@ -131,7 +165,6 @@
         <https://tundrarich.github.io/resources/locations/Wales> .
 
 <https://tundrarich.github.io/resources/initiatives/accreditedFinanceAgreements> a bics:Initiative ;
-    rdfs:label "Accredited finance agreements"^^xsd:string ;
     bics:ContainedLocation <https://tundrarich.github.io/resources/locations/England>,
         <https://tundrarich.github.io/resources/locations/NorthernIreland>,
         <https://tundrarich.github.io/resources/locations/Scotland>,
@@ -139,7 +172,6 @@
         <https://tundrarich.github.io/resources/locations/Wales> .
 
 <https://tundrarich.github.io/resources/initiatives/businessRatesHoliday> a bics:Initiative ;
-    rdfs:label "Business rates holiday"^^xsd:string ;
     bics:ContainedLocation <https://tundrarich.github.io/resources/locations/England>,
         <https://tundrarich.github.io/resources/locations/NorthernIreland>,
         <https://tundrarich.github.io/resources/locations/Scotland>,
@@ -147,7 +179,6 @@
         <https://tundrarich.github.io/resources/locations/Wales> .
 
 <https://tundrarich.github.io/resources/initiatives/coronavirusJobRetentionScheme> a bics:Initiative ;
-    rdfs:label "Coronavirus Job Retention Scheme"^^xsd:string ;
     bics:ContainedLocation <https://tundrarich.github.io/resources/locations/England>,
         <https://tundrarich.github.io/resources/locations/NorthernIreland>,
         <https://tundrarich.github.io/resources/locations/Scotland>,
@@ -155,7 +186,6 @@
         <https://tundrarich.github.io/resources/locations/Wales> .
 
 <https://tundrarich.github.io/resources/initiatives/deferringVATPayments> a bics:Initiative ;
-    rdfs:label "Deferring VAT payments"^^xsd:string ;
     bics:ContainedLocation <https://tundrarich.github.io/resources/locations/England>,
         <https://tundrarich.github.io/resources/locations/NorthernIreland>,
         <https://tundrarich.github.io/resources/locations/Scotland>,
@@ -163,7 +193,6 @@
         <https://tundrarich.github.io/resources/locations/Wales> .
 
 <https://tundrarich.github.io/resources/initiatives/govFundedSmallBusinessGrantLoans> a bics:Initiative ;
-    rdfs:label "Government-funded small business grant or loan schemes"^^xsd:string ;
     bics:ContainedLocation <https://tundrarich.github.io/resources/locations/England>,
         <https://tundrarich.github.io/resources/locations/NorthernIreland>,
         <https://tundrarich.github.io/resources/locations/Scotland>,
@@ -171,7 +200,6 @@
         <https://tundrarich.github.io/resources/locations/Wales> .
 
 <https://tundrarich.github.io/resources/initiatives/notApplied> a bics:Initiative ;
-    rdfs:label "We have not applied for any of these initiatives"^^xsd:string ;
     bics:ContainedLocation <https://tundrarich.github.io/resources/locations/England>,
         <https://tundrarich.github.io/resources/locations/NorthernIreland>,
         <https://tundrarich.github.io/resources/locations/Scotland>,
