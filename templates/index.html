@@ -22,105 +22,148 @@
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script>
 
-    var margin = {top: 20, right: 20, bottom: 30, left: 40},
-        width = 960 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
+    function createBarChart() {
 
-    var x0 = d3.scale.ordinal().rangeRoundBands([0, width], .1);
+        var margin = {top: 50, right: 200, bottom: 30, left: 100},
+            width = 1600 - margin.left - margin.right,
+            height = 600 - margin.top - margin.bottom;
 
-    var x1 = d3.scale.ordinal();
+        var svg = d3.select('body').append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    var y = d3.scale.linear().range([height, 0]);
+        var groupsX = d3.scale.ordinal().rangeRoundBands([0, width], .1);
+        var subGroupsX = d3.scale.ordinal();
+        var y = d3.scale.linear().range([height, 0]);
+        var xAxis = d3.svg.axis().scale(groupsX).tickSize(0).orient("bottom");
+        var yAxis = d3.svg.axis().scale(y).orient("left");
+        var color = d3.scale.ordinal().range(["#e41a1c", "#4daf4a"]);
 
-    var xAxis = d3.svg.axis().scale(x0).tickSize(0).orient("bottom");
 
-    var yAxis = d3.svg.axis().scale(y).orient("left");
+        d3.json("https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/CSVfiles/industriesTotal%20-%20Copy.json", function (error, data) {
 
-    var color = d3.scale.ordinal().range(["#e41a1c","#4daf4a"]);
-
-    var svg = d3.select('body').append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-    d3.json("https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/CSVfiles/industriesTotal.json", function(error, data) {
-
-        var categories= data.map(function(d) { return d.industry; });
-        var statuses = data[0].values.map(function(d) { return d.status; });
-
-        x0.domain(categories);
-        x1.domain(statuses).rangeRoundBands([0, x0.rangeBand()]);
-        y.domain([0, d3.max(data, function(industry) { return d3.max(industry.values, function(d) { return d.value; }); })]);
-
-        svg.append("g")
-            .attr("class", "x axis")
-            .attr("transform", "translate(0," + height + ")")
-            .call(xAxis);
-
-        svg.append("g")
-            .attr("class", "y axis")
-            .style('opacity','0')
-            .call(yAxis)
-            .append("text")
-            .attr("transform", "rotate(-90)")
-            .attr("y", 6)
-            .attr("dy", ".71em")
-            .style("text-anchor", "end")
-            .style('font-weight','bold')
-            .text("Value");
-
-        svg.select('.y').style('opacity','1');
-
-        var slice = svg.selectAll(".slice")
-            .data(data)
-            .enter().append("g")
-            .attr("class", "g")
-            .attr("transform",function(d) { return "translate(" + x0(d.industry) + ",0)"; });
-
-        slice.selectAll("rect")
-            .data(function(d) { return d.values; })
-            .enter().append("rect")
-            .attr("width", x1.rangeBand())
-            .attr("x", function(d) { return x1(d.status); })
-            .style("fill", function(d) { return color(d.status) })
-            .attr("y", function(d) { return y(0); })
-            .attr("height", function(d) { return height - y(0); })
-
-            
-            .on("mouseover", function(d) {
-                d3.select(this).style("fill", d3.rgb(color(d.status)).darker(2));
-            })
-            .on("mouseout", function(d) {
-                d3.select(this).style("fill", color(d.status));
+            var categories = data.map(function (d) {
+                return d.industry;
+            });
+            var statuses = data[0].values.map(function (d) {
+                return d.status;
             });
 
-        slice.selectAll("rect")
-            .attr("y", function(d) { return y(d.value); })
-            .attr("height", function(d) { return height - y(d.value); });
+            groupsX.domain(categories);
+            subGroupsX.domain(statuses).rangeRoundBands([0, groupsX.rangeBand()]);
+            y.domain([0, d3.max(data, function (industry) {
+                return d3.max(industry.values, function (d) {
+                    return d.value;
+                });
+            })]);
 
-        //Legend
-        var legend = svg.selectAll(".legend")
-            .data(data[0].values.map(function(d) { return d.status; }).reverse())
-            .enter().append("g")
-            .attr("class", "legend")
-            .attr("transform", function(d,i) { return "translate(0," + i * 30 + ")"; })
-            .style("opacity","0");
+            //Creates X Axis
+            svg.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + (height + 10) + ")")
+                .call(xAxis);
 
-        legend.append("rect")
-            .attr("x", width - 18)
-            .attr("width", 18)
-            .attr("height", 18)
-            .style("fill", function(d) { return color(d); });
+            //Creates Y Axis
+            svg.append("g")
+                .attr("class", "y axis")
+                .call(yAxis)
+                .append("text")
+                .attr("y", -20)
+                .attr("x", 60)
+                .attr("dy", ".71em")
+                .style("text-anchor", "end")
+                .style('font-weight', 'bold')
+                .text("Number of Surveys");
 
-        legend.append("text")
-            .attr("x", width - 24)
-            .attr("y", 9)
-            .style("text-anchor", "end")
-            .text(function(d) {return d; });
+            //Creates the subgroups
+            var slice = svg.selectAll(".slice")
+                .data(data)
+                .enter().append("g")
+                .attr("class", "g")
+                .attr("transform", function (d) {
+                    return "translate(" + groupsX(d.industry) + ",0)";
+                });
 
-        legend.style("opacity","1");
+            //Creates the rectangles
+            slice.selectAll("rect")
+                .data(function (d) {
+                    return d.values;
+                })
+                .enter().append("rect")
+                .attr("width", subGroupsX.rangeBand())
+                .attr("x", function (d) {
+                    return subGroupsX(d.status);
+                })
+                .style("fill", function (d) {
+                    return color(d.status)
+                })
 
-    });
+                .attr("y", function (d) {
+                    return y(0);
+                })
+                .attr("height", function (d) {
+                    return height - y(0);
+                })
 
+                .attr("y", function (d) {
+                    return y(d.value);
+                })
+                .attr("height", function (d) {
+                    return height - y(d.value);
+                });
+
+
+            //Creates the values above each bar
+            slice.selectAll("text")
+                .data(function (d) {
+                    return d.values;
+                })
+                .enter().append("text")
+                .attr("x", function (d) {
+                    return subGroupsX(d.status) + 5;
+                })
+                .attr("y", function (d) {
+                    return y(d.value) - 5;
+                })
+                .text(function (d) {
+                    return (d.value);
+                })
+
+            //Creates Legend
+            var legend = svg.selectAll(".legend")
+                .data(data[0].values.map(function (d) {
+                    return d.status;
+                }).reverse())
+                .enter().append("g")
+                .attr("class", "legend")
+                .attr("transform", function (d, i) {
+                    return "translate(100," + i * 30 + ")";
+                })
+                .style("opacity", "0");
+
+            legend.append("circle")
+                .attr("x", width - 27)
+                .attr("cx", width - 5)
+                .attr("cy", 4) // 100 is where the first dot appears. 25 is the distance between dots
+                .attr("r", 7)
+                .style("fill", function (d) {
+                    return color(d);
+                });
+
+            legend.append("text")
+                .attr("x", width - 24)
+                .attr("y", 9)
+                .style("text-anchor", "end")
+                .text(function (d) {
+                    return d;
+                });
+
+            legend.style("opacity", "1");
+
+        });
+    }
+
+    createBarChart()
 </script>
