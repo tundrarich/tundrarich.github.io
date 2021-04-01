@@ -22,11 +22,46 @@
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script>
 
+    function createKey() {
+
+
+        var industries = [
+            {title: "Mining:", abbrv: "AGM"},
+            {title: "Industry:", abbrv: "AGM"},
+            {title: "Industry:", abbrv: "AGM"},
+            {title: "Industry:", abbrv: "AGM"},
+            {title: "Industry:", abbrv: "AGM"},
+            {title: "Industry:", abbrv: "AGM"},
+            {title: "Industry:", abbrv: "AGM"},
+            {title: "Industry:", abbrv: "AGM"},
+            {title: "Industry:", abbrv: "AGM"},
+            {title: "Industry:", abbrv: "AGM"},
+            {title: "Industry:", abbrv: "AGM"},
+            {title: "Industry:", abbrv: "AGM"},
+            {title: "Industry:", abbrv: "AGM"},
+            {title: "Industry:", abbrv: "AGM"},
+            {title: "Industry:", abbrv: "AGM"},
+
+        ]
+
+
+        var table = d3.select('body').append('table').attr("transform", "translate(" + 123 + "," + 100 + ")");;
+
+
+        var tr = table.selectAll('tr')
+            .data(industries).enter()
+            .append('tr');
+
+        tr.append('td').html(function(m) { return m.title; });
+        tr.append('td').html(function(m) { return m.abbrv; });
+    }
+
+
     function createBarChart() {
 
         var margin = {top: 50, right: 200, bottom: 30, left: 100},
-            width = 1600 - margin.left - margin.right,
-            height = 600 - margin.top - margin.bottom;
+            width = 1200 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
 
         var svg = d3.select('body').append("svg")
             .attr("width", width + margin.left + margin.right)
@@ -166,4 +201,5 @@
     }
 
     createBarChart()
+    createKey()
 </script>

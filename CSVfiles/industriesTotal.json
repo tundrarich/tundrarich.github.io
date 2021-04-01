@@ -13,7 +13,7 @@
         ]
     }, 
 	{
-        "industry": "ASSA", 
+        "industry": "ASA", 
         "values": [
             {
                 "value": 2359, 
@@ -65,7 +65,7 @@
         ]
     }, 
 	{
-        "industry": "HHSWA", 
+        "industry": "HHS", 
         "values": [
             {
                 "value": 294, 
@@ -130,7 +130,7 @@
         ]
     },
 	{
-        "industry": "PSTA", 
+        "industry": "PST", 
         "values": [
             {
                 "value": 2023, 
@@ -169,7 +169,7 @@
         ]
     },
 	{
-        "industry": "WSWR", 
+        "industry": "WSW", 
         "values": [
             {
                 "value": 201, 
@@ -182,7 +182,7 @@
         ]
     },
 	{
-        "industry": "WRTMVM", 
+        "industry": "WRM", 
         "values": [
             {
                 "value": 2999, 
