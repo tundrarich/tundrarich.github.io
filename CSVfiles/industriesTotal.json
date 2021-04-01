@@ -8,7 +8,7 @@
             }, 
             {
                 "value": 516, 
-                "rate": "Received"
+                "status": "Received"
             } 
         ]
     }, 
@@ -21,7 +21,7 @@
             }, 
             {
                 "value": 814, 
-                "rate": "Received"
+                "status": "Received"
             } 
         ]
     }, 
@@ -34,7 +34,7 @@
             }, 
             {
                 "value": 278, 
-                "rate": "Received"
+                "status": "Received"
             } 
         ]
     }, 
@@ -47,7 +47,7 @@
             }, 
             {
                 "value": 284, 
-                "rate": "Received"
+                "status": "Received"
             } 
         ]
     }, 
@@ -60,7 +60,7 @@
             }, 
             {
                 "value": 318, 
-                "rate": "Received"
+                "status": "Received"
             } 
         ]
     }, 
@@ -73,7 +73,7 @@
             }, 
             {
                 "value": 144, 
-                "rate": "Received"
+                "status": "Received"
             } 
         ]
     },
@@ -86,7 +86,7 @@
             }, 
             {
                 "value": 418, 
-                "rate": "Received"
+                "status": "Received"
             } 
         ]
     },
@@ -99,7 +99,7 @@
             }, 
             {
                 "value": 1097, 
-                "rate": "Received"
+                "status": "Received"
             } 
         ]
     },
@@ -112,7 +112,7 @@
             }, 
             {
                 "value": 0, 
-                "rate": "Received"
+                "status": "Received"
             } 
         ]
     },
@@ -125,7 +125,7 @@
             }, 
             {
                 "value": 0, 
-                "rate": "Received"
+                "status": "Received"
             } 
         ]
     },
@@ -138,7 +138,7 @@
             }, 
             {
                 "value": 733, 
-                "rate": "Received"
+                "status": "Received"
             } 
         ]
     },
@@ -151,7 +151,7 @@
             }, 
             {
                 "value": 0, 
-                "rate": "Received"
+                "status": "Received"
             } 
         ]
     },
@@ -164,7 +164,7 @@
             }, 
             {
                 "value": 282, 
-                "rate": "Received"
+                "status": "Received"
             } 
         ]
     },
@@ -177,7 +177,7 @@
             }, 
             {
                 "value": 70, 
-                "rate": "Received"
+                "status": "Received"
             } 
         ]
     },
@@ -190,7 +190,7 @@
             }, 
             {
                 "value": 1030, 
-                "rate": "Received"
+                "status": "Received"
             } 
         ]
     }

@@ -52,14 +52,14 @@
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.json("data.json", function(error, data) {
+    d3.json("https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/CSVfiles/industriesTotal.json", function(error, data) {
 
-        var categoriesNames = data.map(function(d) { return d.categorie; });
-        var rateNames = data[0].values.map(function(d) { return d.rate; });
+        var categoriesNames = data.map(function(d) { return d.industry; });
+        var statusNames = data[0].values.map(function(d) { return d.status; });
 
         x0.domain(categoriesNames);
-        x1.domain(rateNames).rangeRoundBands([0, x0.rangeBand()]);
-        y.domain([0, d3.max(data, function(categorie) { return d3.max(categorie.values, function(d) { return d.value; }); })]);
+        x1.domain(statusNames).rangeRoundBands([0, x0.rangeBand()]);
+        y.domain([0, d3.max(data, function(industry) { return d3.max(industry.values, function(d) { return d.value; }); })]);
 
         svg.append("g")
             .attr("class", "x axis")
@@ -84,21 +84,21 @@
             .data(data)
             .enter().append("g")
             .attr("class", "g")
-            .attr("transform",function(d) { return "translate(" + x0(d.categorie) + ",0)"; });
+            .attr("transform",function(d) { return "translate(" + x0(d.industry) + ",0)"; });
 
         slice.selectAll("rect")
             .data(function(d) { return d.values; })
             .enter().append("rect")
             .attr("width", x1.rangeBand())
-            .attr("x", function(d) { return x1(d.rate); })
-            .style("fill", function(d) { return color(d.rate) })
+            .attr("x", function(d) { return x1(d.status); })
+            .style("fill", function(d) { return color(d.status) })
             .attr("y", function(d) { return y(0); })
             .attr("height", function(d) { return height - y(0); })
             .on("mouseover", function(d) {
-                d3.select(this).style("fill", d3.rgb(color(d.rate)).darker(2));
+                d3.select(this).style("fill", d3.rgb(color(d.status)).darker(2));
             })
             .on("mouseout", function(d) {
-                d3.select(this).style("fill", color(d.rate));
+                d3.select(this).style("fill", color(d.status));
             });
 
         slice.selectAll("rect")
@@ -110,7 +110,7 @@
 
         //Legend
         var legend = svg.selectAll(".legend")
-            .data(data[0].values.map(function(d) { return d.rate; }).reverse())
+            .data(data[0].values.map(function(d) { return d.status; }).reverse())
             .enter().append("g")
             .attr("class", "legend")
             .attr("transform", function(d,i) { return "translate(0," + i * 20 + ")"; })

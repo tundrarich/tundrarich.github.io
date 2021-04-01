@@ -1,5 +1,4 @@
 import sys, os, git, json
-import generateSPARQL as queries
 from flask import Flask, render_template
 from flask_flatpages import FlatPages
 from flask_frozen import Freezer
@@ -30,7 +29,7 @@ def index():
 
 
     
-print(queries.getIndustryNames())
+
 
 if __name__ == "__main__":
         app.run()
