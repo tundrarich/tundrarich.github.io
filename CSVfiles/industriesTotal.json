@@ -3,11 +3,15 @@
         "industry": "AFA", 
         "values": [
             {
-                "value": 1634, 
+				"less250": 975
+				"250OrMore": 659
+                "total": 1634, 
                 "status": "Sent"
             }, 
             {
-                "value": 516, 
+				"less250": 321
+				"250OrMore": 195
+                "total": 516, 
                 "status": "Received"
             } 
         ]
@@ -16,11 +20,15 @@
         "industry": "ASA", 
         "values": [
             {
-                "value": 2359, 
+				"less250": 1287
+				"250OrMore": 1072
+                "total": 2359, 
                 "status": "Sent"
             }, 
             {
-                "value": 814, 
+				"less250": 453
+				"250OrMore": 361
+                "total": 814, 
                 "status": "Received"
             } 
         ]
@@ -29,11 +37,15 @@
         "industry": "AER", 
         "values": [
             {
-                "value": 718, 
+				"less250": 415
+				"250OrMore": 303
+                "total": 718, 
                 "status": "Sent"
             }, 
             {
-                "value": 278, 
+				"less250": 180
+				"250OrMore": 98
+                "total": 278, 
                 "status": "Received"
             } 
         ]
@@ -42,11 +54,15 @@
         "industry": "C", 
         "values": [
             {
-                "value": 1034, 
+				"less250": 722
+				"250OrMore": 312
+                "total": 1034, 
                 "status": "Sent"
             }, 
             {
-                "value": 284, 
+				"less250": 208
+				"250OrMore": 76
+                "total": 284, 
                 "status": "Received"
             } 
         ]
@@ -55,11 +71,15 @@
         "industry": "E", 
         "values": [
             {
-                "value": 760, 
+				"less250": 303
+				"250OrMore": 457
+                "total": 760, 
                 "status": "Sent"
             }, 
             {
-                "value": 318, 
+				"less250": 127
+				"250OrMore": 191
+                "total": 318, 
                 "status": "Received"
             } 
         ]
@@ -68,11 +88,15 @@
         "industry": "HHS", 
         "values": [
             {
-                "value": 294, 
+				"less250": 145
+				"250OrMore": 149
+                "total": 294, 
                 "status": "Sent"
             }, 
             {
-                "value": 144, 
+				"less250": 85
+				"250OrMore": 59
+                "total": 144, 
                 "status": "Received"
             } 
         ]
@@ -81,11 +105,15 @@
         "industry": "IC", 
         "values": [
             {
-                "value": 1216, 
+				"less250": 794
+				"250OrMore": 422
+                "total": 1216, 
                 "status": "Sent"
             }, 
             {
-                "value": 418, 
+				"less250": 297
+				"250OrMore": 121
+                "total": 418, 
                 "status": "Received"
             } 
         ]
@@ -94,11 +122,15 @@
         "industry": "M", 
         "values": [
             {
-                "value": 3155, 
+				"less250": 1785
+				"250OrMore": 1370	
+                "total": 3155, 
                 "status": "Sent"
             }, 
             {
-                "value": 1097, 
+				"less250": 648
+				"250OrMore": 449
+                "total": 1097, 
                 "status": "Received"
             } 
         ]
@@ -107,11 +139,15 @@
         "industry": "MQ", 
         "values": [
             {
-                "value": 28, 
+				"less250": 15
+				"250OrMore": 13
+                "total": 28, 
                 "status": "Sent"
             }, 
             {
-                "value": 0, 
+				"less250": 0
+				"250OrMore": 0
+                "total": 0, 
                 "status": "Received"
             } 
         ]
@@ -120,11 +156,15 @@
         "industry": "OSA", 
         "values": [
             {
-                "value": 137, 
+				"less250": 108
+				"250OrMore": 29
+                "total": 137, 
                 "status": "Sent"
             }, 
             {
-                "value": 0, 
+				"less250": 0
+				"250OrMore": 0
+                "total": 0, 
                 "status": "Received"
             } 
         ]
@@ -133,11 +173,15 @@
         "industry": "PST", 
         "values": [
             {
-                "value": 2023, 
+				"less250": 1303
+				"250OrMore": 720
+                "total": 2023, 
                 "status": "Sent"
             }, 
             {
-                "value": 733, 
+				"less250": 468
+				"250OrMore": 265
+                "total": 733, 
                 "status": "Received"
             } 
         ]
@@ -146,11 +190,15 @@
         "industry": "REA", 
         "values": [
             {
-                "value": 200, 
+				"less250": 112
+				"250OrMore": 88
+                "total": 200, 
                 "status": "Sent"
             }, 
             {
-                "value": 0, 
+				"less250": 0
+				"250OrMore": 0
+                "total": 0, 
                 "status": "Received"
             } 
         ]
@@ -159,11 +207,15 @@
         "industry": "TS", 
         "values": [
             {
-                "value": 863, 
+				"less250": 528
+				"250OrMore": 335
+                "total": 863, 
                 "status": "Sent"
             }, 
             {
-                "value": 282, 
+				"less250": 193
+				"250OrMore": 89
+                "total": 282, 
                 "status": "Received"
             } 
         ]
@@ -172,11 +224,15 @@
         "industry": "WSW", 
         "values": [
             {
-                "value": 201, 
+				"less250": 130
+				"250OrMore": 71
+                "total": 201, 
                 "status": "Sent"
             }, 
             {
-                "value": 70, 
+				"less250": 50
+				"250OrMore": 20
+                "total": 70, 
                 "status": "Received"
             } 
         ]
@@ -185,11 +241,15 @@
         "industry": "WRM", 
         "values": [
             {
-                "value": 2999, 
+				"less250": 1819
+				"250OrMore": 1180
+                "total": 2999, 
                 "status": "Sent"
             }, 
             {
-                "value": 1030, 
+				"less250": 686
+				"250OrMore": 344
+                "total": 1030, 
                 "status": "Received"
             } 
         ]
