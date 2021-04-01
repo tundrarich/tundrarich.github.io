@@ -139,7 +139,7 @@
     }
 
 
-    function createBarChart() {
+    function createBarChart(dataValue) {
 
         var margin = {top: 50, right: 200, bottom: 30, left: 100},
             width = 1200 - margin.left - margin.right,
@@ -172,7 +172,7 @@
             subGroupsX.domain(statuses).rangeRoundBands([0, groupsX.rangeBand()]);
             y.domain([0, d3.max(data, function (industry) {
                 return d3.max(industry.values, function (d) {
-                    return d.value;
+                    return d.total;
                 });
             })]);
 
@@ -219,8 +219,8 @@
 
                 .attr("y", function (d) {return y(0);})
                 .attr("height", function (d) {return height - y(d.status);})
-                .attr("y", function(d) { return y(d.value); })
-                .attr("height", function(d) { return height - y(d.value); })
+                .attr("y", function(d) { return y(d.); })
+                .attr("height", function(d) { return height - y(d.total); })
 
 
                 .on("mouseover", function(d) {
@@ -246,10 +246,10 @@
                     return subGroupsX(d.status) + 3;
                 })
                 .attr("y", function (d) {
-                    return y(d.value) - 5;
+                    return y(d.total) - 5;
                 })
                 .text(function (d) {
-                    return (d.value);
+                    return (d.total);
                 })
 
             //Creates Legend
@@ -286,6 +286,6 @@
         });
     }
 
-    createBarChart()
+    createBarChart("total")
     createKey()
 </script>
