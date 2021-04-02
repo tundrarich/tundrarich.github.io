@@ -62,7 +62,7 @@
     var industryProportionLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/industriesPercentage.json"
     var workforceNumbersLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/workforceGrained.json"
     var workforceProportionLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/workforceGrainedProportion.json"
-    var industryTradingLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/CSVFiles/tradingStatusIndustry.csv"
+    var industryTradingLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/tradingStatusIndustry.json"
 
 
     var changeLess250 = function(){
@@ -309,6 +309,9 @@
         });
     }
 
+
+
+
     function createStackedBarChart(link, area){
 
 
@@ -325,75 +328,118 @@
                 "translate(" + margin.left + "," + margin.top + ")");
 
 
-        d3.csv(link, function(data) {
+        d3.json(link, function (error, data) {
 
-            // List of subgroups = header of the csv files = soil condition here
-            var subgroups = data.columns.slice(1)
-
-            // List of groups = species here = value of the first column called group -> I show them on the X axis
-            var groups = d3.map(data, function(d){return(d.group)}).keys()
-
-            // Add X axis
-            var x = d3.scaleBand()
-                .domain(groups)
-                .range([0, width])
-                .padding([0.2])
-            svg.append("g")
-                .attr("transform", "translate(0," + height + ")")
-                .call(d3.axisBottom(x).tickSizeOuter(0));
-
-            // Add Y axis
-            var y = d3.scaleLinear()
-                .domain([0, 100])
-                .range([ height, 0 ]);
-            svg.append("g")
-                .call(d3.axisLeft(y));
-
-            // color palette = one color per subgroup
-            var color = d3.scaleOrdinal()
-                .domain(subgroups)
-                .range(['#e41a1c','#377eb8','#4daf4a'])
-
-            // Normalize the data -> sum of each group must be 100!
             console.log(data)
-            dataNormalized = []
-            data.forEach(function(d){
-                // Compute the total
-                tot = 0
-                for (i in subgroups){ name=subgroups[i] ; tot += +d[name] }
-                // Now normalize
-                for (i in subgroups){ name=subgroups[i] ; d[name] = d[name] / tot * 100}
-            })
+            var industries = data.map(function (d) {
+                console.log(d.industry)
+                return d.industry;
 
-            //stack the data? --> stack per subgroup
-            var stackedData = d3.stack()
-                .keys(subgroups)
-                (data)
+            });
 
-            // Show the bars
+
+            var dataset = d3.layout.stack()(["Continuing to trade", "Has permanently ceased trading", "Has temporarily closed or temporarily paused trading"].map(function(fruit) {
+                return data.map(function(d) {
+                    return {x: industries, y: +d[fruit]};
+                });
+            }));
+            console.log(dataset)
+
+            var x = d3.scale.ordinal().rangeRoundBands([0, width], .1);;
+
+            var y = d3.scale.linear()
+                .domain([0, d3.max(data, function(d) {  return d3.max(d, function(d) {return d.y0 + d.y; });  })])
+
+                .range([height, 0]);
+
+            var colors = ["b33040", "#d25c4d", "#f2b447", "#d9d574"];
+
+
+            var yAxis = d3.svg.axis()
+                .scale(y)
+                .orient("left")
+                .ticks(5)
+                .tickSize(-width, 0, 0)
+                .tickFormat( function(d) { return d } );
+
+            var xAxis = d3.svg.axis()
+                .scale(x)
+                .orient("bottom")
+                .tickFormat(d3.time.format("%Y"));
+
             svg.append("g")
-                .selectAll("g")
-                // Enter in the stack data = loop key per key = group per group
-                .data(stackedData)
+                .attr("class", "y axis")
+                .call(yAxis);
+
+            svg.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(xAxis);
+
+
+
+            var groups = svg.selectAll("g.cost")
+                .data(dataset)
                 .enter().append("g")
-                .attr("fill", function(d) { return color(d.key); })
-                .selectAll("rect")
-                // enter a second time = loop subgroup per subgroup to add all rectangles
+                .attr("class", "cost")
+                .style("fill", function(d, i) { return colors[i]; });
+
+            var rect = groups.selectAll("rect")
                 .data(function(d) { return d; })
-                .enter().append("rect")
-                .attr("x", function(d) { return x(d.data.group); })
-                .attr("y", function(d) { return y(d[1]); })
-                .attr("height", function(d) { return y(d[0]) - y(d[1]); })
-                .attr("width",x.bandwidth())
-        })
+                .enter()
+                .append("rect")
+                .attr("x", function(d) { return x(d.x); })
+                .attr("y", function(d) { return y(d.y0 + d.y); })
+                .attr("height", function(d) { return y(d.y0) - y(d.y0 + d.y); })
+                .attr("width", x.rangeBand())
 
 
+
+                .on("mouseover", function() { tooltip.style("display", null); })
+                .on("mouseout", function() { tooltip.style("display", "none"); })
+                .on("mousemove", function(d) {
+                    var xPosition = d3.mouse(this)[0] - 15;
+                    var yPosition = d3.mouse(this)[1] - 25;
+                    tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
+                    tooltip.select("text").text(d.y);
+                });
+
+
+
+            var legend = svg.selectAll(".legend")
+                .data(colors)
+                .enter().append("g")
+                .attr("class", "legend")
+                .attr("transform", function(d, i) { return "translate(30," + i * 19 + ")"; });
+
+            legend.append("rect")
+                .attr("x", width - 18)
+                .attr("width", 18)
+                .attr("height", 18)
+                .style("fill", function(d, i) {return colors.slice().reverse()[i];});
+
+            legend.append("text")
+                .attr("x", width + 5)
+                .attr("y", 9)
+                .attr("dy", ".35em")
+                .style("text-anchor", "start")
+                .text(function(d, i) {
+                    switch (i) {
+                        case 0: return "Anjou pears";
+                        case 1: return "Naval oranges";
+                        case 2: return "McIntosh apples";
+                        case 3: return "Red Delicious apples";
+                    }
+                })
+
+
+     })
     }
 
-   // createBarChart(industryNumbersLink, "d.total", "Number of Surveys", "#area1", 0, 1)
-   // createBarChart(industryProportionLink, "d.total", "Proportion of Responses (%)", "#area2", 100, 2)
-   // createBarChart(workforceNumbersLink, "d.allIndustries", "Number of Surveys", "#area3", 0, 1)
-   // createBarChart(workforceProportionLink, "d.allIndustries", "Proportion of Responses (%)", "#area4", 100, 2)
+    createBarChart(industryNumbersLink, "d.total", "Number of Surveys", "#area1", 0, 1)
+    createBarChart(industryProportionLink, "d.total", "Proportion of Responses (%)", "#area2", 100, 2)
+    createBarChart(workforceNumbersLink, "d.allIndustries", "Number of Surveys", "#area3", 0, 1)
+    createBarChart(workforceProportionLink, "d.allIndustries", "Proportion of Responses (%)", "#area4", 100, 2)
     createStackedBarChart(industryTradingLink, "#area5");
 
     createKey()
