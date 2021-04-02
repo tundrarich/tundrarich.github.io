@@ -1,0 +1,20 @@
+[
+	{
+		"industry": "250 +",
+		"Continuing to trade": 79.8,
+		"Has permanently ceased trading": 0,
+		"Has temporarily closed or temporarily paused trading": 19.7
+	},
+	{
+		"industry": "All Size Bands",
+		"Continuing to trade": 76.7,
+		"Has permanently ceased trading": 0,
+		"Has temporarily closed or temporarily paused trading": 22.8
+	},
+	{
+		"industry": "< 250",
+		"Continuing to trade": 74.8,
+		"Has permanently ceased trading": 0,
+		"Has temporarily closed or temporarily paused trading": 24.7
+	}
+]

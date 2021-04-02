@@ -1,0 +1,32 @@
+[
+	{
+		"industry": "England",
+		"Continuing to trade": 77.8,
+		"Has permanently ceased trading": 0,
+		"Has temporarily closed or temporarily paused trading": 21.8
+	},
+	{
+		"industry": "Scotland",
+		"Continuing to trade": 77.6,
+		"Has permanently ceased trading": 0,
+		"Has temporarily closed or temporarily paused trading": 21.7
+	},
+	{
+		"industry": "Northern Ireland",
+		"Continuing to trade": 72.8,
+		"Has permanently ceased trading": 0,
+		"Has temporarily closed or temporarily paused trading": 27.2
+	},
+	{
+		"industry": "UK",
+		"Continuing to trade": 76.7,
+		"Has permanently ceased trading": 0,
+		"Has temporarily closed or temporarily paused trading": 22.8
+	},
+	{
+		"industry": "Wales",
+		"Continuing to trade": 76.2,
+		"Has permanently ceased trading": 1.1,
+		"Has temporarily closed or temporarily paused trading": 22.7
+	}
+]

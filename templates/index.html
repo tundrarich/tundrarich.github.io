@@ -172,6 +172,7 @@
 
         d3.json(link, function (error, data) {
 
+
             var industries = data.map(function (d) {
                 return d.industry;
             });
@@ -187,10 +188,7 @@
                         return maxYAxis;
                     }else{
                         return eval(dataValue)
-                    }
-
-                });
-            })]);
+                    }});})]);
 
             //Creates X Axis
             svg.append("g")
@@ -343,33 +341,23 @@
 
             var y = d3.scale.linear()
                 .domain([0, 100])
-
                 .range([height, 0]);
 
             var colors = ["b33040", "#d25c4d", "#f2b447"];
 
             var yAxis = d3.svg.axis()
-
                 .scale(y)
                 .orient("left")
                 .ticks(5)
                 .tickSize(-width, 0, 0)
                 .tickFormat( function(d) { return d } );
 
-
-
             var xAxis = d3.svg.axis()
                 .scale(x)
                 .orient("bottom")
 
-            svg.append("g")
-                .attr("class", "y axis")
-                .call(yAxis);
-
-            svg.append("g")
-                .attr("class", "x axis")
-                .attr("transform", "translate(0," + height + ")")
-                .call(xAxis);
+            svg.append("g").attr("class", "y axis").call(yAxis);
+            svg.append("g").attr("class", "x axis").attr("transform", "translate(0," + height + ")").call(xAxis);
 
             var groups = svg.selectAll("g.cost")
                 .data(dataset)
@@ -386,14 +374,11 @@
                 .attr("height", function(d) { return y(d.y0) - y(d.y0 + d.y); })
                 .attr("width", x.rangeBand());
 
-
-
             rects.selectAll("rect")
                 .transition()
                 .delay(function (d) {return Math.random()*300;})
                 .duration(1000)
-
-
+            
             //Legend
             var legend = svg.selectAll(".legend")
                 .data(colors)
