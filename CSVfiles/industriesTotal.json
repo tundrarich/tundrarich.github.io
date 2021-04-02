@@ -237,6 +237,22 @@
 				"status": "Received"
 			}
 		]
+	},
+		{
+		"industry": "AI",
+		"values": [{
+				"less250": 10442,
+				"more250": 7181,
+				"total": 17623,
+				"status": "Sent"
+			},
+			{
+				"less250": 3809,
+				"more250": 2305,
+				"total": 6114,
+				"status": "Received"
+			}
+		]
 	}
 
 

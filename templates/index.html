@@ -73,6 +73,7 @@
     function createBarChart(dataValue) {
 
 
+        //https://bl.ocks.org/bricedev/0d95074b6d83a77dc3ad
 
         var margin = {top: 50, right: 200, bottom: 30, left: 100},
             width = 1200 - margin.left - margin.right,
@@ -86,24 +87,23 @@
 
         var groupsX = d3.scale.ordinal().rangeRoundBands([0, width], .1);
         var subGroupsX = d3.scale.ordinal();
-        var y = d3.scale.linear().range([height, 0]);
+        var yScale = d3.scale.linear().range([height, 0]);
         var xAxis = d3.svg.axis().scale(groupsX).tickSize(0).orient("bottom");
-        var yAxis = d3.svg.axis().scale(y).orient("left");
+        var yAxis = d3.svg.axis().scale(yScale).orient("left");
         var color = d3.scale.ordinal().range(["#e41a1c", "#5ecf4a"]);
-
 
         d3.json("https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/CSVfiles/industriesTotal.json", function (error, data) {
 
-            var categories = data.map(function (d) {
+            var industries = data.map(function (d) {
                 return d.industry;
             });
             var statuses = data[0].values.map(function (d) {
                 return d.status;
             });
 
-            groupsX.domain(categories);
+            groupsX.domain(industries);
             subGroupsX.domain(statuses).rangeRoundBands([0, groupsX.rangeBand()]);
-            y.domain([0, d3.max(data, function (industry) {
+            yScale.domain([0, d3.max(data, function (industry) {
                 return d3.max(industry.values, function (d) {
                     return eval(dataValue);
                 });
@@ -122,7 +122,6 @@
                 .append("text")
                 .attr("y", -20)
                 .attr("x", 60)
-                .attr("dy", ".71em")
                 .style("text-anchor", "end")
                 .style('font-weight', 'bold')
                 .text("Number of Surveys");
@@ -136,7 +135,7 @@
                     return "translate(" + groupsX(d.industry) + ",0)";
                 });
 
-            //Creates the rectangles
+            //Creates the bars
             rects.selectAll("rect")
                 .data(function (d) {
                     return d.values;
@@ -150,22 +149,10 @@
                     return color(d.status)
                 })
 
-                .attr("y", function (d) {return y(0);})
-                .attr("height", function (d) {return height - y(d.status);})
-                .attr("y", function(d) { return y(eval(dataValue)); })
-                .attr("height", function(d) { return height - y(eval(dataValue)); })
-
-
-                .on("mouseover", function(d) {
-                        d3.select(this).style("fill", d3.rgb(color(d.status)).darker(2));
-                })
-                .on("mouseout", function(d) {
-                    d3.select(this).style("fill", color(d.status));
-                });
-
-
-
-
+                .attr("y", function (d) {return yScale(0);})
+                .attr("height", function (d) {return height - yScale(d.status);})
+                .attr("y", function(d) { return yScale(eval(dataValue)); })
+                .attr("height", function(d) { return height - yScale(eval(dataValue)); })
 
 
 
@@ -179,13 +166,13 @@
                     return subGroupsX(d.status) + 3;
                 })
                 .attr("y", function (d) {
-                    return y(eval(dataValue)) - 5;
+                    return yScale(eval(dataValue)) - 5;
                 })
                 .text(function (d) {
                     return (eval(dataValue));
                 })
 
-            //Creates Legend
+            //Creates the legend
             var legend = svg.selectAll(".legend")
                 .data(data[0].values.map(function (d) {
                     return d.status;
@@ -195,12 +182,11 @@
                 .attr("transform", function (d, i) {
                     return "translate(100," + i * 30 + ")";
                 })
-                .style("opacity", "0");
 
             legend.append("circle")
                 .attr("x", width - 27)
                 .attr("cx", width - 5)
-                .attr("cy", 4) // 100 is where the first dot appears. 25 is the distance between dots
+                .attr("cy", 4)
                 .attr("r", 7)
                 .style("fill", function (d) {
                     return color(d);
@@ -214,11 +200,13 @@
                     return d;
                 });
 
-            legend.style("opacity", "1");
 
         });
     }
 
-    createBarChart("d.250OrMore")
+
+
+    createBarChart("d.more250")
+    createLegend()
     createKey()
 </script>

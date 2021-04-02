@@ -1,0 +1,177 @@
+[{
+		"industry": "AFA",
+		"values": [{
+				"status": "Proportion Responded",
+				"less250": 32.9,
+				"more250": 29.6,
+				"total": 31.6
+			}
+		]
+	},
+	{
+		"industry": "ASA",
+		"values": [{
+				"status": "Proportion Responded",
+				"less250": 35.2,
+				"more250": 33.7,
+				"total": 34.5
+				}
+		]
+	},
+	{
+		"industry": "AER",
+		"values": [{
+				"status": "Proportion Responded",
+				"less250": 43.4,
+				"more250": 32.3,
+				"total": 38.7
+			}
+
+		]
+	},
+	{
+		"industry": "C",
+		"values": [{
+				"status": "Proportion Responded",
+				"less250": 28.8,
+				"more250": 24.4,
+				"total": 27.5
+			}
+
+		]
+	},
+	{
+		"industry": "E",
+		"values": [{
+				"status": "Proportion Responded",
+				"less250": 41.9,
+				"more250": 41.8,
+				"total": 41.8
+			}
+
+		]
+	},
+	{
+		"industry": "HHS",
+		"values": [{
+				"status": "Proportion Responded",
+				"less250": 58.6,
+				"more250": 39.6,
+				"total": 49.0
+			}
+
+		]
+	},
+	{
+		"industry": "IC",
+		"values": [{
+				"status": "Proportion Responded",
+				"less250": 37.4,
+				"more250": 28.7,
+				"total": 34.4
+			}
+
+		]
+	},
+	{
+		"industry": "M",
+		"values": [{
+				"status": "Proportion Responded",
+				"less250": 36.3,
+				"more250": 32.8,
+				"total": 34.8
+			}
+
+		]
+	},
+	{
+		"industry": "MQ",
+		"values": [{
+				"status": "Proportion Responded",
+				"less250": 0,
+				"more250": 0,
+				"total": 0
+			}
+
+		]
+	},
+	{
+		"industry": "OSA",
+		"values": [{
+				"status": "Proportion Responded",
+				"less250": 0,
+				"more250": 0,
+				"total": 0
+			}
+
+		]
+	},
+	{
+		"industry": "PST",
+		"values": [{
+				"status": "Proportion Responded",
+				"less250": 35.9,
+				"more250": 36.8,
+				"total": 36.2
+			}
+
+		]
+	},
+	{
+		"industry": "REA",
+		"values": [{
+				"status": "Proportion Responded",
+				"less250": 0,
+				"more250": 0,
+				"total": 0
+			}
+
+		]
+	},
+	{
+		"industry": "TS",
+		"values": [{
+				"status": "Proportion Responded",
+				"less250": 36.6,
+				"more250": 26.6,
+				"total": 32.7
+			}
+
+		]
+	},
+	{
+		"industry": "WSW",
+		"values": [{
+				"status": "Proportion Responded",
+				"less250": 38.5,
+				"more250": 28.2,
+				"total": 34.8
+			}
+
+		]
+	},
+	{
+		"industry": "WRM",
+		"values": [{
+				"status": "Proportion Responded",
+				"less250": 37.7,
+				"more250": 29.2,
+				"total": 34.3
+			}
+
+		]
+	},
+	{
+		"industry": "AI",
+		"values": [{
+				"status": "Proportion Responded",
+				"less250": 36.5,
+				"more250": 32.1,
+				"total": 34.7
+			}
+
+		]
+	}
+
+
+]
