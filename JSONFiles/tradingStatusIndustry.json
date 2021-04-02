@@ -1,0 +1,80 @@
+[
+ {
+   "Industry": "M",
+   "Continuing to trade": 79,
+   "Has permanently ceased trading": 0,
+   "Has temporarily closed or temporarily paused trading": 20.6
+ },
+ {
+   "Industry": "WSW",
+   "Continuing to trade": 90,
+   "Has permanently ceased trading": 0,
+   "Has temporarily closed or temporarily paused trading": 10
+ },
+ {
+   "Industry": "C",
+   "Continuing to trade": 73.2,
+   "Has permanently ceased trading": 0,
+   "Has temporarily closed or temporarily paused trading": 26.1
+ },
+ {
+   "Industry": "WRM",
+   "Continuing to trade": 75.2,
+   "Has permanently ceased trading": 0,
+   "Has temporarily closed or temporarily paused trading": 24.3
+ },
+ {
+   "Industry": "AFA",
+   "Continuing to trade": 18.2,
+   "Has permanently ceased trading": 1.2,
+   "Has temporarily closed or temporarily paused trading": 80.6
+ },
+ {
+   "Industry": "TS",
+   "Continuing to trade": 91.5,
+   "Has permanently ceased trading": 0,
+   "Has temporarily closed or temporarily paused trading": 8.5
+ },
+ {
+   "Industry": "IC",
+   "Continuing to trade": 95,
+   "Has permanently ceased trading": 0,
+   "Has temporarily closed or temporarily paused trading": 4.5
+ },
+ {
+   "Industry": "PST",
+   "Continuing to trade": 96.7,
+   "Has permanently ceased trading": 0,
+   "Has temporarily closed or temporarily paused trading": 3
+ },
+ {
+   "Industry": "ASA",
+   "Continuing to trade": 91.5,
+   "Has permanently ceased trading": 0,
+   "Has temporarily closed or temporarily paused trading": 8.1
+ },
+ {
+   "Industry": "E",
+   "Continuing to trade": 86.8,
+   "Has permanently ceased trading": 0,
+   "Has temporarily closed or temporarily paused trading": 12.6
+ },
+ {
+   "Industry": "HHS",
+   "Continuing to trade": 93.8,
+   "Has permanently ceased trading": 1.4,
+   "Has temporarily closed or temporarily paused trading": 4.9
+ },
+ {
+   "Industry": "AER",
+   "Continuing to trade": 20.5,
+   "Has permanently ceased trading": 0,
+   "Has temporarily closed or temporarily paused trading": 79.5
+ },
+ {
+   "Industry": "AI",
+   "Continuing to trade": 76.7,
+   "Has permanently ceased trading": 0,
+   "Has temporarily closed or temporarily paused trading": 22.8
+ }
+]
