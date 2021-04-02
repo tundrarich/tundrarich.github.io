@@ -1,0 +1,49 @@
+[{
+		"industry": "Workforce Size 0 - 99",
+		"values": [{
+				"allIndustries": 1326,
+				"status": "Sent"
+			},
+			{
+				"allIndustries": 357,
+				"status": "Received"
+			}
+		]
+	},
+	{
+		"industry": "Workforce Size 100 - 249",
+		"values": [{
+				"allIndustries": 9116,
+				"status": "Sent"
+			},
+			{
+				"allIndustries": 3452,
+				"status": "Received"
+			}
+		]
+	},
+	{
+		"industry": "Workforce Size 250 +",
+		"values": [{
+				"allIndustries": 7181,
+				"status": "Sent"
+			},
+			{
+				"allIndustries": 2305,
+				"status": "Received"
+			}
+		]
+	},
+	{
+		"industry": "Total",
+		"values": [{
+				"allIndustries": 17623,
+				"status": "Sent"
+			},
+			{
+				"allIndustries": 6114,
+				"status": "Received"
+			}
+		]
+	}
+]	

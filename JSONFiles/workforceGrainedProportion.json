@@ -1,0 +1,33 @@
+[{
+		"industry": "Workforce Size 0 - 99",
+		"values": [{
+				"allIndustries": 26.9,
+				"status": "Proportion Responded"
+			}
+		]
+	},
+	{
+		"industry": "Workforce Size 100 - 249",
+		"values": [{
+				"allIndustries": 37.9,
+				"status": "Proportion Responded"
+			}
+		]
+	},
+	{
+		"industry": "Workforce Size 250 +",
+		"values": [{
+				"allIndustries": 32.1,
+				"status": "Proportion Responded"
+			}
+		]
+	},
+	{
+		"industry": "Total",
+		"values": [{
+				"allIndustries": 34.7,
+				"status": "Proportion Responded"
+			}
+		]
+	}
+]	

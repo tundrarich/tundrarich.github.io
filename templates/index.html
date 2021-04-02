@@ -17,10 +17,70 @@
         display: none;
     }
 
+    td, th {
+        padding: 23px 10px;
+        border: solid;
+        border-width: 1px 0;
+    }
+
+    button {
+        background: #ededed;
+        border: 1px solid #ccc;
+        padding: 10px 30px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    button:hover, button:focus, button:active, button:target{
+        background-color: #0074a9;
+        outline: none;
+    }
+
 </style>
 <body>
+
+
+<div id="area1"></div>
+<div id="area2"></div>
+
+
+<button type="button" onmousedown="changeLess250()">Workforce < 250</button>
+<button type="button" onmousedown="changeMore250()">Workforce 250+</button>
+<button type="button" onmousedown="changeTotal()">All Workforce Bands (Total)</button>
+
+<div id="chart", style="height:10px; margin:10px; font: 17px sans-serif; .objecttable td {
+       padding: 8px;
+     }"></div>
+
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script>
+
+    var industryNumbersLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/CSVfiles/industriesTotal.json"
+    var industryProportionLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/CSVfiles/industriesPercentage.json"
+
+    var changeLess250 = function(){
+        document.getElementById('area1').innerHTML = '';
+        document.getElementById('area2').innerHTML = '';
+        createBarChart(industryNumbersLink, "d.less250", "Number of Surveys", "#area1", 0, 1)
+        createBarChart(industryProportionLink, "d.less250", "Proportion of Responses (%)", "#area2", 100, 2)
+    }
+    var changeMore250= function(){
+        document.getElementById('area1').innerHTML = '';
+        document.getElementById('area2').innerHTML = '';
+        createBarChart(industryNumbersLink, "d.more250", "Number of Surveys", "#area1", 0, 1)
+        createBarChart(industryProportionLink, "d.more250", "Proportion of Responses (%)", "#area2", 100, 2)
+    }
+
+    var changeTotal = function(){
+        document.getElementById('area1').innerHTML = '';
+        document.getElementById('area2').innerHTML = '';
+        createBarChart(industryNumbersLink, "d.total", "Number of Surveys", "#area1", 0, 1)
+        createBarChart(industryProportionLink, "d.total", "Proportion of Responses (%)", "#area2", 100, 2)
+    }
+
+
+
+
 
     function createKey() {
 
@@ -41,20 +101,24 @@
             {title: "Transportation And Storage", abbrv: "TS"},
             {title: "Water Supply, Sewerage, Waste Management And Remediation Activities", abbrv: "WSW"},
             {title: "Wholesale And Retail Trade; Repair Of Motor Vehicles And Motorcycles", abbrv: "WRM"},
-
+            {title: "All Industries", abbrv: "AI"}
         ]
 
 
-        var margin = {top: 100, right: 200, bottom: 1000, left: 100},
-            width = 500 - margin.left - margin.right,
+        var margin = {top: 100, right: 300, bottom: 1000, left: 100},
+            width = 1200 - margin.left - margin.right,
             height = 200- margin.top - margin.bottom;
 
-        var table = d3.select('body').append('table')
+
+
+        var table = d3.select('#chart').append('table')
             .attr("style", "margin-right: 200px")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+            .style("border-collapse", "collapse")
+
 
 
 
@@ -64,13 +128,14 @@
 
         tr.append('td').html(function(m) { return m.title; });
         tr.append('td').html(function(m) { return m.abbrv; });
+        thead = table.append("thead")
     }
 
 
 
 
 
-    function createBarChart(dataValue) {
+    function createBarChart(link, dataValue, yAxisTitle, area, maxYAxis, colourID) {
 
 
         //https://bl.ocks.org/bricedev/0d95074b6d83a77dc3ad
@@ -79,7 +144,7 @@
             width = 1200 - margin.left - margin.right,
             height = 400 - margin.top - margin.bottom;
 
-        var svg = d3.select('body').append("svg")
+        var svg = d3.select(area).append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
@@ -90,9 +155,15 @@
         var yScale = d3.scale.linear().range([height, 0]);
         var xAxis = d3.svg.axis().scale(groupsX).tickSize(0).orient("bottom");
         var yAxis = d3.svg.axis().scale(yScale).orient("left");
-        var color = d3.scale.ordinal().range(["#e41a1c", "#5ecf4a"]);
 
-        d3.json("https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/CSVfiles/industriesTotal.json", function (error, data) {
+        if(colourID== 1){
+            var color = d3.scale.ordinal().range(["#ca0020","#0571b0"]);
+        }else{
+            var color = d3.scale.ordinal().range(["#f4a582"]);
+        }
+
+
+        d3.json(link, function (error, data) {
 
             var industries = data.map(function (d) {
                 return d.industry;
@@ -105,7 +176,12 @@
             subGroupsX.domain(statuses).rangeRoundBands([0, groupsX.rangeBand()]);
             yScale.domain([0, d3.max(data, function (industry) {
                 return d3.max(industry.values, function (d) {
-                    return eval(dataValue);
+                    if(maxYAxis != 0){
+                        return maxYAxis;
+                    }else{
+                        return eval(dataValue)
+                    }
+
                 });
             })]);
 
@@ -118,13 +194,18 @@
             //Creates Y Axis
             svg.append("g")
                 .attr("class", "y axis")
+                .style('opacity','0')
                 .call(yAxis)
                 .append("text")
-                .attr("y", -20)
-                .attr("x", 60)
+                .attr("transform", "rotate(-90)")
+                .attr("dy", ".71em")
+                .attr("y", -60)
+                .attr("x", 40)
                 .style("text-anchor", "end")
                 .style('font-weight', 'bold')
-                .text("Number of Surveys");
+                .text(yAxisTitle);
+
+            svg.select('.y').transition().duration(500).delay(200).style('opacity','1');
 
             //Creates the subgroups
             var rects = svg.selectAll(".rects")
@@ -150,18 +231,31 @@
                 })
 
                 .attr("y", function (d) {return yScale(0);})
-                .attr("height", function (d) {return height - yScale(d.status);})
+                .attr("height", function (d) {return height - yScale(0);})
+
+                .on("mouseover", function(d) {
+                    d3.select(this).style("fill", d3.rgb(color(d.status)).darker(2));
+                })
+                .on("mouseout", function(d) {
+                    d3.select(this).style("fill", color(d.status));
+                });
+
+            rects.selectAll("rect")
+                .transition()
+                .delay(function (d) {return Math.random()*300;})
+                .duration(1000)
                 .attr("y", function(d) { return yScale(eval(dataValue)); })
-                .attr("height", function(d) { return height - yScale(eval(dataValue)); })
-
-
+                .attr("height", function(d) { return height - yScale(eval(dataValue)); });
 
             //Creates the values above each bar
             rects.selectAll("text")
+
                 .data(function (d) {
                     return d.values;
                 })
+
                 .enter().append("text")
+                .style('opacity','0')
                 .attr("x", function (d) {
                     return subGroupsX(d.status) + 3;
                 })
@@ -171,6 +265,9 @@
                 .text(function (d) {
                     return (eval(dataValue));
                 })
+
+            rects.selectAll("text").transition().duration(500).delay(200).style('opacity','1');
+
 
             //Creates the legend
             var legend = svg.selectAll(".legend")
@@ -182,6 +279,7 @@
                 .attr("transform", function (d, i) {
                     return "translate(100," + i * 30 + ")";
                 })
+                .style("opacity","0");
 
             legend.append("circle")
                 .attr("x", width - 27)
@@ -200,13 +298,15 @@
                     return d;
                 });
 
-
+            legend.transition().duration(500).delay(function(d,i){ return 1300 + 100 * i; }).style("opacity","1");
         });
     }
 
 
 
-    createBarChart("d.more250")
-    createLegend()
+    createBarChart(industryNumbersLink, "d.total", "Number of Surveys", "#area1", 0, 1)
+    createBarChart(industryProportionLink, "d.total", "Proportion of Responses (%)", "#area2", 100, 2)
+
+
     createKey()
 </script>
