@@ -330,20 +330,23 @@
 
         d3.json(link, function (error, data) {
 
-            console.log(data)
-            var industries = data.map(function (d) {
-                console.log(d.industry)
-                return d.industry;
 
+            var industries = data.map(function (d) {
+                return d.industry;
             });
 
 
+
             var dataset = d3.layout.stack()(["Continuing to trade", "Has permanently ceased trading", "Has temporarily closed or temporarily paused trading"].map(function(fruit) {
-                return data.map(function(d) {
-                    return {x: industries, y: +d[fruit]};
+
+                return data[0].values.map(function(d) {
+                    return data.map(function(i) {
+                        console.log(i.values.eval["Continuing to trade"])
+                    return {x: i.industry, y: +d[fruit]};
+                    });
                 });
             }));
-            console.log(dataset)
+
 
             var x = d3.scale.ordinal().rangeRoundBands([0, width], .1);;
 
