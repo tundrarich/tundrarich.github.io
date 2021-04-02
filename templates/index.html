@@ -18,7 +18,7 @@
     }
 
     td, th {
-        padding: 23px 10px;
+        padding: 22px 180px;
         border: solid;
         border-width: 1px 0;
     }
@@ -36,13 +36,15 @@
         outline: none;
     }
 
+
 </style>
 <body>
 
 
-<div id="area1"></div>
-<div id="area2"></div>
-
+<div style = "position:relative; right:80px; top:2px; "id="area1"></div>
+<div style = "position:relative; right:80px; top:2px; "id="area2"></div>
+<div style = "position:relative; left:800px; top:2px; "id="area3"></div>
+<div style = "position:relative; left:80px; top:2px; "id="area4"></div>
 
 <button type="button" onmousedown="changeLess250()">Workforce < 250</button>
 <button type="button" onmousedown="changeMore250()">Workforce 250+</button>
@@ -55,8 +57,10 @@
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script>
 
-    var industryNumbersLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/CSVfiles/industriesTotal.json"
-    var industryProportionLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/CSVfiles/industriesPercentage.json"
+    var industryNumbersLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/industriesTotal.json"
+    var industryProportionLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/industriesPercentage.json"
+    var workforceNumbersLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/workforceGrained.json"
+    var workforceProportionLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/workforceGrainedProportion.json"
 
     var changeLess250 = function(){
         document.getElementById('area1').innerHTML = '';
@@ -302,11 +306,92 @@
         });
     }
 
+    function createStackedBarChart(){
 
+        
+        var margin = {top: 10, right: 30, bottom: 20, left: 50},
+            width = 460 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
+
+
+        var svg = d3.select("#my_dataviz")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform",
+                "translate(" + margin.left + "," + margin.top + ")");
+
+
+        d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_stacked.csv", function(data) {
+
+            // List of subgroups = header of the csv files = soil condition here
+            var subgroups = data.columns.slice(1)
+
+            // List of groups = species here = value of the first column called group -> I show them on the X axis
+            var groups = d3.map(data, function(d){return(d.group)}).keys()
+
+            // Add X axis
+            var x = d3.scaleBand()
+                .domain(groups)
+                .range([0, width])
+                .padding([0.2])
+            svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x).tickSizeOuter(0));
+
+            // Add Y axis
+            var y = d3.scaleLinear()
+                .domain([0, 100])
+                .range([ height, 0 ]);
+            svg.append("g")
+                .call(d3.axisLeft(y));
+
+            // color palette = one color per subgroup
+            var color = d3.scaleOrdinal()
+                .domain(subgroups)
+                .range(['#e41a1c','#377eb8','#4daf4a'])
+
+            // Normalize the data -> sum of each group must be 100!
+            console.log(data)
+            dataNormalized = []
+            data.forEach(function(d){
+                // Compute the total
+                tot = 0
+                for (i in subgroups){ name=subgroups[i] ; tot += +d[name] }
+                // Now normalize
+                for (i in subgroups){ name=subgroups[i] ; d[name] = d[name] / tot * 100}
+            })
+
+            //stack the data? --> stack per subgroup
+            var stackedData = d3.stack()
+                .keys(subgroups)
+                (data)
+
+            // Show the bars
+            svg.append("g")
+                .selectAll("g")
+                // Enter in the stack data = loop key per key = group per group
+                .data(stackedData)
+                .enter().append("g")
+                .attr("fill", function(d) { return color(d.key); })
+                .selectAll("rect")
+                // enter a second time = loop subgroup per subgroup to add all rectangles
+                .data(function(d) { return d; })
+                .enter().append("rect")
+                .attr("x", function(d) { return x(d.data.group); })
+                .attr("y", function(d) { return y(d[1]); })
+                .attr("height", function(d) { return y(d[0]) - y(d[1]); })
+                .attr("width",x.bandwidth())
+        })
+
+
+    }
 
     createBarChart(industryNumbersLink, "d.total", "Number of Surveys", "#area1", 0, 1)
     createBarChart(industryProportionLink, "d.total", "Proportion of Responses (%)", "#area2", 100, 2)
-
+    createBarChart(workforceNumbersLink, "d.allIndustries", "Number of Surveys", "#area3", 0, 1)
+    createBarChart(workforceProportionLink, "d.allIndustries", "Proportion of Responses (%)", "#area4", 100, 2)
 
     createKey()
 </script>
