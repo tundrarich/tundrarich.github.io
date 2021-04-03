@@ -1,5 +1,5 @@
 [
-{ "industry":"Manufacturing",
+{ "industry":"M",
 "values": [
   {
       "value": 63.5,
@@ -16,7 +16,7 @@
 
  }] }
 ,
-{ "industry":"Water Supply, Sewerage, Waste Management And Remediation Activities",
+{ "industry":"WSW",
 "values": [
   {
       "value": 68.6,
@@ -33,7 +33,7 @@
 
  }] }
 ,
-{ "industry":"Construction",
+{ "industry":"C",
 "values": [
   {
       "value": 80.9,
@@ -50,7 +50,7 @@
 
  }] }
 ,
-{ "industry":"Wholesale And Retail Trade; Repair Of Motor Vehicles And Motorcycles",
+{ "industry":"WRM",
 "values": [
   {
       "value": 72.6,
@@ -67,7 +67,7 @@
 
  }] }
 ,
-{ "industry":"Accommodation And Food Service Activities",
+{ "industry":"AFA",
 "values": [
   {
       "value": 87.1,
@@ -84,7 +84,7 @@
 
  }] }
 ,
-{ "industry":"Transportation And Storage",
+{ "industry":"TS",
 "values": [
   {
       "value": 76.6,
@@ -101,7 +101,7 @@
 
  }] }
 ,
-{ "industry":"Information And Communication",
+{ "industry":"IC",
 "values": [
   {
       "value": 40.1,
@@ -118,7 +118,7 @@
 
  }] }
 ,
-{ "industry":"Professional, Scientific And Technical Activities",
+{ "industry":"PST",
 "values": [
   {
       "value": 62.2,
@@ -135,7 +135,7 @@
 
  }] }
 ,
-{ "industry":"Administrative And Support Service Activities",
+{ "industry":"ASA",
 "values": [
   {
       "value": 75.7,
@@ -152,7 +152,7 @@
 
  }] }
 ,
-{ "industry":"Education",
+{ "industry":"E",
 "values": [
   {
       "value": 40.5,
@@ -169,7 +169,7 @@
 
  }] }
 ,
-{ "industry":"Human Health And Social Work Activities",
+{ "industry":"HHS",
 "values": [
   {
       "value": 34.5,
@@ -186,7 +186,7 @@
 
  }] }
 ,
-{ "industry":"Arts, Entertainment And Recreation",
+{ "industry":"AER",
 "values": [
   {
       "value": 76.3,
@@ -203,7 +203,7 @@
 
  }] }
 ,
-{ "industry":"All Industries",
+{ "industry":"AI",
 "values": [
   {
       "value": 67.2,

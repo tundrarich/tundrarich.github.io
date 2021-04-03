@@ -1,0 +1,53 @@
+[
+{ "industry":"workforceSmaller250",
+"values": [
+  {
+      "value": 68.7,
+     "status":"Coronavirus Job Retention Scheme" },
+{       "value": 27.2,
+     "status":"Business rates holiday" },
+{       "value": 56,
+     "status":"Deferring VAT payments" },{       "value": 22.4,
+     "status":"HMRC Time To Pay scheme" },{       "value": 13.5,
+     "status":"Government-funded small business grant or loan schemes" },{       "value": 11.2,
+     "status":"Accredited finance agreements" },{       "value": 19.8,
+     "status":"We have not applied for any of these initiatives"
+
+
+ }] }
+,
+{ "industry":"workforceBiggerEqual250",
+"values": [
+  {
+      "value": 64.7,
+     "status":"Coronavirus Job Retention Scheme" },
+{       "value": 27.9,
+     "status":"Business rates holiday" },
+{       "value": 57.1,
+     "status":"Deferring VAT payments" },{       "value": 22.2,
+     "status":"HMRC Time To Pay scheme" },{       "value": 7.3,
+     "status":"Government-funded small business grant or loan schemes" },{       "value": 7.9,
+     "status":"Accredited finance agreements" },{       "value": 22.3,
+     "status":"We have not applied for any of these initiatives"
+
+
+ }] }
+,
+{ "industry":"total",
+"values": [
+  {
+      "value": 67.2,
+     "status":"Coronavirus Job Retention Scheme" },
+{       "value": 27.4,
+     "status":"Business rates holiday" },
+{       "value": 56.4,
+     "status":"Deferring VAT payments" },{       "value": 22.3,
+     "status":"HMRC Time To Pay scheme" },{       "value": 11.2,
+     "status":"Government-funded small business grant or loan schemes" },{       "value": 9.9,
+     "status":"Accredited finance agreements" },{       "value": 20.7,
+     "status":"We have not applied for any of these initiatives"
+
+
+ }] }
+
+]
