@@ -17,44 +17,349 @@
         display: none;
     }
 
+    td, th {
+        padding: 22px 180px;
+        border: solid;
+        border-width: 1px 0;
+    }
+
+    button {
+        background: #ededed;
+        border: 1px solid #ccc;
+        padding: 10px 30px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    button:hover, button:focus, button:active, button:target{
+        background-color: #0074a9;
+        outline: none;
+    }
+
+
 </style>
 <body>
+
+<div id="selectPageOptions"></div>
+
+
+
+
+<div  id="sampleButtons">
+    Sample Size for survey
+
+        <button type="button" id="less250Button" onmousedown="changeLess250F()">Workforce < 250</button>
+        <button type="button" id="250MoreButton" onmousedown="changeMore250F()">Workforce 250+</button>
+        <button type="button" id="allWorkforceButton" onmousedown="changeTotalF()">All Workforce Bands (Total)</button>
+</div>
+
+<div  id="tradingSortButtons">
+    Workforce Size for survey
+
+    <button type="button" id="changeCeasedButton" onmousedown="changeCeasedF()">Sort for Ceased</button>
+    <button type="button" id="changeTempButton" onmousedown="changeTempF()">Sort for Temp</button>
+    <button type="button" id="changeContButton" onmousedown="changeContF()">Sort for Cont</button>
+</div>
+
+
+<div style = "position:relative; left:80px; top:2px; "id="area2"></div>
+<div style = "position:relative; left:80px; top:2px; "id="area3"></div>
+<div style = "position:relative; left:80px; top:2px; "id="area4"></div>
+<div style = "position:relative; left:80px; top:2px; "id="area5"></div>
+<div style = "position:relative; left:80px; top:2px; "id="area6"></div>
+<div style = "position:relative; left:80px; top:2px; "id="area7"></div>
+
+
+
+
+
+<div id="chart", style="height:12px; margin:20px; font: 14px sans-serif; .objecttable td {
+       padding: 8px;
+     }"></div>
+
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script>
 
-    function createKey() {
+    clearAreas()
+    samplePage()
 
 
-        var industries = [
-            {title: "Accommodation And Food Service Activities", abbrv: "AFA"},
-            {title: "Administrative And Support Service Activities", abbrv: "ASA"},
-            {title: "Arts, Entertainment And Recreation", abbrv: "AER"},
-            {title: "Construction", abbrv: "C"},
-            {title: "Education", abbrv: "E"},
-            {title: "Human Health And Social Work Activities", abbrv: "HHS"},
-            {title: "Information And Communication", abbrv: "IC"},
-            {title: "Manufacturing", abbrv: "M"},
-            {title: "Mining And Quarrying", abbrv: "MQ"},
-            {title: "Other Service Activities", abbrv: "OSA"},
-            {title: "Professional, Scientific And Technical Activities", abbrv: "PST"},
-            {title: "Real Estate Activities", abbrv: "REA"},
-            {title: "Transportation And Storage", abbrv: "TS"},
-            {title: "Water Supply, Sewerage, Waste Management And Remediation Activities", abbrv: "WSW"},
-            {title: "Wholesale And Retail Trade; Repair Of Motor Vehicles And Motorcycles", abbrv: "WRM"},
+    function clearAreas(){
 
-        ]
+        document.getElementById('area2').innerHTML = '';
+        document.getElementById('area3').innerHTML = '';
+        document.getElementById('area4').innerHTML = '';
+        document.getElementById('area5').innerHTML = '';
+        document.getElementById('area6').innerHTML = '';
+        document.getElementById('area7').innerHTML = '';
+        document.getElementById('chart').innerHTML = '';
+        console.log("Cleared DIVS")
+    }
+
+    var dropdownPages = d3.select("#selectPageOptions")
+        .append('select')
 
 
-        var margin = {top: 100, right: 200, bottom: 1000, left: 100},
-            width = 500 - margin.left - margin.right,
-            height = 200- margin.top - margin.bottom;
+    dropdownPages
+        .selectAll('pageOptions')
+        .data(["Samples", "Trading Status", "Government Schemes"])
+        .enter()
+            .append('option')
+        .text(function (d) { return d; })
+        .attr("value", function (d) { return d; })
 
-        var table = d3.select('body').append('table')
-            .attr("style", "margin-right: 200px")
+    dropdownPages.on("change", function(d) {
+        var selectedOption = d3.select(this).property("value")
+        changePage(selectedOption)
+    })
+
+
+    function changePage(page) {
+        if(page == "Samples"){
+            samplePage()
+        }
+        if(page == "Trading Status"){
+            workforcePage()
+        }
+        if(page == "Government Schemes"){
+            governmentPage()
+        }
+    }
+
+
+    function hideButtons(){
+        document.getElementById("sampleButtons").style.display = "none";
+        document.getElementById("tradingSortButtons").style.display = "none";
+
+    }
+
+
+
+
+
+
+
+    function samplePage(){
+
+        hideButtons()
+
+        var industryNumbersLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Samples/default/industriesTotal.json"
+        var industryProportionLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Samples/default/industriesPercentage.json"
+        var workforceNumbersLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Samples/default/workforceGrained.json"
+        var workforceProportionLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Samples/default/workforceGrainedProportion.json"
+
+        var changeLess250 = function(){
+            clearAreas()
+            createBarChart(industryNumbersLink, "d.less250", "Number of Surveys", "#area2", 0, 1)
+            createBarChart(industryProportionLink, "d.less250", "Proportion of Responses (%)", "#area3", 100, 2)
+
+            createBarChart(workforceNumbersLink, "d.allIndustries", "Number of Surveys", "#area2", 0, 1)
+            createBarChart(workforceProportionLink, "d.allIndustries", "Proportion of Responses (%)", "#area3", 100, 2)
+            createKey("long")
+        }
+
+        var changeMore250= function(){
+            clearAreas()
+            createBarChart(industryNumbersLink, "d.more250", "Number of Surveys", "#area2", 0, 1)
+            createBarChart(industryProportionLink, "d.more250", "Proportion of Responses (%)", "#area3", 100, 2)
+
+            createBarChart(workforceNumbersLink, "d.allIndustries", "Number of Surveys", "#area2", 0, 1)
+            createBarChart(workforceProportionLink, "d.allIndustries", "Proportion of Responses (%)", "#area3", 100, 2)
+            createKey("long")
+        }
+
+        var changeTotal = function(){
+            clearAreas()
+            createBarChart(industryNumbersLink, "d.total", "Number of Surveys", "#area2", 0, 1)
+            createBarChart(industryProportionLink, "d.total", "Proportion of Responses (%)", "#area3", 100, 2)
+
+            createBarChart(workforceNumbersLink, "d.allIndustries", "Number of Surveys", "#area2", 0, 1)
+            createBarChart(workforceProportionLink, "d.allIndustries", "Proportion of Responses (%)", "#area3", 100, 2)
+            createKey("long")
+        }
+
+        changeLess250F = changeLess250;
+        changeMore250F = changeMore250;
+        changeTotalF = changeTotal;
+
+
+        clearAreas()
+
+        document.getElementById("sampleButtons").style.display = "block";
+
+        createBarChart(industryNumbersLink, "d.total", "Number of Surveys", "#area2", 0, 1)
+        createBarChart(industryProportionLink, "d.total", "Proportion of Responses (%)", "#area3", 100, 2)
+        createBarChart(workforceNumbersLink, "d.allIndustries", "Number of Surveys", "#area2", 0, 1)
+        createBarChart(workforceProportionLink, "d.allIndustries", "Proportion of Responses (%)", "#area3", 100, 2)
+        createKey("long")
+
+
+    }
+
+
+    function workforcePage(){
+
+
+
+        hideButtons()
+
+
+
+        var industryTradingContLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Trading/industry/tradingStatusIndustryContinuing.json"
+        var industryTradingTempLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Trading/industry/tradingStatusIndustryTemp.json"
+        var industryTradingCeasedLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Trading/industry/tradingStatusIndustryCeased.json"
+
+        var workforceTradingContLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Trading/workforce/tradingStatusWorkforceContinue.json"
+        var workforceTradingTempLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Trading/workforce/tradingStatusWorkforceTemp.json"
+        var workforceTradingCeasedLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Trading/workforce/tradingStatusWorkforceCeased.json"
+
+        var countryTradingContLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Trading/country/tradingStatusCountryContinue.json"
+        var countryTradingTempLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Trading/country/tradingStatusCountryTemp.json"
+        var countryTradingCeasedLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Trading/country/tradingStatusCountryCeased.json"
+
+        var countryBar = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Trading/barcharts/tradingStatusCountryBar.json"
+        var workforceBar = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Trading/barcharts/tradingStatusWorkforceBar.json"
+        var industryBar = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Trading/barcharts/tradingStatusIndustryBar.json"
+
+
+        var changeCeased = function(){
+            clearAreas()
+            createKey("short")
+
+            createStackedBarChart(industryTradingCeasedLink, "#area2");
+            createBarChart(industryBar, "d.value", "Proportion of Trading Statuses (%)", "#area2", 0, 1)
+
+            createStackedBarChart(workforceTradingCeasedLink, "#area3");
+            createBarChart(workforceBar, "d.value", "Proportion of Trading Statuses (%)", "#area3", 0, 1)
+
+            createStackedBarChart(countryTradingCeasedLink, "#area4");
+            createBarChart(countryBar, "d.value", "Proportion of Trading Statuses (%)", "#area4", 0, 1)
+        }
+
+        var changeTemp = function(){
+            clearAreas()
+            createKey("short")
+
+            createStackedBarChart(industryTradingTempLink, "#area2");
+            createBarChart(industryBar, "d.value", "Proportion of Trading Statuses (%)", "#area2", 0, 1)
+
+            createStackedBarChart(workforceTradingTempLink, "#area3");
+            createBarChart(workforceBar, "d.value", "Proportion of Trading Statuses (%)", "#area3", 0, 1)
+
+            createStackedBarChart(countryTradingTempLink, "#area4");
+            createBarChart(countryBar, "d.value", "Proportion of Trading Statuses (%)", "#area4", 0, 1)
+        }
+
+        var changeCont = function(){
+            clearAreas()
+            createKey("short")
+
+            createStackedBarChart(industryTradingContLink, "#area2");
+            createBarChart(industryBar, "d.value", "Proportion of Trading Statuses (%)", "#area2", 0, 1)
+
+            createStackedBarChart(workforceTradingContLink, "#area3");
+            createBarChart(workforceBar, "d.value", "Proportion of Trading Statuses (%)", "#area3", 0, 1)
+
+            createStackedBarChart(countryTradingContLink, "#area4");
+            createBarChart(countryBar, "d.value", "Proportion of Trading Statuses (%)", "#area4", 0, 1)
+        }
+
+        changeCeasedF = changeCeased;
+        changeTempF = changeTemp;
+        changeContF = changeCont;
+
+
+
+        clearAreas()
+        createKey("short")
+        document.getElementById("tradingSortButtons").style.display = "block";
+
+        createStackedBarChart(industryTradingContLink, "#area2");
+        createBarChart(industryBar, "d.value", "Proportion of Trading Statuses (%)", "#area2", 0, 1)
+
+        createStackedBarChart(workforceTradingContLink, "#area3");
+        createBarChart(workforceBar, "d.value", "Proportion of Trading Statuses (%)", "#area3", 0, 1)
+
+        createStackedBarChart(countryTradingContLink, "#area4");
+        createBarChart(countryBar, "d.value", "Proportion of Trading Statuses (%)", "#area4", 0, 1)
+    }
+
+
+    function governmentPage(){
+
+        clearAreas()
+        createKey("short")
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    function createKey(type) {
+
+        if(type == "long"){
+            var industries = [
+                {title: "Accommodation And Food Service Activities", abbrv: "AFA"},
+                {title: "Administrative And Support Service Activities", abbrv: "ASA"},
+                {title: "Arts, Entertainment And Recreation", abbrv: "AER"},
+                {title: "Construction", abbrv: "C"},
+                {title: "Education", abbrv: "E"},
+                {title: "Human Health And Social Work Activities", abbrv: "HHS"},
+                {title: "Information And Communication", abbrv: "IC"},
+                {title: "Manufacturing", abbrv: "M"},
+                {title: "Mining And Quarrying", abbrv: "MQ"},
+                {title: "Other Service Activities", abbrv: "OSA"},
+                {title: "Professional, Scientific And Technical Activities", abbrv: "PST"},
+                {title: "Real Estate Activities", abbrv: "REA"},
+                {title: "Transportation And Storage", abbrv: "TS"},
+                {title: "Water Supply, Sewerage, Waste Management And Remediation Activities", abbrv: "WSW"},
+                {title: "Wholesale And Retail Trade; Repair Of Motor Vehicles And Motorcycles", abbrv: "WRM"},
+                {title: "All Industries", abbrv: "AI"}
+            ]
+
+        }else{
+            var industries = [
+                {title: "Accommodation And Food Service Activities", abbrv: "AFA"},
+                {title: "Administrative And Support Service Activities", abbrv: "ASA"},
+                {title: "Arts, Entertainment And Recreation", abbrv: "AER"},
+                {title: "Construction", abbrv: "C"},
+                {title: "Education", abbrv: "E"},
+                {title: "Human Health And Social Work Activities", abbrv: "HHS"},
+                {title: "Information And Communication", abbrv: "IC"},
+                {title: "Manufacturing", abbrv: "M"},
+                {title: "Professional, Scientific And Technical Activities", abbrv: "PST"},
+                {title: "Transportation And Storage", abbrv: "TS"},
+                {title: "Water Supply, Sewerage, Waste Management And Remediation Activities", abbrv: "WSW"},
+                {title: "Wholesale And Retail Trade; Repair Of Motor Vehicles And Motorcycles", abbrv: "WRM"},
+                {title: "All Industries", abbrv: "AI"}
+            ]
+        }
+
+
+
+        var margin = {top: 3, right: 10, bottom: 1, left: 1},
+            width = 1200 - margin.left - margin.right,
+            height = 1- margin.top - margin.bottom;
+
+
+
+        var table = d3.select('#chart').append('table')
+            .attr("style", "margin-right: 10px")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+            .style("border-collapse", "collapse")
+
 
 
 
@@ -64,16 +369,19 @@
 
         tr.append('td').html(function(m) { return m.title; });
         tr.append('td').html(function(m) { return m.abbrv; });
+
     }
 
+    function createBarChart(link, dataValue, yAxisTitle, area, maxYAxis, colourID) {
 
-    function createBarChart() {
+
+        //https://bl.ocks.org/bricedev/0d95074b6d83a77dc3ad
 
         var margin = {top: 50, right: 200, bottom: 30, left: 100},
             width = 1200 - margin.left - margin.right,
             height = 400 - margin.top - margin.bottom;
 
-        var svg = d3.select('body').append("svg")
+        var svg = d3.select(area).append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
@@ -81,28 +389,36 @@
 
         var groupsX = d3.scale.ordinal().rangeRoundBands([0, width], .1);
         var subGroupsX = d3.scale.ordinal();
-        var y = d3.scale.linear().range([height, 0]);
+        var yScale = d3.scale.linear().range([height, 0]);
         var xAxis = d3.svg.axis().scale(groupsX).tickSize(0).orient("bottom");
-        var yAxis = d3.svg.axis().scale(y).orient("left");
-        var color = d3.scale.ordinal().range(["#e41a1c", "#5ecf4a"]);
+        var yAxis = d3.svg.axis().scale(yScale).orient("left");
+
+        if(colourID== 1){
+            var color = d3.scale.ordinal().range(["#ca0020","#0571b0", "#f4a582"]);
+        }else{
+            var color = d3.scale.ordinal().range(["#f4a582"]);
+        }
 
 
-        d3.json("https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/CSVfiles/industriesTotal.json", function (error, data) {
+        d3.json(link, function (error, data) {
 
-            var categories = data.map(function (d) {
+
+            var industries = data.map(function (d) {
                 return d.industry;
             });
             var statuses = data[0].values.map(function (d) {
                 return d.status;
             });
 
-            groupsX.domain(categories);
+            groupsX.domain(industries);
             subGroupsX.domain(statuses).rangeRoundBands([0, groupsX.rangeBand()]);
-            y.domain([0, d3.max(data, function (industry) {
+            yScale.domain([0, d3.max(data, function (industry) {
                 return d3.max(industry.values, function (d) {
-                    return d.value;
-                });
-            })]);
+                    if(maxYAxis != 0){
+                        return maxYAxis;
+                    }else{
+                        return eval(dataValue)
+                    }});})]);
 
             //Creates X Axis
             svg.append("g")
@@ -113,14 +429,18 @@
             //Creates Y Axis
             svg.append("g")
                 .attr("class", "y axis")
+                .style('opacity','0')
                 .call(yAxis)
                 .append("text")
-                .attr("y", -20)
-                .attr("x", 60)
+                .attr("transform", "rotate(-90)")
                 .attr("dy", ".71em")
+                .attr("y", -60)
+                .attr("x", 40)
                 .style("text-anchor", "end")
                 .style('font-weight', 'bold')
-                .text("Number of Surveys");
+                .text(yAxisTitle);
+
+            svg.select('.y').transition().duration(500).delay(200).style('opacity','1');
 
             //Creates the subgroups
             var rects = svg.selectAll(".rects")
@@ -131,7 +451,7 @@
                     return "translate(" + groupsX(d.industry) + ",0)";
                 });
 
-            //Creates the rectangles
+            //Creates the bars
             rects.selectAll("rect")
                 .data(function (d) {
                     return d.values;
@@ -145,42 +465,46 @@
                     return color(d.status)
                 })
 
-                .attr("y", function (d) {return y(0);})
-                .attr("height", function (d) {return height - y(d.status);})
-                .attr("y", function(d) { return y(d.value); })
-                .attr("height", function(d) { return height - y(d.value); })
-
+                .attr("y", function (d) {return yScale(0);})
+                .attr("height", function (d) {return height - yScale(0);})
 
                 .on("mouseover", function(d) {
-                        d3.select(this).style("fill", d3.rgb(color(d.status)).darker(2));
+                    d3.select(this).style("fill", d3.rgb(color(d.status)).darker(2));
                 })
                 .on("mouseout", function(d) {
                     d3.select(this).style("fill", color(d.status));
                 });
 
-
-
-
-
-
+            rects.selectAll("rect")
+                .transition()
+                .delay(function (d) {return Math.random()*300;})
+                .duration(1000)
+                .attr("y", function(d) { return yScale(eval(dataValue)); })
+                .attr("height", function(d) { return height - yScale(eval(dataValue)); });
 
             //Creates the values above each bar
             rects.selectAll("text")
+
                 .data(function (d) {
                     return d.values;
                 })
+
                 .enter().append("text")
+                .style('opacity','0')
                 .attr("x", function (d) {
-                    return subGroupsX(d.status);
+                    return subGroupsX(d.status) + 3;
                 })
                 .attr("y", function (d) {
-                    return y(d.value) - 5;
+                    return yScale(eval(dataValue)) - 5;
                 })
                 .text(function (d) {
-                    return (d.value);
+                    return (eval(dataValue));
                 })
 
-            //Creates Legend
+            rects.selectAll("text").transition().duration(500).delay(200).style('opacity','1');
+
+
+            //Creates the legend
             var legend = svg.selectAll(".legend")
                 .data(data[0].values.map(function (d) {
                     return d.status;
@@ -190,12 +514,12 @@
                 .attr("transform", function (d, i) {
                     return "translate(100," + i * 30 + ")";
                 })
-                .style("opacity", "0");
+                .style("opacity","0");
 
             legend.append("circle")
                 .attr("x", width - 27)
                 .attr("cx", width - 5)
-                .attr("cy", 4) // 100 is where the first dot appears. 25 is the distance between dots
+                .attr("cy", 4)
                 .attr("r", 7)
                 .style("fill", function (d) {
                     return color(d);
@@ -209,11 +533,137 @@
                     return d;
                 });
 
-            legend.style("opacity", "1");
-
+            legend.transition().duration(500).delay(function(d,i){ return 1300 + 100 * i; }).style("opacity","1");
         });
     }
 
-    createBarChart()
-    createKey()
+    function createStackedBarChart(link, area){
+
+
+        var margin = {top: 50, right: 350, bottom: 30, left: 100},
+            width = 1200 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
+
+        var svg = d3.select(area).append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.json(link, function (error, data) {
+
+            var industries = data.map(function (d) {
+                return d.industry;
+            });
+
+            var dataset = d3.layout.stack()(["Continuing to trade", "Has permanently ceased trading", "Has temporarily closed or temporarily paused trading"].map(function(states) {
+                    return data.map(function(d) {
+                        return {x: d.industry, y: +d[states]};
+                    });
+            }));
+
+            var x = d3.scale.ordinal()
+                .domain(dataset[0].map(function(d) { return d.x; }))
+                .rangeRoundBands([10, width-10], 0.02);
+
+            var y = d3.scale.linear()
+                .domain([0, 100])
+                .range([height, 0]);
+
+            var colors = ["b33040", "#d25c4d", "#f2b447"];
+
+            var yAxis = d3.svg.axis()
+
+                .scale(y)
+                .orient("left")
+
+                .ticks(5)
+                .tickSize(-width, 0, 0)
+                .tickFormat( function(d) { return d } )
+
+            svg.append("g")
+                .attr("class", "y axis")
+                .style('opacity','1')
+                .call(yAxis)
+                .append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("dy", ".71em")
+                .attr("y", -60)
+                .attr("x", -40)
+                .style("text-anchor", "end")
+                .style('font-weight', 'bold')
+                .text("Percentage (%)");
+
+
+
+
+
+            var xAxis = d3.svg.axis()
+                .scale(x)
+                .orient("bottom")
+
+            svg.append("g").attr("class", "y axis").call(yAxis);
+            svg.append("g").attr("class", "x axis").attr("transform", "translate(0," + height + ")").call(xAxis);
+
+            var groups = svg.selectAll("g.cost")
+                .data(dataset)
+                .enter().append("g")
+                .attr("class", "cost")
+                .style("fill", function(d, i) { return colors[i]; });
+
+            var rects = groups.selectAll("rect")
+
+                .data(function(d) { return d; })
+                .enter()
+                .append("rect")
+                .style('opacity','0.85')
+                .attr("x", function(d) { return x(d.x); })
+                .attr("y", function(d) { return y(d.y0 + d.y); })
+                .attr("height", function(d) { return y(d.y0) - y(d.y0 + d.y); })
+                .attr("width", x.rangeBand());
+
+
+
+
+            
+            //Legend
+            var legend = svg.selectAll(".legend")
+                .data(colors)
+                .enter().append("g")
+                .attr("class", "legend")
+                .attr("transform", function(d, i) { return "translate(30," + i * 19 + ")"; });
+
+            legend.append("circle")
+                .attr("x", width - 27)
+                .attr("cx", width)
+                .attr("cy", 10)
+                .attr("r", 7)
+                .style("fill", function(d, i) {return colors.slice().reverse()[i];});
+
+
+
+
+            legend.append("text")
+                .attr("x", width + 15)
+                .attr("y", 10)
+                .attr("dy", ".35em")
+                .style("text-anchor", "start")
+                .text(function(d, i) {
+                    switch (i) {
+                        case 0: return "Has temporarily closed or temporarily paused trading";
+                        case 1: return "Has permanently ceased trading";
+                        case 2: return "Continuing to trade";
+                    }
+                })
+
+
+     })
+    }
+
+
+
+
+
+
+
 </script>
