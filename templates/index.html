@@ -286,10 +286,12 @@
 
 
     function governmentPage(){
+        var industryTradingContLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Government%20Schemes/appliedIndustryBar.json"
 
         clearAreas()
         createKey("short")
 
+        createBarChart(industryTradingContLink, "d.value", "Number of Surveys", "#area2", 0, 1)
 
     }
 
