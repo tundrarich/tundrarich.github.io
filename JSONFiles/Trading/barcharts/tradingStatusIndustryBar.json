@@ -1,0 +1,210 @@
+[
+	{
+		"industry": "AFA",
+		"values": [{
+			"value": 18.2,
+			"status": "Continuing to trade"
+		},
+		{
+			"value": 80.6,
+			"status": "Has temporarily closed or temporarily paused trading"
+		},
+		{
+			"value": 1.2,
+			"status": "Has permanently ceased trading"
+		}
+		]
+	},
+		{
+		"industry": "AER",
+		"values": [{
+			"value": 20.5,
+			"status": "Continuing to trade"
+		},
+		{
+			"value": 79.5,
+			"status": "Has temporarily closed or temporarily paused trading"
+		},
+		{
+			"value": 0,
+			"status": "Has permanently ceased trading"
+		}
+		]
+	},
+		{
+		"industry": "C",
+		"values": [{
+			"value": 73.2,
+			"status": "Continuing to trade"
+		},
+		{
+			"value": 26.1,
+			"status": "Has temporarily closed or temporarily paused trading"
+		},
+		{
+			"value": 0,
+			"status": "Has permanently ceased trading"
+		}
+		]
+	},
+	{
+		"industry": "WRM",
+		"values": [{
+			"value": 75.2,
+			"status": "Continuing to trade"
+		},
+		{
+			"value": 24.3,
+			"status": "Has temporarily closed or temporarily paused trading"
+		},
+		{
+			"value": 0,
+			"status": "Has permanently ceased trading"
+		}
+		]
+	},
+		{
+		"industry": "AI",
+		"values": [{
+			"value": 76.7,
+			"status": "Continuing to trade"
+		},
+		{
+			"value": 22.8,
+			"status": "Has temporarily closed or temporarily paused trading"
+		},
+		{
+			"value": 0,
+			"status": "Has permanently ceased trading"
+		}
+		]
+	},
+		{
+		"industry": "M",
+		"values": [{
+			"value": 79,
+			"status": "Continuing to trade"
+		},
+		{
+			"value": 20.6,
+			"status": "Has temporarily closed or temporarily paused trading"
+		},
+		{
+			"value": 0,
+			"status": "Has permanently ceased trading"
+		}
+		]
+	},
+		{
+		"industry": "E",
+		"values": [{
+			"value": 86.8,
+			"status": "Continuing to trade"
+		},
+		{
+			"value": 12.6,
+			"status": "Has temporarily closed or temporarily paused trading"
+		},
+		{
+			"value": 0,
+			"status": "Has permanently ceased trading"
+		}
+		]
+	},
+		{
+		"industry": "WSW",
+		"values": [{
+			"value": 90,
+			"status": "Continuing to trade"
+		},
+		{
+			"value": 10,
+			"status": "Has temporarily closed or temporarily paused trading"
+		},
+		{
+			"value": 0,
+			"status": "Has permanently ceased trading"
+		}
+		]
+	},
+		{
+		"industry": "TS",
+		"values": [{
+			"value": 91.5,
+			"status": "Continuing to trade"
+		},
+		{
+			"value": 8.5,
+			"status": "Has temporarily closed or temporarily paused trading"
+		},
+		{
+			"value": 0,
+			"status": "Has permanently ceased trading"
+		}
+		]
+	},
+		{
+		"industry": "ASA",
+		"values": [{
+			"value": 91.5,
+			"status": "Continuing to trade"
+		},
+		{
+			"value": 8.1,
+			"status": "Has temporarily closed or temporarily paused trading"
+		},
+		{
+			"value": 0,
+			"status": "Has permanently ceased trading"
+		}
+		]
+	},
+		{
+		"industry": "HHS",
+		"values": [{
+			"value": 93.8,
+			"status": "Continuing to trade"
+		},
+		{
+			"value": 4.9,
+			"status": "Has temporarily closed or temporarily paused trading"
+		},
+		{
+			"value": 1.4,
+			"status": "Has permanently ceased trading"
+		}
+		]
+	},
+			{
+		"industry": "IC",
+		"values": [{
+			"value": 95,
+			"status": "Continuing to trade"
+		},
+		{
+			"value": 4.5,
+			"status": "Has temporarily closed or temporarily paused trading"
+		},
+		{
+			"value": 0,
+			"status": "Has permanently ceased trading"
+		}
+		]
+	},
+		{
+		"industry": "PST",
+		"values": [{
+			"value": 96.7,
+			"status": "Continuing to trade"
+		},
+		{
+			"value": 3,
+			"status": "Has temporarily closed or temporarily paused trading"
+		},
+		{
+			"value": 0,
+			"status": "Has permanently ceased trading"
+		}
+		]
+	}
+]

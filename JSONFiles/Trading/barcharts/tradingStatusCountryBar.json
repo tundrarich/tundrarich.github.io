@@ -1,0 +1,83 @@
+
+[
+	{
+		"industry": "Northern Ireland",
+		"values": [{
+			"value": 72.8,
+			"status": "Continuing to trade"
+		},
+		{
+			"value": 27.2,
+			"status": "Has temporarily closed or temporarily paused trading"
+		},
+		{
+			"value": 0,
+			"status": "Has permanently ceased trading"
+		}
+		]
+	},
+		{
+		"industry": "Wales",
+		"values": [{
+			"value": 76.2,
+			"status": "Continuing to trade"
+		},
+		{
+			"value": 22.7,
+			"status": "Has temporarily closed or temporarily paused trading"
+		},
+		{
+			"value": 1.1,
+			"status": "Has permanently ceased trading"
+		}
+		]
+	},
+		{
+		"industry": "UK",
+		"values": [{
+			"value": 76.7,
+			"status": "Continuing to trade"
+		},
+		{
+			"value": 22.8,
+			"status": "Has temporarily closed or temporarily paused trading"
+		},
+		{
+			"value": 0,
+			"status": "Has permanently ceased trading"
+		}
+		]
+	},
+	{
+		"industry": "Scotland",
+		"values": [{
+			"value": 77.6,
+			"status": "Continuing to trade"
+		},
+		{
+			"value": 21.7,
+			"status": "Has temporarily closed or temporarily paused trading"
+		},
+		{
+			"value": 0,
+			"status": "Has permanently ceased trading"
+		}
+		]
+	},
+		{
+		"industry": "England",
+		"values": [{
+			"value": 77.8,
+			"status": "Continuing to trade"
+		},
+		{
+			"value": 21.8,
+			"status": "Has temporarily closed or temporarily paused trading"
+		},
+		{
+			"value": 0,
+			"status": "Has permanently ceased trading"
+		}
+		]
+	}
+]
