@@ -244,7 +244,7 @@
     </div>
 
 
-
+</div>
 
 
 
@@ -470,24 +470,24 @@
 
         var changeLess250 = function(){
             clearAreas()
-            createBarChart(industryNumbersLink, "d.less250", "Number of Surveys", "#area2", 0, 1)
-            createBarChart(industryProportionLink, "d.less250", "Proportion of Responses (%)", "#area3", 100, 2)
+            createBarChart(industryNumbersLink, "d.less250", "Number of Surveys", "#area2", 0, 1, 0, "Industry")
+            createBarChart(industryProportionLink, "d.less250", "Proportion of Responses (%)", "#area3", 100, 2, 0, "Industry")
 
             createKey("long")
         }
 
         var changeMore250= function(){
             clearAreas()
-            createBarChart(industryNumbersLink, "d.more250", "Number of Surveys", "#area2", 0, 1)
-            createBarChart(industryProportionLink, "d.more250", "Proportion of Responses (%)", "#area3", 100, 2)
+            createBarChart(industryNumbersLink, "d.more250", "Number of Surveys", "#area2", 0, 1, 0, "Industry")
+            createBarChart(industryProportionLink, "d.more250", "Proportion of Responses (%)", "#area3", 100, 2,0, "Industry")
 
             createKey("long")
         }
 
         var changeTotal = function(){
             clearAreas()
-            createBarChart(industryNumbersLink, "d.total", "Number of Surveys", "#area2", 0, 1)
-            createBarChart(industryProportionLink, "d.total", "Proportion of Responses (%)", "#area3", 100, 2)
+            createBarChart(industryNumbersLink, "d.total", "Number of Surveys", "#area2", 0, 1, 0, "Industry")
+            createBarChart(industryProportionLink, "d.total", "Proportion of Responses (%)", "#area3", 100, 2, 0, "Industry")
 
             createKey("long")
         }
@@ -497,8 +497,8 @@
             clearAreas()
 
             document.getElementById("sampleWorkforceDiv").style.display = "none";
-            createBarChart(workforceNumbersLink, "d.allIndustries", "Number of Surveys", "#area2", 0, 1)
-            createBarChart(workforceProportionLink, "d.allIndustries", "Proportion of Responses (%)", "#area3", 100, 2)
+            createBarChart(workforceNumbersLink, "d.allIndustries", "Number of Surveys", "#area2", 0, 1, 0, "Workforce Band")
+            createBarChart(workforceProportionLink, "d.allIndustries", "Proportion of Responses (%)", "#area3", 100, 2, 0, "Workforce Band")
 
         }
 
@@ -559,9 +559,9 @@
         var changeCeased = function(){
             clearAreas()
 
-            createStackedBarChart(industryTradingCeasedLink, "#area2");
-            createStackedBarChart(workforceTradingCeasedLink, "#area3");
-            createStackedBarChart(countryTradingCeasedLink, "#area4");
+            createStackedBarChart(industryTradingCeasedLink, "#area2", "Industry");
+            createStackedBarChart(workforceTradingCeasedLink, "#area3", "Workforce Band");
+            createStackedBarChart(countryTradingCeasedLink, "#area4", "Country");
             createKey("short")
 
         }
@@ -570,9 +570,9 @@
             clearAreas()
             createKey("short")
 
-            createStackedBarChart(industryTradingTempLink, "#area2");
-            createStackedBarChart(workforceTradingTempLink, "#area3");
-            createStackedBarChart(countryTradingTempLink, "#area4");
+            createStackedBarChart(industryTradingTempLink, "#area2", "Industry");
+            createStackedBarChart(workforceTradingTempLink, "#area3", "Workforce Band");
+            createStackedBarChart(countryTradingTempLink, "#area4", "Country");
 
         }
 
@@ -580,9 +580,9 @@
             clearAreas()
             createKey("short")
 
-            createStackedBarChart(industryTradingContLink, "#area2");
-            createStackedBarChart(workforceTradingContLink, "#area3");
-            createStackedBarChart(countryTradingContLink, "#area4");
+            createStackedBarChart(industryTradingContLink, "#area2", "Industry");
+            createStackedBarChart(workforceTradingContLink, "#area3", "Workforce Band");
+            createStackedBarChart(countryTradingContLink, "#area4", "Country");
         }
 
 
@@ -594,9 +594,9 @@
             createKey("short")
             document.getElementById("tradingSortDiv").style.display = "none";
 
-            createBarChart(industryBar, "d.value", "Percentage (%)", "#area2", 100, 1)
-            createBarChart(workforceBar, "d.value", "Percentage (%)", "#area3", 100, 1)
-            createBarChart(countryBar, "d.value", "Percentage (%)", "#area4", 100, 1)
+            createBarChart(industryBar, "d.value", "Percentage (%)", "#area2", 100, 1, 0, "Industry")
+            createBarChart(workforceBar, "d.value", "Percentage (%)", "#area3", 100, 1, 0, "Workforce Band")
+            createBarChart(countryBar, "d.value", "Percentage (%)", "#area4", 100, 1, 0, "Country")
         }
 
 
@@ -662,7 +662,7 @@
         var industryApplied = function(){
             clearAreas()
             createKey("short")
-            createBarChart(appliedIndustry, "d.value", "Percentage (%)", "#area2", 100, 1)
+            createBarChart(appliedIndustry, "d.value", "Percentage (%)", "#area2", 100, 1, 1, "Industry")
             createHeatMap(appliedIndustryHeat, "#area3", 1,  colName1, rowName1)
 
             hideLists()
@@ -676,7 +676,7 @@
         var industryReceived = function() {
             clearAreas()
             createKey("short")
-            createBarChart(receivedIndustry, "d.value", "Percentage (%)", "#area2", 100, 1)
+            createBarChart(receivedIndustry, "d.value", "Percentage (%)", "#area2", 100, 1, 1, "Industry")
             createHeatMap(receivedIndustryHeat, "#area3", 1,  colName1, rowName1)
 
             hideLists()
@@ -687,7 +687,7 @@
         var industryFuture = function() {
             clearAreas()
             createKey("short")
-            createBarChart(futureIndustry, "d.value", "Percentage (%)", "#area2", 100, 1)
+            createBarChart(futureIndustry, "d.value", "Percentage (%)", "#area2", 100, 1, 1, "Industry")
             createHeatMap(futureIndustryHeat, "#area3", 1,  colName1, rowName1)
 
             hideLists()
@@ -698,7 +698,7 @@
         var workforceApplied = function() {
 
             clearAreas()
-            createBarChart(appliedWorkforce, "d.value", "Percentage (%)", "#area2", 100, 1)
+            createBarChart(appliedWorkforce, "d.value", "Percentage (%)", "#area2", 100, 1, 0, "Workforce Band")
             createHeatMap(appliedWorkforceHeat, "#area3", 0,  colName2, rowName2)
             hideLists()
             setSelectedIndex(document.getElementById("governmentTypeList"),1);
@@ -710,7 +710,7 @@
         var workforceReceived = function() {
 
             clearAreas()
-            createBarChart(receivedWorkforce, "d.value", "Percentage (%)", "#area2", 100, 1)
+            createBarChart(receivedWorkforce, "d.value", "Percentage (%)", "#area2", 100, 1, 0, "Workforce Band")
             createHeatMap(receivedWorkforceHeat, "#area3", 0,  colName2, rowName2)
             hideLists()
             document.getElementById("governmentTypeDiv").style.display = "block";
@@ -720,7 +720,7 @@
         var workforceFuture = function() {
 
             clearAreas()
-            createBarChart(futureWorkforce, "d.value", "Percentage (%)", "#area3", 100, 1)
+            createBarChart(futureWorkforce, "d.value", "Percentage (%)", "#area3", 100, 1, 0, "Workforce Band")
             createHeatMap(futureWorkforceHeat, "#area3", 0,  colName2, rowName2)
 
             hideLists()
@@ -732,7 +732,7 @@
 
             clearAreas()
 
-            createBarChart(appliedCountry, "d.value", "Percentage (%)", "#area2", 100, 1)
+            createBarChart(appliedCountry, "d.value", "Percentage (%)", "#area2", 100, 1, 0, "Country")
             createHeatMap(appliedCountryHeat, "#area3", 0, colName3, rowName3)
 
 
@@ -837,17 +837,25 @@
 
     }
 
-    function createBarChart(link, dataValue, yAxisTitle, area, maxYAxis, colourID) {
+    function createBarChart(link, dataValue, yAxisTitle, area, maxYAxis, colourID, increaseSize, xAxisTitle) {
 
 
 
 
 
         //https://bl.ocks.org/bricedev/0d95074b6d83a77dc3ad
+        if(increaseSize == 0){
+            var margin = {top: 60, right: 400, bottom: 60, left: 100},
+                width = 1500 - margin.left - margin.right,
+                height = 350 - margin.top - margin.bottom;
 
-        var margin = {top: 60, right: 400, bottom: 30, left: 100},
-            width = 1500 - margin.left - margin.right,
-            height = 300 - margin.top - margin.bottom;
+        }else{
+            var margin = {top: 60, right: 400, bottom: 60, left: 100},
+                width = 2000 - margin.left - margin.right,
+                height = 550 - margin.top - margin.bottom;
+
+        }
+
 
         var svg = d3.select(area).append("svg")
             .attr("width", width + margin.left + margin.right)
@@ -865,7 +873,7 @@
         var yAxis = d3.svg.axis().scale(yScale).orient("left");
 
         if(colourID== 1){
-            var color = d3.scale.ordinal().range(["#ca0020","#f4a582","#d5d5d5","#92c5de","#0571b0"]);
+            var color = d3.scale.ordinal().range(["#ca0020","#80ff80","#0066ff","#ffcc00","#92c5de", "#cc33ff","#666699"]);
         }else{
             var color = d3.scale.ordinal().range(["#003f5c"]);
         }
@@ -896,7 +904,13 @@
                 .attr("class", "x axis")
                 .attr("transform", "translate(0," + (height + 10) + ")")
 
-                .call(xAxis);
+                .call(xAxis)
+                .append("text")
+                .attr("y", 40)
+                .attr("x", 550)
+                .style("text-anchor", "end")
+                .style('font-weight', 'bold')
+                .text(xAxisTitle);
 
 
             //Creates Y Axis
@@ -1019,10 +1033,10 @@
         });
     }
 
-    function createStackedBarChart(link, area){
+    function createStackedBarChart(link, area, xaxis){
 
 
-        var margin = {top: 60, right: 300, bottom: 30, left: 100},
+        var margin = {top: 60, right: 300, bottom: 50, left: 100},
             width = 1200 - margin.left - margin.right,
             height = 300 - margin.top - margin.bottom;
 
@@ -1084,8 +1098,17 @@
                 .scale(x)
                 .orient("bottom")
 
+
+
             svg.append("g").attr("class", "y axis").call(yAxis);
-            svg.append("g").attr("class", "x axis").attr("transform", "translate(0," + height + ")").call(xAxis);
+            svg.append("g").attr("class", "x axis").attr("transform", "translate(0," + height + ")")
+                .call(xAxis)
+                .append("text")
+                .attr("y", 40)
+                .attr("x", 400)
+                .style("text-anchor", "end")
+                .style('font-weight', 'bold')
+                .text(xaxis);
 
             var groups = svg.selectAll("g.cost")
                 .data(dataset)
