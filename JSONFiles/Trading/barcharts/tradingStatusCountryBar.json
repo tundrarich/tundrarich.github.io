@@ -32,22 +32,7 @@
 		}
 		]
 	},
-		{
-		"industry": "UK",
-		"values": [{
-			"value": 76.7,
-			"status": "Continuing to trade"
-		},
-		{
-			"value": 22.8,
-			"status": "Has temporarily closed or temporarily paused trading"
-		},
-		{
-			"value": 0,
-			"status": "Has permanently ceased trading"
-		}
-		]
-	},
+		
 	{
 		"industry": "Scotland",
 		"values": [{
@@ -72,6 +57,22 @@
 		},
 		{
 			"value": 21.8,
+			"status": "Has temporarily closed or temporarily paused trading"
+		},
+		{
+			"value": 0,
+			"status": "Has permanently ceased trading"
+		}
+		]
+	},
+	{
+		"industry": "UK",
+		"values": [{
+			"value": 76.7,
+			"status": "Continuing to trade"
+		},
+		{
+			"value": 22.8,
 			"status": "Has temporarily closed or temporarily paused trading"
 		},
 		{

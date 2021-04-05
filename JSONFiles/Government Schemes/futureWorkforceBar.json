@@ -1,5 +1,5 @@
 [
-{ "industry":"workforceSmaller250",
+{ "industry":"Workforce Size < 250",
 "values": [
   {
       "value": 36.7,
@@ -16,7 +16,7 @@
 
  }] }
 ,
-{ "industry":"workforceBiggerEqual250",
+{ "industry":"Workforce Size 250 +",
 "values": [
   {
       "value": 37,
@@ -33,7 +33,7 @@
 
  }] }
 ,
-{ "industry":"total",
+{ "industry":"All Size Bands",
 "values": [
   {
       "value": 36.8,

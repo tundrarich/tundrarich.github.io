@@ -63,22 +63,7 @@
 		}
 		]
 	},
-		{
-		"industry": "AI",
-		"values": [{
-			"value": 76.7,
-			"status": "Continuing to trade"
-		},
-		{
-			"value": 22.8,
-			"status": "Has temporarily closed or temporarily paused trading"
-		},
-		{
-			"value": 0,
-			"status": "Has permanently ceased trading"
-		}
-		]
-	},
+
 		{
 		"industry": "M",
 		"values": [{
@@ -199,6 +184,22 @@
 		},
 		{
 			"value": 3,
+			"status": "Has temporarily closed or temporarily paused trading"
+		},
+		{
+			"value": 0,
+			"status": "Has permanently ceased trading"
+		}
+		]
+	},
+			{
+		"industry": "AI",
+		"values": [{
+			"value": 76.7,
+			"status": "Continuing to trade"
+		},
+		{
+			"value": 22.8,
 			"status": "Has temporarily closed or temporarily paused trading"
 		},
 		{

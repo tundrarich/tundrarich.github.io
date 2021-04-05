@@ -15,22 +15,7 @@
 		}
 		]
 	},
-		{
-		"industry": "All Size Bands",
-		"values": [{
-			"value": 76.7,
-			"status": "Continuing to trade"
-		},
-		{
-			"value": 22.8,
-			"status": "Has temporarily closed or temporarily paused trading"
-		},
-		{
-			"value": 0,
-			"status": "Has permanently ceased trading"
-		}
-		]
-	},
+		
 		{
 		"industry": "250 +",
 		"values": [{
@@ -39,6 +24,22 @@
 		},
 		{
 			"value": 19.7,
+			"status": "Has temporarily closed or temporarily paused trading"
+		},
+		{
+			"value": 0,
+			"status": "Has permanently ceased trading"
+		}
+		]
+	},
+	{
+		"industry": "All Size Bands",
+		"values": [{
+			"value": 76.7,
+			"status": "Continuing to trade"
+		},
+		{
+			"value": 22.8,
 			"status": "Has temporarily closed or temporarily paused trading"
 		},
 		{
