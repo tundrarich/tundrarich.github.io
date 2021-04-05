@@ -179,9 +179,9 @@
 
     <p> <b>Questions Asked: </b>
         <br>
-        <br> &nbsp; Has your enterprise applied for any of the following initiatives? (Applied)
-        <br> &nbsp; Of the initiatives applied for, which has your enterprise received? (Received)
-        <br> &nbsp; Is your enterprise intending to apply for any of the following initiatives? (Future)
+        <br> &nbsp; Has your enterprise applied for any of the following initiatives?&nbsp; <b>(Applied)</b>
+        <br> &nbsp; Of the initiatives applied for, which has your enterprise received?&nbsp; <b>(Received)</b>
+        <br> &nbsp; Is your enterprise intending to apply for any of the following initiatives?&nbsp; <b>(Future)</b>
     </p>
     <br>
     <br>
@@ -196,6 +196,7 @@
     </select>
         <br> &nbsp; Initiatives type, broken down by Industry type, Workforce Size Band and Country.
         <br> &nbsp; Percentage of businesses either continuing to trade or who have temporarily paused or ceased trading, UK, 6 April to 19 April 2020
+
     </div>
 </div>
 
@@ -208,6 +209,7 @@
         <option value="Received">Received</option>
         <option value="Future">Future</option>
     </select>
+
 
     </div>
 </div>
@@ -592,9 +594,9 @@
             createKey("short")
             document.getElementById("tradingSortDiv").style.display = "none";
 
-            createBarChart(industryBar, "d.value", "Proportion of Responses (%)", "#area2", 100, 1)
-            createBarChart(workforceBar, "d.value", "Proportion of Responses (%)", "#area3", 100, 1)
-            createBarChart(countryBar, "d.value", "Proportion of Responses (%)", "#area4", 100, 1)
+            createBarChart(industryBar, "d.value", "Percentage (%)", "#area2", 100, 1)
+            createBarChart(workforceBar, "d.value", "Percentage (%)", "#area3", 100, 1)
+            createBarChart(countryBar, "d.value", "Percentage (%)", "#area4", 100, 1)
         }
 
 
@@ -660,7 +662,7 @@
         var industryApplied = function(){
             clearAreas()
             createKey("short")
-            createBarChart(appliedIndustry, "d.value", "Proportion of Schemes (%)", "#area2", 100, 1)
+            createBarChart(appliedIndustry, "d.value", "Percentage (%)", "#area2", 100, 1)
             createHeatMap(appliedIndustryHeat, "#area3", 1,  colName1, rowName1)
 
             hideLists()
@@ -674,7 +676,7 @@
         var industryReceived = function() {
             clearAreas()
             createKey("short")
-            createBarChart(receivedIndustry, "d.value", "Proportion of Schemes (%)", "#area2", 100, 1)
+            createBarChart(receivedIndustry, "d.value", "Percentage (%)", "#area2", 100, 1)
             createHeatMap(receivedIndustryHeat, "#area3", 1,  colName1, rowName1)
 
             hideLists()
@@ -685,7 +687,7 @@
         var industryFuture = function() {
             clearAreas()
             createKey("short")
-            createBarChart(futureIndustry, "d.value", "Proportion of Schemes (%)", "#area2", 100, 1)
+            createBarChart(futureIndustry, "d.value", "Percentage (%)", "#area2", 100, 1)
             createHeatMap(futureIndustryHeat, "#area3", 1,  colName1, rowName1)
 
             hideLists()
@@ -696,7 +698,7 @@
         var workforceApplied = function() {
 
             clearAreas()
-            createBarChart(appliedWorkforce, "d.value", "Proportion of Schemes (%)", "#area2", 100, 1)
+            createBarChart(appliedWorkforce, "d.value", "Percentage (%)", "#area2", 100, 1)
             createHeatMap(appliedWorkforceHeat, "#area3", 0,  colName2, rowName2)
             hideLists()
             setSelectedIndex(document.getElementById("governmentTypeList"),1);
@@ -708,7 +710,7 @@
         var workforceReceived = function() {
 
             clearAreas()
-            createBarChart(receivedWorkforce, "d.value", "Proportion of Schemes (%)", "#area2", 100, 1)
+            createBarChart(receivedWorkforce, "d.value", "Percentage (%)", "#area2", 100, 1)
             createHeatMap(receivedWorkforceHeat, "#area3", 0,  colName2, rowName2)
             hideLists()
             document.getElementById("governmentTypeDiv").style.display = "block";
@@ -718,7 +720,7 @@
         var workforceFuture = function() {
 
             clearAreas()
-            createBarChart(futureWorkforce, "d.value", "Proportion of Schemes (%)", "#area3", 100, 1)
+            createBarChart(futureWorkforce, "d.value", "Percentage (%)", "#area3", 100, 1)
             createHeatMap(futureWorkforceHeat, "#area3", 0,  colName2, rowName2)
 
             hideLists()
@@ -730,7 +732,7 @@
 
             clearAreas()
 
-            createBarChart(appliedCountry, "d.value", "Proportion of Schemes (%)", "#area2", 100, 1)
+            createBarChart(appliedCountry, "d.value", "Percentage (%)", "#area2", 100, 1)
             createHeatMap(appliedCountryHeat, "#area3", 0, colName3, rowName3)
 
 
@@ -1020,8 +1022,8 @@
     function createStackedBarChart(link, area){
 
 
-        var margin = {top: 60, right: 200, bottom: 30, left: 100},
-            width = 1000 - margin.left - margin.right,
+        var margin = {top: 60, right: 300, bottom: 30, left: 100},
+            width = 1200 - margin.left - margin.right,
             height = 300 - margin.top - margin.bottom;
 
         var svg = d3.select(area).append("svg")

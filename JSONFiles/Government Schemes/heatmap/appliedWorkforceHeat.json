@@ -1,18 +1,20 @@
 {"columns":[["R","< 250"],["R","250 +"],["R","All Size Bands"]]
 ,"index":[["Coronavirus Job Retention Scheme"],["Business rates holiday"],["Deferring VAT payments"],["HMRC Time To Pay scheme"],["Government-funded small business grant or loan schemes"],["Accredited finance agreements"],["We have not applied for any of these initiatives"]]
 ,"data":[
-[0.69,
-0.65,
-0.67
+[0.687,
+0.647,
+0.672
+
 
 
 
 
 ],
 
-[0.27,
-0.28,
-0.27
+[0.272,
+0.279,
+0.274
+
 
 
 
@@ -20,42 +22,47 @@
 ],
 
 [0.56,
-0.57,
-0.56
-
-
-
-],
-
-[0.22,
-0.22,
-0.22
+0.571,
+0.564
 
 
 
 
 ],
 
-[0.14,
-0.07,
-0.11
+[0.224,
+0.222,
+0.223
+
+
+
+
+
+],
+
+[0.135,
+0.073123,
+0.112
+
 
 
 
 
 ],
 
-[0.11,
-0.08,
-0.10
+[0.112,
+0.079,
+0.099
+
 
 
 
 ],
 
-[0.20,
-0.22,
-0.21
+[0.198,
+0.223,
+0.207
+
 
 
 
