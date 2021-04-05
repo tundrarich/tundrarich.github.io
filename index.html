@@ -18,7 +18,7 @@
     }
 
     td, th {
-        padding: 22px 180px;
+        padding: 2px 53px;
         border: solid;
         border-width: 1px 0;
     }
@@ -36,53 +36,260 @@
         outline: none;
     }
 
+    .heatmap {
+        font-size: 13px;
+        font-family: sans-serif;
+    }
+    rect.bordered {
+        stroke: #E6E6E6;
+        stroke-width:2px;
+    }
+    text.mono {
+        font-size: 13px;
+        font-family: sans-serif;
+
+    }
+    text.legendElement {
+        font-size: 13px;
+    }
+
+
+
+    text.hover {
+        font-weight: bold;
+        fill: #66F;
+        font-background: #000;
+    }
+
+    html * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+         padding: 10px;
+
+     }
+
+    .group {
+        display: flex;
+
+    }
+
+
 
 </style>
 <body>
 
-<div id="selectPageOptions"></div>
 
 
+<div style="padding-left: 15px; padding-top: 15px;"  id="selectPageDiv" >
 
+    <br> <b>Jay Bansal - 29371759</b>
+    <br>
+    <br>
+    <p> This website visualises the results from a portion of the Business Impact of Coronavirus (COVID-19) Survey (BICS)
+        <br>
+        <br> &nbsp; Bar Charts: Hover over the bars to display the value of each bar.
+        <br> &nbsp; Stacked Bar Charts: Hover over a bar to display a tooltip of the value.
+        <br> &nbsp; Heatmaps: Hover over a cell to display the value. Clicking on a row or column label will allow for sorting.
+        <br> &nbsp; Legend: An industries legend is located at the bottom of the page where appropiate.
+    </p>
+    <br>
 
-<div  id="sampleButtons">
-    Sample Size for survey
+    <div class="group">
 
-        <button type="button" id="less250Button" onmousedown="changeLess250F()">Workforce < 250</button>
-        <button type="button" id="250MoreButton" onmousedown="changeMore250F()">Workforce 250+</button>
-        <button type="button" id="allWorkforceButton" onmousedown="changeTotalF()">All Workforce Bands (Total)</button>
+        <select id="selectPageList" class="container">>
+            <option value="Samples">Survey Samples and Responses</option>
+            <option value="Trading">Trading Statuses</option>
+            <option value="Government">Government Initiatives</option>
+
+        </select>
+
+    <br> &nbsp; Use this drop-down list to change pages between the different aspects of the survey.
+
 </div>
 
-<div  id="tradingSortButtons">
-    Workforce Size for survey
 
-    <button type="button" id="changeCeasedButton" onmousedown="changeCeasedF()">Sort for Ceased</button>
-    <button type="button" id="changeTempButton" onmousedown="changeTempF()">Sort for Temp</button>
-    <button type="button" id="changeContButton" onmousedown="changeContF()">Sort for Cont</button>
+
+<div style="padding-top: 15px;" id="sampleSwitchDiv" >
+
+    <div class="group">
+
+    <select id="sampleSwitchList" class="container">>
+        <option value="Industry">Industries</option>
+        <option value="Workforces">Workforces</option>
+    </select>
+        <br> &nbsp; Sample Size, Response Rates and the Proportion of Responses, broken down by Industry type and Workforce Size.
+        <br> &nbsp; Real Estate Services, Other Services and Mining and Quarrying responses are removed, but their totals are included in ‘All Industries’.
+
+    </div>
+
+
+
 </div>
+
+<div style="padding-top: 15px;" id="sampleWorkforceDiv">
+
+    <div class="group">
+
+    <select id="sampleWorkforceList" class="container">>
+        <option value="Workforce < 250">Workforce Size < 250</option>
+        <option value="Workforce 250 +">Workforce Size 250 +</option>
+        <option value="All Workforce Bands (Total)">All Workforce Bands (Total)</option>
+    </select>
+
+        <br> &nbsp;
+
+    </div>
+</div>
+
+<div style="padding-top: 15px;" id="tradingSwitchDiv">
+    <br> &nbsp; <b>Question: What is the current trading status of your enterprise?</b>
+    <br>
+    <br>
+    <br>
+    <div class="group">
+
+    <select id="tradingSwitchList" class="container">>
+        <option value="Show Stacked">Stacked Bar Charts</option>
+        <option value="Show Bars">Grouped Bar Charts</option>
+    </select>
+
+        <br> &nbsp; Trading Status broken down by Industry type, Workforce Size Band and Country.
+        <br> &nbsp; Percentage of all responding businesses, UK, 6 April to 19 April 2020
+    </div>
+</div>
+
+<div style="padding-top: 15px;" id="tradingSortDiv">
+
+    <div class="group">
+
+    <select id="tradingSortList" class="container">>
+        <option value="Sort for Cont">Sort for Continuing to Trade</option>
+        <option value="Sort for Temp">Sort for Temporarily Closed or Paused Trading</option>
+        <option value="Sort for Ceased">Sort for Permanently Ceased Trading</option>
+    </select>
+        <br>
+    </div>
+</div>
+
+<div style="padding-top: 15px;" id="governmentTypeDiv">
+
+    <p> <b>Questions Asked: </b>
+        <br>
+        <br> &nbsp; Has your enterprise applied for any of the following initiatives?&nbsp; <b>(Applied)</b>
+        <br> &nbsp; Of the initiatives applied for, which has your enterprise received?&nbsp; <b>(Received)</b>
+        <br> &nbsp; Is your enterprise intending to apply for any of the following initiatives?&nbsp; <b>(Future)</b>
+    </p>
+    <br>
+    <br>
+
+
+    <div class="group">
+
+    <select id="governmentTypeList" class="container">>
+        <option value="Industry">Industries</option>
+        <option value="Workforce">Workforces</option>
+        <option value="Country">Countries</option>
+    </select>
+        <br> &nbsp; Initiatives type, broken down by Industry type, Workforce Size Band and Country.
+        <br> &nbsp; Percentage of businesses either continuing to trade or who have temporarily paused or ceased trading, UK, 6 April to 19 April 2020
+
+    </div>
+</div>
+
+<div style="padding-top: 15px;" id="governmentIndustryDiv">
+
+    <div class="group">
+
+    <select id="governmentIndustryList" class="container">>
+        <option value="Applied">Applied</option>
+        <option value="Received">Received</option>
+        <option value="Future">Future</option>
+    </select>
+
+
+    </div>
+</div>
+
+<div style="padding-top: 15px;" id="governmentWorkforceDiv">
+
+    <div class="group">
+
+    <select id="governmentWorkforceList" class="container">>
+        <option value="Applied">Applied</option>
+        <option value="Received">Received</option>
+        <option value="Future">Future</option>
+    </select>
+
+    </div>
+
+</div>
+
+
+
+
+    <div style="padding-top: 15px;" id="governmentCountryDiv">
+
+        <div class="group">
+
+            <select id="governmentCountryList" class="container">>
+                <option value="Applied">Applied</option>
+            </select>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
 
 
 <div style = "position:relative; left:80px; top:2px; "id="area2"></div>
-<div style = "position:relative; left:80px; top:2px; "id="area3"></div>
+<div style = "position:relative; left:80px; top:2px;"id="area3">
+
+
+
+</div>
+
+
+
 <div style = "position:relative; left:80px; top:2px; "id="area4"></div>
 <div style = "position:relative; left:80px; top:2px; "id="area5"></div>
 <div style = "position:relative; left:80px; top:2px; "id="area6"></div>
 <div style = "position:relative; left:80px; top:2px; "id="area7"></div>
 
-
-
-
-
-<div id="chart", style="height:12px; margin:20px; font: 14px sans-serif; .objecttable td {
-       padding: 8px;
+<div id="chart", style="height:10px;  margin:23px; font: 14px sans-serif; .objecttable td {
+       padding: 1px;
+       float:right;
      }"></div>
 
+
+
+
+
+
 <script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/colorbrewer.v1.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+
+
 <script>
 
     clearAreas()
     samplePage()
 
+    function setSelectedIndex(s, i) {
+        s.options[i].selected = true;
+        return;
+    }
 
     function clearAreas(){
 
@@ -96,22 +303,133 @@
         console.log("Cleared DIVS")
     }
 
-    var dropdownPages = d3.select("#selectPageOptions")
-        .append('select')
+    document.getElementById("selectPageList").onchange = function() {
+        var option=document.getElementById("selectPageList").value;
+
+        if(option=="Samples"){
+            changePage("Samples")
+        }
+        else if(option=="Trading"){
+            changePage("Trading Status")
+        }
+        else if(option=="Government"){
+            changePage("Government Schemes")
+        }
+        return false
+    };
+
+    document.getElementById("sampleSwitchList").onchange = function() {
+        var option=document.getElementById("sampleSwitchList").value;
+
+        if(option=="Industry"){
+            showIndustryF()
+        }
+        else if(option=="Workforces"){
+            showWorkforcesF()
+        }
+        return false
+    };
+
+    document.getElementById("sampleWorkforceList").onchange = function() {
+        var option=document.getElementById("sampleWorkforceList").value;
+
+        if(option=="Workforce < 250"){
+            changeLess250F()
+        }
+        else if(option=="Workforce 250 +"){
+            changeMore250F()
+        }
+        else if(option=="All Workforce Bands (Total)"){
+            changeTotalF()
+        }
+        return false
+    };
+
+    document.getElementById("tradingSwitchList").onchange = function() {
+        var option=document.getElementById("tradingSwitchList").value;
+
+        if(option=="Show Stacked"){
+            showTradingStackedF()
+        }
+        else if(option=="Show Bars"){
+            showTradingBarsF()
+        }
+        return false
+    };
 
 
-    dropdownPages
-        .selectAll('pageOptions')
-        .data(["Samples", "Trading Status", "Government Schemes"])
-        .enter()
-            .append('option')
-        .text(function (d) { return d; })
-        .attr("value", function (d) { return d; })
+    document.getElementById("tradingSortList").onchange = function() {
+        var option=document.getElementById("tradingSortList").value;
 
-    dropdownPages.on("change", function(d) {
-        var selectedOption = d3.select(this).property("value")
-        changePage(selectedOption)
-    })
+        if(option=="Sort for Ceased"){
+            changeCeasedF()
+        }
+        else if(option=="Sort for Temp"){
+            changeTempF()
+        }
+        else if(option=="Sort for Cont"){
+            changeContF()
+        }
+        return false
+    };
+
+
+    document.getElementById("governmentTypeList").onchange = function() {
+        var option=document.getElementById("governmentTypeList").value;
+
+        if(option=="Industry"){
+            industryAppliedF()
+        }
+        else if(option=="Workforce"){
+            workforceAppliedF()
+        }
+        else if(option=="Country"){
+            countryAppliedF()
+        }
+        return false
+    };
+
+    document.getElementById("governmentIndustryList").onchange = function() {
+        var option=document.getElementById("governmentIndustryList").value;
+
+        if(option=="Applied"){
+            industryAppliedF()
+        }
+        else if(option=="Received"){
+            industryReceivedF()
+        }
+        else if(option=="Future"){
+            industryFutureF()
+        }
+        return false
+    };
+
+    document.getElementById("governmentWorkforceList").onchange = function() {
+        var option=document.getElementById("governmentWorkforceList").value;
+
+        if(option=="Applied"){
+            workforceAppliedF()
+        }
+        else if(option=="Received"){
+            workforceReceivedF()
+        }
+        else if(option=="Future"){
+            workforceFutureF()
+        }
+        return false
+    };
+
+    document.getElementById("governmentCountryList").onchange = function() {
+        var option=document.getElementById("governmentCountryList").value;
+
+        if(option=="Applied"){
+            countryAppliedF()
+        }
+
+        return false
+    };
+
+
 
 
     function changePage(page) {
@@ -127,21 +445,23 @@
     }
 
 
-    function hideButtons(){
-        document.getElementById("sampleButtons").style.display = "none";
-        document.getElementById("tradingSortButtons").style.display = "none";
+    function hideLists(){
 
+        document.getElementById("sampleSwitchDiv").style.display = "none";
+        document.getElementById("sampleWorkforceDiv").style.display = "none";
+        document.getElementById("tradingSwitchDiv").style.display = "none";
+        document.getElementById("tradingSortDiv").style.display = "none";
+        document.getElementById("governmentTypeDiv").style.display = "none";
+        document.getElementById("governmentIndustryDiv").style.display = "none";
+        document.getElementById("governmentWorkforceDiv").style.display = "none";
+        document.getElementById("governmentCountryDiv").style.display = "none";
     }
-
-
-
-
 
 
 
     function samplePage(){
 
-        hideButtons()
+        hideLists()
 
         var industryNumbersLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Samples/default/industriesTotal.json"
         var industryProportionLink = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Samples/default/industriesPercentage.json"
@@ -150,58 +470,72 @@
 
         var changeLess250 = function(){
             clearAreas()
-            createBarChart(industryNumbersLink, "d.less250", "Number of Surveys", "#area2", 0, 1)
-            createBarChart(industryProportionLink, "d.less250", "Proportion of Responses (%)", "#area3", 100, 2)
+            createBarChart(industryNumbersLink, "d.less250", "Number of Surveys", "#area2", 0, 1, 0, "Industry")
+            createBarChart(industryProportionLink, "d.less250", "Proportion of Responses (%)", "#area3", 100, 2, 0, "Industry")
 
-            createBarChart(workforceNumbersLink, "d.allIndustries", "Number of Surveys", "#area2", 0, 1)
-            createBarChart(workforceProportionLink, "d.allIndustries", "Proportion of Responses (%)", "#area3", 100, 2)
             createKey("long")
         }
 
         var changeMore250= function(){
             clearAreas()
-            createBarChart(industryNumbersLink, "d.more250", "Number of Surveys", "#area2", 0, 1)
-            createBarChart(industryProportionLink, "d.more250", "Proportion of Responses (%)", "#area3", 100, 2)
+            createBarChart(industryNumbersLink, "d.more250", "Number of Surveys", "#area2", 0, 1, 0, "Industry")
+            createBarChart(industryProportionLink, "d.more250", "Proportion of Responses (%)", "#area3", 100, 2,0, "Industry")
 
-            createBarChart(workforceNumbersLink, "d.allIndustries", "Number of Surveys", "#area2", 0, 1)
-            createBarChart(workforceProportionLink, "d.allIndustries", "Proportion of Responses (%)", "#area3", 100, 2)
             createKey("long")
         }
 
         var changeTotal = function(){
             clearAreas()
-            createBarChart(industryNumbersLink, "d.total", "Number of Surveys", "#area2", 0, 1)
-            createBarChart(industryProportionLink, "d.total", "Proportion of Responses (%)", "#area3", 100, 2)
+            createBarChart(industryNumbersLink, "d.total", "Number of Surveys", "#area2", 0, 1, 0, "Industry")
+            createBarChart(industryProportionLink, "d.total", "Proportion of Responses (%)", "#area3", 100, 2, 0, "Industry")
 
-            createBarChart(workforceNumbersLink, "d.allIndustries", "Number of Surveys", "#area2", 0, 1)
-            createBarChart(workforceProportionLink, "d.allIndustries", "Proportion of Responses (%)", "#area3", 100, 2)
             createKey("long")
         }
+
+
+        var showWorkforces = function(){
+            clearAreas()
+
+            document.getElementById("sampleWorkforceDiv").style.display = "none";
+            createBarChart(workforceNumbersLink, "d.allIndustries", "Number of Surveys", "#area2", 0, 1, 0, "Workforce Band")
+            createBarChart(workforceProportionLink, "d.allIndustries", "Proportion of Responses (%)", "#area3", 100, 2, 0, "Workforce Band")
+
+        }
+
+        var showIndustry = function(){
+            clearAreas()
+            setSelectedIndex(document.getElementById("sampleSwitchList"),0);
+            setSelectedIndex(document.getElementById("sampleWorkforceList"),0);
+
+            document.getElementById("sampleSwitchDiv").style.display = "block";
+            document.getElementById("sampleWorkforceDiv").style.display = "block";
+
+            setSelectedIndex(document.getElementById("sampleWorkforceList"),0);
+            changeLess250()
+        }
+
 
         changeLess250F = changeLess250;
         changeMore250F = changeMore250;
         changeTotalF = changeTotal;
+        showWorkforcesF = showWorkforces;
+        showIndustryF = showIndustry;
 
 
-        clearAreas()
 
-        document.getElementById("sampleButtons").style.display = "block";
 
-        createBarChart(industryNumbersLink, "d.total", "Number of Surveys", "#area2", 0, 1)
-        createBarChart(industryProportionLink, "d.total", "Proportion of Responses (%)", "#area3", 100, 2)
-        createBarChart(workforceNumbersLink, "d.allIndustries", "Number of Surveys", "#area2", 0, 1)
-        createBarChart(workforceProportionLink, "d.allIndustries", "Proportion of Responses (%)", "#area3", 100, 2)
-        createKey("long")
+
+        showIndustry()
+
 
 
     }
-
 
     function workforcePage(){
 
 
 
-        hideButtons()
+        hideLists()
 
 
 
@@ -224,73 +558,204 @@
 
         var changeCeased = function(){
             clearAreas()
+
+            createStackedBarChart(industryTradingCeasedLink, "#area2", "Industry");
+            createStackedBarChart(workforceTradingCeasedLink, "#area3", "Workforce Band");
+            createStackedBarChart(countryTradingCeasedLink, "#area4", "Country");
             createKey("short")
 
-            createStackedBarChart(industryTradingCeasedLink, "#area2");
-            createBarChart(industryBar, "d.value", "Proportion of Trading Statuses (%)", "#area2", 0, 1)
-
-            createStackedBarChart(workforceTradingCeasedLink, "#area3");
-            createBarChart(workforceBar, "d.value", "Proportion of Trading Statuses (%)", "#area3", 0, 1)
-
-            createStackedBarChart(countryTradingCeasedLink, "#area4");
-            createBarChart(countryBar, "d.value", "Proportion of Trading Statuses (%)", "#area4", 0, 1)
         }
 
         var changeTemp = function(){
             clearAreas()
             createKey("short")
 
-            createStackedBarChart(industryTradingTempLink, "#area2");
-            createBarChart(industryBar, "d.value", "Proportion of Trading Statuses (%)", "#area2", 0, 1)
+            createStackedBarChart(industryTradingTempLink, "#area2", "Industry");
+            createStackedBarChart(workforceTradingTempLink, "#area3", "Workforce Band");
+            createStackedBarChart(countryTradingTempLink, "#area4", "Country");
 
-            createStackedBarChart(workforceTradingTempLink, "#area3");
-            createBarChart(workforceBar, "d.value", "Proportion of Trading Statuses (%)", "#area3", 0, 1)
-
-            createStackedBarChart(countryTradingTempLink, "#area4");
-            createBarChart(countryBar, "d.value", "Proportion of Trading Statuses (%)", "#area4", 0, 1)
         }
 
         var changeCont = function(){
             clearAreas()
             createKey("short")
 
-            createStackedBarChart(industryTradingContLink, "#area2");
-            createBarChart(industryBar, "d.value", "Proportion of Trading Statuses (%)", "#area2", 0, 1)
-
-            createStackedBarChart(workforceTradingContLink, "#area3");
-            createBarChart(workforceBar, "d.value", "Proportion of Trading Statuses (%)", "#area3", 0, 1)
-
-            createStackedBarChart(countryTradingContLink, "#area4");
-            createBarChart(countryBar, "d.value", "Proportion of Trading Statuses (%)", "#area4", 0, 1)
+            createStackedBarChart(industryTradingContLink, "#area2", "Industry");
+            createStackedBarChart(workforceTradingContLink, "#area3", "Workforce Band");
+            createStackedBarChart(countryTradingContLink, "#area4", "Country");
         }
+
+
+
+
+
+        var showTradingBars = function(){
+            clearAreas()
+            createKey("short")
+            document.getElementById("tradingSortDiv").style.display = "none";
+
+            createBarChart(industryBar, "d.value", "Percentage (%)", "#area2", 100, 1, 0, "Industry")
+            createBarChart(workforceBar, "d.value", "Percentage (%)", "#area3", 100, 1, 0, "Workforce Band")
+            createBarChart(countryBar, "d.value", "Percentage (%)", "#area4", 100, 1, 0, "Country")
+        }
+
+
+        var showTradingStacked = function(){
+            clearAreas()
+            setSelectedIndex(document.getElementById("tradingSwitchList"),0);
+
+            document.getElementById("tradingSortDiv").style.display = "block";
+            setSelectedIndex(document.getElementById("tradingSortList"),0);
+            changeCont()
+
+
+        }
+
+
+
 
         changeCeasedF = changeCeased;
         changeTempF = changeTemp;
         changeContF = changeCont;
-
-
+        showTradingBarsF = showTradingBars;
+        showTradingStackedF = showTradingStacked;
 
         clearAreas()
-        createKey("short")
-        document.getElementById("tradingSortButtons").style.display = "block";
-
-        createStackedBarChart(industryTradingContLink, "#area2");
-        createBarChart(industryBar, "d.value", "Proportion of Trading Statuses (%)", "#area2", 0, 1)
-
-        createStackedBarChart(workforceTradingContLink, "#area3");
-        createBarChart(workforceBar, "d.value", "Proportion of Trading Statuses (%)", "#area3", 0, 1)
-
-        createStackedBarChart(countryTradingContLink, "#area4");
-        createBarChart(countryBar, "d.value", "Proportion of Trading Statuses (%)", "#area4", 0, 1)
+        document.getElementById("tradingSwitchDiv").style.display = "block";
+        document.getElementById("tradingSortDiv").style.display = "block";
+        showTradingStacked()
     }
 
 
     function governmentPage(){
+        hideLists()
 
-        clearAreas()
-        createKey("short")
+        var appliedIndustry = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Government%20Schemes/appliedIndustryBar.json"
+        var appliedWorkforce = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Government%20Schemes/appliedWorkforceBar.json"
+        var appliedCountry ="https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Government%20Schemes/appliedCountryBar.json"
+
+        var receivedIndustry ="https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Government%20Schemes/receivedIndustryBar.json"
+        var receivedWorkforce ="https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Government%20Schemes/receivedWorkforceBar.json"
+
+        var futureIndustry ="https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Government%20Schemes/futureIndustryBar.json"
+        var futureWorkforce ="https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Government%20Schemes/futureWorkforceBar.json"
+
+        var appliedIndustryHeat = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Government%20Schemes/heatmap/appliedIndustryHeat.json"
+        var appliedWorkforceHeat = "https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Government%20Schemes/heatmap/appliedWorkforceHeat.json"
+        var appliedCountryHeat ="https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Government%20Schemes/heatmap/appliedCountryHeat.json"
+
+        var receivedIndustryHeat ="https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Government%20Schemes/heatmap/receivedIndustryHeat.json"
+        var receivedWorkforceHeat ="https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Government%20Schemes/heatmap/receivedWorkforceHeat.json"
+
+        var futureIndustryHeat ="https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Government%20Schemes/heatmap/futureIndustryHeat.json"
+        var futureWorkforceHeat ="https://raw.githubusercontent.com/tundrarich/tundrarich.github.io/d3/JSONFiles/Government%20Schemes/heatmap/futureWorkforceHeat.json"
 
 
+        colName1 = "colLabel1"
+        colName2 = "colLabel2"
+        colName3 = "colLabel3"
+
+        rowName1 = "rowLabel1"
+        rowName2 = "rowLabel2"
+        rowName3 = "rowLabel3"
+
+        var industryApplied = function(){
+            clearAreas()
+            createKey("short")
+            createBarChart(appliedIndustry, "d.value", "Percentage (%)", "#area2", 100, 1, 1, "Industry")
+            createHeatMap(appliedIndustryHeat, "#area3", 1,  colName1, rowName1)
+
+            hideLists()
+            setSelectedIndex(document.getElementById("governmentTypeList"),0);
+            setSelectedIndex(document.getElementById("governmentIndustryList"),0);
+            document.getElementById("governmentTypeDiv").style.display = "block";
+            document.getElementById("governmentIndustryDiv").style.display = "block";
+        }
+
+
+        var industryReceived = function() {
+            clearAreas()
+            createKey("short")
+            createBarChart(receivedIndustry, "d.value", "Percentage (%)", "#area2", 100, 1, 1, "Industry")
+            createHeatMap(receivedIndustryHeat, "#area3", 1,  colName1, rowName1)
+
+            hideLists()
+            document.getElementById("governmentTypeDiv").style.display = "block";
+            document.getElementById("governmentIndustryDiv").style.display = "block";
+        }
+
+        var industryFuture = function() {
+            clearAreas()
+            createKey("short")
+            createBarChart(futureIndustry, "d.value", "Percentage (%)", "#area2", 100, 1, 1, "Industry")
+            createHeatMap(futureIndustryHeat, "#area3", 1,  colName1, rowName1)
+
+            hideLists()
+            document.getElementById("governmentTypeDiv").style.display = "block";
+            document.getElementById("governmentIndustryDiv").style.display = "block";
+        }
+
+        var workforceApplied = function() {
+
+            clearAreas()
+            createBarChart(appliedWorkforce, "d.value", "Percentage (%)", "#area2", 100, 1, 0, "Workforce Band")
+            createHeatMap(appliedWorkforceHeat, "#area3", 0,  colName2, rowName2)
+            hideLists()
+            setSelectedIndex(document.getElementById("governmentTypeList"),1);
+            setSelectedIndex(document.getElementById("governmentWorkforceList"),0);
+            document.getElementById("governmentTypeDiv").style.display = "block";
+            document.getElementById("governmentWorkforceDiv").style.display = "block";
+        }
+
+        var workforceReceived = function() {
+
+            clearAreas()
+            createBarChart(receivedWorkforce, "d.value", "Percentage (%)", "#area2", 100, 1, 0, "Workforce Band")
+            createHeatMap(receivedWorkforceHeat, "#area3", 0,  colName2, rowName2)
+            hideLists()
+            document.getElementById("governmentTypeDiv").style.display = "block";
+            document.getElementById("governmentWorkforceDiv").style.display = "block";
+        }
+
+        var workforceFuture = function() {
+
+            clearAreas()
+            createBarChart(futureWorkforce, "d.value", "Percentage (%)", "#area3", 100, 1, 0, "Workforce Band")
+            createHeatMap(futureWorkforceHeat, "#area3", 0,  colName2, rowName2)
+
+            hideLists()
+            document.getElementById("governmentTypeDiv").style.display = "block";
+            document.getElementById("governmentWorkforceDiv").style.display = "block";
+        }
+
+        var countryApplied = function() {
+
+            clearAreas()
+
+            createBarChart(appliedCountry, "d.value", "Percentage (%)", "#area2", 100, 1, 0, "Country")
+            createHeatMap(appliedCountryHeat, "#area3", 0, colName3, rowName3)
+
+
+            setSelectedIndex(document.getElementById("governmentCountryList"),0);
+
+            hideLists()
+            document.getElementById("governmentTypeDiv").style.display = "block";
+            document.getElementById("governmentCountryDiv").style.display = "block";
+        }
+
+        industryAppliedF = industryApplied;
+        industryReceivedF = industryReceived;
+        industryFutureF = industryFuture;
+        workforceAppliedF = workforceApplied;
+        workforceReceivedF = workforceReceived;
+        workforceFutureF = workforceFuture;
+        countryAppliedF = countryApplied;
+
+
+
+        document.getElementById("governmentTypeDiv").style.display = "block";
+
+        industryApplied()
     }
 
 
@@ -346,16 +811,16 @@
 
 
 
-        var margin = {top: 3, right: 10, bottom: 1, left: 1},
+        var margin = {top: 20, right: 100, bottom: 20, left: 20},
             width = 1200 - margin.left - margin.right,
-            height = 1- margin.top - margin.bottom;
+            height = 100- margin.top - margin.bottom;
 
 
 
         var table = d3.select('#chart').append('table')
             .attr("style", "margin-right: 10px")
             .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
+            .attr("height", 1)
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
             .style("border-collapse", "collapse")
@@ -372,20 +837,34 @@
 
     }
 
-    function createBarChart(link, dataValue, yAxisTitle, area, maxYAxis, colourID) {
+    function createBarChart(link, dataValue, yAxisTitle, area, maxYAxis, colourID, increaseSize, xAxisTitle) {
+
+
+
 
 
         //https://bl.ocks.org/bricedev/0d95074b6d83a77dc3ad
+        if(increaseSize == 0){
+            var margin = {top: 60, right: 400, bottom: 60, left: 100},
+                width = 1500 - margin.left - margin.right,
+                height = 350 - margin.top - margin.bottom;
 
-        var margin = {top: 20, right: 100, bottom: 30, left: 100},
-            width = 900 - margin.left - margin.right,
-            height = 300 - margin.top - margin.bottom;
+        }else{
+            var margin = {top: 60, right: 400, bottom: 60, left: 100},
+                width = 2000 - margin.left - margin.right,
+                height = 550 - margin.top - margin.bottom;
+
+        }
+
 
         var svg = d3.select(area).append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+
+
 
         var groupsX = d3.scale.ordinal().rangeRoundBands([0, width], .1);
         var subGroupsX = d3.scale.ordinal();
@@ -394,9 +873,9 @@
         var yAxis = d3.svg.axis().scale(yScale).orient("left");
 
         if(colourID== 1){
-            var color = d3.scale.ordinal().range(["#ca0020","#0571b0", "#f4a582"]);
+            var color = d3.scale.ordinal().range(["#ca0020","#80ff80","#0066ff","#ffcc00","#92c5de", "#cc33ff","#666699"]);
         }else{
-            var color = d3.scale.ordinal().range(["#f4a582"]);
+            var color = d3.scale.ordinal().range(["#003f5c"]);
         }
 
 
@@ -424,13 +903,22 @@
             svg.append("g")
                 .attr("class", "x axis")
                 .attr("transform", "translate(0," + (height + 10) + ")")
-                .call(xAxis);
+
+                .call(xAxis)
+                .append("text")
+                .attr("y", 40)
+                .attr("x", 550)
+                .style("text-anchor", "end")
+                .style('font-weight', 'bold')
+                .text(xAxisTitle);
+
 
             //Creates Y Axis
             svg.append("g")
                 .attr("class", "y axis")
                 .style('opacity','0')
                 .call(yAxis)
+
                 .append("text")
                 .attr("transform", "rotate(-90)")
                 .attr("dy", ".71em")
@@ -467,13 +955,21 @@
 
                 .attr("y", function (d) {return yScale(0);})
                 .attr("height", function (d) {return height - yScale(0);})
-
                 .on("mouseover", function(d) {
-                    d3.select(this).style("fill", d3.rgb(color(d.status)).darker(2));
+
+                   // d3.select(this).style("fill", d3.rgb(color(d.rate)).darker(2));
+                    rects.selectAll("text").transition().duration(500).style('opacity','1')
+
+
                 })
                 .on("mouseout", function(d) {
-                    d3.select(this).style("fill", color(d.status));
+                    rects.selectAll("text").transition().duration(500).style('opacity','0')
+
+
                 });
+
+
+
 
             rects.selectAll("rect")
                 .transition()
@@ -501,7 +997,7 @@
                     return (eval(dataValue));
                 })
 
-            rects.selectAll("text").transition().duration(500).delay(200).style('opacity','1');
+           // rects.selectAll("text").transition().duration(500).delay(200).style('opacity','1');
 
 
             //Creates the legend
@@ -518,7 +1014,7 @@
 
             legend.append("circle")
                 .attr("x", width - 27)
-                .attr("cx", width - 5)
+                .attr("cx", width + 200)
                 .attr("cy", 4)
                 .attr("r", 7)
                 .style("fill", function (d) {
@@ -526,7 +1022,7 @@
                 });
 
             legend.append("text")
-                .attr("x", width - 24)
+                .attr("x", width + 175)
                 .attr("y", 9)
                 .style("text-anchor", "end")
                 .text(function (d) {
@@ -537,11 +1033,11 @@
         });
     }
 
-    function createStackedBarChart(link, area){
+    function createStackedBarChart(link, area, xaxis){
 
 
-        var margin = {top: 20, right: 100, bottom: 30, left: 100},
-            width = 900 - margin.left - margin.right,
+        var margin = {top: 60, right: 300, bottom: 50, left: 100},
+            width = 1200 - margin.left - margin.right,
             height = 300 - margin.top - margin.bottom;
 
         var svg = d3.select(area).append("svg")
@@ -602,8 +1098,17 @@
                 .scale(x)
                 .orient("bottom")
 
+
+
             svg.append("g").attr("class", "y axis").call(yAxis);
-            svg.append("g").attr("class", "x axis").attr("transform", "translate(0," + height + ")").call(xAxis);
+            svg.append("g").attr("class", "x axis").attr("transform", "translate(0," + height + ")")
+                .call(xAxis)
+                .append("text")
+                .attr("y", 40)
+                .attr("x", 400)
+                .style("text-anchor", "end")
+                .style('font-weight', 'bold')
+                .text(xaxis);
 
             var groups = svg.selectAll("g.cost")
                 .data(dataset)
@@ -620,12 +1125,17 @@
                 .attr("x", function(d) { return x(d.x); })
                 .attr("y", function(d) { return y(d.y0 + d.y); })
                 .attr("height", function(d) { return y(d.y0) - y(d.y0 + d.y); })
-                .attr("width", x.rangeBand());
+                .attr("width", x.rangeBand())
+                .on("mouseover", function() { tooltip.style("display", null); })
+                .on("mouseout", function() { tooltip.style("display", "none"); })
+                .on("mousemove", function(d) {
+                    var xPosition = d3.mouse(this)[0] - 15;
+                    var yPosition = d3.mouse(this)[1] - 25;
+                    tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
+                    tooltip.select("text").text(d.y);
+                });
 
 
-
-
-            
             //Legend
             var legend = svg.selectAll(".legend")
                 .data(colors)
@@ -641,8 +1151,6 @@
                 .style("fill", function(d, i) {return colors.slice().reverse()[i];});
 
 
-
-
             legend.append("text")
                 .attr("x", width + 15)
                 .attr("y", 10)
@@ -656,9 +1164,351 @@
                     }
                 })
 
+            var tooltip = svg.append("g")
+                .attr("class", "tooltip")
+                .style("display", "none");
+
+            tooltip.append("rect")
+                .attr("width", 30)
+                .attr("height", 20)
+                .attr("fill", "white")
+                .style("opacity", 0.5);
+
+            tooltip.append("text")
+                .attr("x", 15)
+                .attr("dy", "1.2em")
+                .style("text-anchor", "middle")
+                .attr("font-size", "12px")
+                .attr("font-weight", "bold");
+
 
      })
     }
+
+
+    function createHeatMap(link, heatmapId, legendCreate, colName, rowName){
+        var classesNumber = 10,
+            cellSize = 30;
+
+
+
+        //##########################################################################
+        // Patrick.Brockmann@lsce.ipsl.fr
+        //##########################################################################
+
+        //==================================================
+        // References
+        // http://bl.ocks.org/Soylent/bbff6cc507dca2f48792
+        // http://bost.ocks.org/mike/selection/
+        // http://bost.ocks.org/mike/join/
+        // http://stackoverflow.com/questions/9481497/understanding-how-d3-js-binds-data-to-nodes
+        // http://bost.ocks.org/mike/miserables/
+        // http://bl.ocks.org/ianyfchang/8119685
+
+        //==================================================
+
+
+
+
+
+
+
+
+        //==================================================
+        // http://bl.ocks.org/mbostock/3680958
+
+        //==================================================
+
+
+        var legendElementWidth = cellSize * 2;
+
+        // http://bl.ocks.org/mbostock/5577023
+        var colors = colorbrewer["Spectral"][classesNumber];
+
+        // http://bl.ocks.org/mbostock/3680999
+        var svg;
+
+        //==================================================
+        d3.json(link, function(error, data) {
+
+            //console.log(data);
+            var arr = data.data;
+            var row_number = arr.length;
+            var col_number = arr[0].length;
+            //console.log(col_number, row_number);
+
+
+
+
+
+
+            var colorScale = d3.scale.quantize()
+                .domain([0.0, 1.0])
+                .range(colors);
+
+            var margin = {top: 120, right: 350, bottom: 10, left: 340},
+                width = 1200 - margin.left - margin.right,
+                height = 500 - margin.top - margin.bottom;
+
+            var svg = d3.select(heatmapId).append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+
+            svg.append('defs')
+                .append('pattern')
+                .attr('id', 'diagonalHatch')
+                .attr('patternUnits', 'userSpaceOnUse')
+                .attr('width', 4)
+                .attr('height', 4)
+                .append('path')
+                .attr('d', 'M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2')
+                .attr('stroke', '#000000')
+                .attr('stroke-width', 1);
+
+            var rowSortOrder = false;
+            var colSortOrder = false;
+
+            var rowLabels = svg.append("g")
+                .attr("class", rowName + "s")
+                .selectAll("." + rowName)
+                .data(data.index)
+                .enter().append("text")
+                .text(function(d) {
+                    return d.count > 1 ? d.join("/") : d;
+                })
+                .attr("x", 0)
+                .attr("y", function(d, i) {
+                    return (i * cellSize);
+                })
+                .style("text-anchor", "end")
+                .attr("transform", function(d, i) {
+                    return "translate(-3," + cellSize / 1.5 + ")";
+                })
+                .attr("class", rowName + "mono")
+                .attr("id", function(d, i) {
+                    return rowName + "_" + i;
+                })
+                .on('mouseover', function(d, i) {
+                    d3.select('#' + rowName + "_" + i).classed("hover", true);
+                })
+                .on('mouseout', function(d, i) {
+                    d3.select('#' + rowName + "_" + i).classed("hover", false);
+                })
+                .on("click", function(d, i) {
+                    rowSortOrder = !rowSortOrder;
+                    sortByValues("r", i, rowSortOrder);
+                    d3.select("#order").property("selectedIndex", 0);
+                    //$("#order").jqxComboBox({selectedIndex: 0});
+                });
+
+            var colLabels = svg.append("g")
+                .attr("class", colName + "s")
+                .selectAll("." + colName)
+                .data(data.columns)
+                .enter().append("text")
+                .text(function(d) {
+                    d.shift();
+                    return d.count > 1 ? d.reverse().join("/") : d.reverse();
+                })
+                .attr("x", 0)
+                .attr("y", function(d, i) {
+                    return (i * cellSize);
+                })
+                .style("text-anchor", "left")
+                .attr("transform", function(d, i) {
+                    return "translate(" + cellSize / 2 + ", -3) rotate(-90) rotate(45, 0, " + (i * cellSize) + ")";
+                })
+                .attr("class", colName + "mono")
+                .attr("id", function(d, i) {
+                    return colName + "_" + i;
+                })
+                .on('mouseover', function(d, i) {
+                    d3.select('#' + colName + "_" + i).classed("hover", true);
+                })
+                .on('mouseout', function(d, i) {
+                    d3.select('#' + colName + "_" + i).classed("hover", false);
+                })
+                .on("click", function(d, i) {
+                    colSortOrder = !colSortOrder;
+                    sortByValues("c", i, colSortOrder);
+                    d3.select("#order").property("selectedIndex", 0);
+                });
+
+            var row = svg.selectAll(".row")
+                .data(data.data)
+                .enter().append("g")
+                .attr("id", function(d) {
+                    return d.idx;
+                })
+                .attr("class", "row");
+
+            var j = 0;
+            var heatMap = row.selectAll(".cell")
+                .data(function(d) {
+                    j++;
+                    return d;
+                })
+                .enter().append("svg:rect")
+                .attr("x", function(d, i) {
+                    return i * cellSize;
+                })
+                .attr("y", function(d, i, j) {
+                    return j * cellSize;
+                })
+                .attr("rx", 4)
+                .attr("ry", 4)
+                .attr("class", function(d, i, j) {
+                    return "cell bordered cr" + j + " cc" + i;
+                })
+                .attr("row", function(d, i, j) {
+                    return j;
+                })
+                .attr("col", function(d, i, j) {
+                    return i;
+                })
+                .attr("width", cellSize)
+                .attr("height", cellSize)
+                .style("fill", function(d) {
+                    if (d != null) return colorScale(d);
+                    else return "url(#diagonalHatch)";
+                })
+
+
+        .on("mouseover", function(d, i, j) {
+                d3.select('#' + colName + "_" + i).classed("hover", true);
+                d3.select('#' + rowName + "_" + j).classed("hover", true);
+                tooltip.style("display", null); })
+                .on("mouseout", function(d, i, j) {
+                    d3.select('#' + colName + "_" + i).classed("hover", false);
+                    d3.select('#' + rowName + "_" + j).classed("hover", false);
+                    tooltip.style("display", "none"); })
+                .on("mousemove", function(d, i) {
+                    var xPosition = d3.mouse(this)[0] - 15;
+                    var yPosition = d3.mouse(this)[1] - 25;
+                    tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
+                    tooltip.select("text").text(d.toFixed(3));
+                });
+
+
+                var legend = svg.append("g")
+                    .attr("class", "legend")
+                    .attr("transform", "translate(0,-300)")
+                    .selectAll(".legendElement")
+                    .data([0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9])
+                    .enter().append("g")
+                    .attr("class", "legendElement");
+
+                legend.append("svg:rect")
+                    .attr("x", function(d, i) {
+                        return legendElementWidth * i;
+                    })
+                    .attr("y", height + margin.top + 100)
+                    .attr("class", "cellLegend bordered")
+                    .attr("width", legendElementWidth)
+                    .attr("height", cellSize / 2)
+                    .style("fill", function(d, i) {
+                        return colors[i];
+                    });
+
+
+
+                legend.append("text")
+                    .attr("class", "mono legendElement")
+                    .text(function(d) {
+                        return "≥" + Math.round(d * 100) / 100;
+                    })
+                    .attr("x", function(d, i) {
+                        return legendElementWidth * i;
+                    })
+                    .attr("y", height + margin.top + cellSize + 100);
+
+
+
+            var tooltip = svg.append("g")
+                .attr("class", "tooltip")
+                .style("display", "none");
+
+            tooltip.append("rect")
+                .attr("width", 30)
+                .attr("height", 20)
+                .attr("fill", "white")
+                .style("opacity", 0.5);
+
+            tooltip.append("text")
+                .attr("x", 15)
+                .attr("dy", "1.2em")
+                .style("text-anchor", "middle")
+                .attr("font-size", "12px")
+                .attr("font-weight", "bold");
+
+            //==================================================
+            // Change ordering of cells
+            function sortByValues(rORc, i, sortOrder) {
+                var t = svg.transition().duration(1000);
+                var values = [];
+                var sorted;
+                d3.selectAll(".c" + rORc + i)
+                    .filter(function(d) {
+                        if (d != null) values.push(d);
+                        else values.push(-999); // to handle NaN
+                    });
+                //console.log(values);
+                if (rORc == "r") { // sort on cols
+                    sorted = d3.range(col_number).sort(function(a, b) {
+                        if (sortOrder) {
+                            return values[b] - values[a];
+                        } else {
+                            return values[a] - values[b];
+                        }
+                    });
+                    t.selectAll(".cell")
+                        .attr("x", function(d) {
+                            var col = parseInt(d3.select(this).attr("col"));
+                            return sorted.indexOf(col) * cellSize;
+                        });
+                    t.selectAll('.' + colName)
+                        .attr("y", function(d, i) {
+                            return sorted.indexOf(i) * cellSize;
+                        })
+                        .attr("transform", function(d, i) {
+                            return "translate(" + cellSize / 2 + ", -3) rotate(-90) rotate(45, 0, " + (sorted.indexOf(i) * cellSize) + ")";
+                        });
+                } else { // sort on rows
+                    sorted = d3.range(row_number).sort(function(a, b) {
+                        if (sortOrder) {
+                            return values[b] - values[a];
+                        } else {
+                            return values[a] - values[b];
+                        }
+                    });
+                    t.selectAll(".cell")
+                        .attr("y", function(d) {
+                            var row = parseInt(d3.select(this).attr("row"));
+                            return sorted.indexOf(row) * cellSize;
+                        });
+                    t.selectAll(".rowLabel")
+                        .attr("y", function(d, i) {
+                            return sorted.indexOf(i) * cellSize;
+                        })
+                        .attr("transform", function(d, i) {
+                            return "translate(-3," + cellSize / 1.5 + ")";
+                        });
+                }
+            }
+
+            //==================================================
+            d3.select("#order").on("change", function() {
+                var newOrder = d3.select("#order").property("value");
+                changeOrder(newOrder, heatmapId);
+            });
+
+        });
+    }
+
 
 
 
