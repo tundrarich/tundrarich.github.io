@@ -502,6 +502,8 @@
 
         var showIndustry = function(){
             clearAreas()
+            setSelectedIndex(document.getElementById("sampleSwitchList"),0);
+            setSelectedIndex(document.getElementById("sampleWorkforceList"),0);
 
             document.getElementById("sampleSwitchDiv").style.display = "block";
             document.getElementById("sampleWorkforceDiv").style.display = "block";
@@ -598,6 +600,8 @@
 
         var showTradingStacked = function(){
             clearAreas()
+            setSelectedIndex(document.getElementById("tradingSwitchList"),0);
+
             document.getElementById("tradingSortDiv").style.display = "block";
             setSelectedIndex(document.getElementById("tradingSortList"),0);
             changeCont()
@@ -660,6 +664,7 @@
             createHeatMap(appliedIndustryHeat, "#area3", 1,  colName1, rowName1)
 
             hideLists()
+            setSelectedIndex(document.getElementById("governmentTypeList"),0);
             setSelectedIndex(document.getElementById("governmentIndustryList"),0);
             document.getElementById("governmentTypeDiv").style.display = "block";
             document.getElementById("governmentIndustryDiv").style.display = "block";
@@ -694,6 +699,7 @@
             createBarChart(appliedWorkforce, "d.value", "Proportion of Schemes (%)", "#area2", 100, 1)
             createHeatMap(appliedWorkforceHeat, "#area3", 0,  colName2, rowName2)
             hideLists()
+            setSelectedIndex(document.getElementById("governmentTypeList"),1);
             setSelectedIndex(document.getElementById("governmentWorkforceList"),0);
             document.getElementById("governmentTypeDiv").style.display = "block";
             document.getElementById("governmentWorkforceDiv").style.display = "block";
@@ -726,6 +732,9 @@
 
             createBarChart(appliedCountry, "d.value", "Proportion of Schemes (%)", "#area2", 100, 1)
             createHeatMap(appliedCountryHeat, "#area3", 0, colName3, rowName3)
+
+
+            setSelectedIndex(document.getElementById("governmentCountryList"),0);
 
             hideLists()
             document.getElementById("governmentTypeDiv").style.display = "block";
