@@ -7,7 +7,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://tundrarich.github.io/ontology/bics/> a owl:Ontology ;
+<https://github.com/tundrarich/tundrarich.github.io/blob/main/ontology/ontology.png> a owl:Ontology ;
 	dc:title "BICS Vocabularly" ;
 	dc:date "2020-03-25" ;
 	dc:description "BICS Vocabularly." .
